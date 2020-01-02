@@ -1,0 +1,138 @@
+{
+ "metadata": {
+  "configurationVersions": [
+   2
+  ],
+  "clusterVersion": "1.180.0.20191003-203041"
+ },
+ "id": "6e481cc8-bea9-46ba-b1f8-24ebdd1da313",
+ "dashboardMetadata": {
+  "name": "\ud83d\udd0e MyFunnel Compare",
+  "shared": true,
+  "owner": "MyEmail",
+  "sharingDetails": {
+   "linkShared": true,
+   "published": true
+  },
+  "dashboardFilter": {
+   "timeframe": "l_2_HOURS",
+   "managementZone": null
+  }
+ },
+ "tiles": [
+  {
+   "name": "______________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+   "tileType": "HEADER",
+   "configured": true,
+   "bounds": {
+    "top": 456,
+    "left": 38,
+    "width": 1634,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   }
+  },
+  {
+   "name": "______________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+   "tileType": "HEADER",
+   "configured": true,
+   "bounds": {
+    "top": 38,
+    "left": 38,
+    "width": 1634,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   }
+  },
+  {
+   "name": "MyCompareApp MyCompareFunnel Funnel Previous MyTime Hours",
+   "tileType": "HEADER",
+   "configured": true,
+   "bounds": {
+    "top": 418,
+    "left": 38,
+    "width": 912,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   }
+  },
+  {
+   "name": "MyApp MyFunnel Funnel Last MyTime Hours",
+   "tileType": "HEADER",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 38,
+    "width": 912,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   }
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 76,
+    "left": 38,
+    "width": 1634,
+    "height": 342
+   },
+   "tileFilter": {
+    "timeframe": "-MyTimeh",
+    "managementZone": null
+   },
+   "customName": "Funnel",
+   "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyApp\"",
+   "type": "FUNNEL",
+   "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 1444,
+    "width": 228,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## \u27b2 [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 494,
+    "left": 38,
+    "width": 1634,
+    "height": 342
+   },
+   "tileFilter": {
+    "timeframe": "-MyCompareTimeh to -MyTimeh",
+    "managementZone": null
+   },
+   "customName": "Funnel",
+   "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyApp\"",
+   "type": "FUNNEL",
+   "timeFrameShift": "dynamic"
+  }
+ ]
+}

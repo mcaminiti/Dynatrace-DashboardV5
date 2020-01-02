@@ -1,0 +1,112 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      3
+    ],
+    "clusterVersion": "1.182.102.20191213-064610"
+  },
+  "id": "2829b22c-ea5c-48bf-9fe3-f746160da313",
+  "dashboardMetadata": {
+    "name": "\u27b5 User Action Analysis",
+    "shared": true,
+    "owner": "MyEmail",
+    "sharingDetails": {
+      "linkShared": true,
+      "published": true
+    },
+    "dashboardFilter": {
+      "timeframe": "l_2_HOURS",
+      "managementZone": null
+    }
+  },
+  "tiles": [
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 836,
+        "height": 418
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Requests",
+      "query": "select useraction.name, count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\" group by useraction.name",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 836,
+        "width": 836,
+        "height": 418
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration",
+      "query": "select useraction.name, avg(duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" group by useraction.name  order by Duration DESC",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 836,
+        "width": 836,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Duration",
+      "query": "select distinct name as \"User Action Name\", avg(duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" order by Duration DESC",
+      "type": "TABLE"
+    },
+{
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1482,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## \u27B2 [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 0,
+        "width": 836,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Requests",
+      "query": "select distinct useraction.name as \"User Action Name\", count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\" order by count(*) DESC",
+      "type": "TABLE"
+    }
+  ]
+}
