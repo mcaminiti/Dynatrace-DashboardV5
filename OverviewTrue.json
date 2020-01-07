@@ -28,7 +28,7 @@
     "top": 0,
     "left": 0,
     "width": 1634,
-    "height": 228
+    "height": 304
    },
    "tileFilter": {
     "timeframe": null,
@@ -44,7 +44,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 228,
+        "top": 304,
         "left": 0,
         "width": 380,
         "height": 266
@@ -63,7 +63,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 228,
+        "top": 304,
         "left": 418,
         "width": 380,
         "height": 266
@@ -82,7 +82,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 228,
+        "top": 304,
         "left": 836,
         "width": 380,
         "height": 266
@@ -101,7 +101,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 228,
+        "top": 304,
         "left": 1254,
         "width": 380,
         "height": 266
@@ -120,16 +120,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 494,
+        "top": 570,
         "left": 266,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue",
+      "customName": " ",
       "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and LastStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -139,16 +139,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 494,
+        "top": 570,
         "left": 836,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue",
+      "customName": " ",
       "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and Step1 and not LastStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -158,16 +158,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 664,
+        "top": 702,
         "left": 1102,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Funnel Rage Clicks",
+      "customName": " ",
       "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" and Step1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -177,16 +177,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 494,
+        "top": 570,
         "left": 532,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue",
+      "customName": " ",
       "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and Step1 and LastStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -196,16 +196,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 664,
+        "top": 702,
         "left": 1368,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Nonengaged Funnel Sessions",
+      "customName": " ",
       "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and duration > 180000 and userActionCount < 10",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -215,16 +215,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 664,
+        "top": 702,
         "left": 0,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Step Duration",
+      "customName": " ",
       "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -234,16 +234,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 664,
+        "top": 702,
         "left": 836,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Funnel Errors",
+      "customName": " ",
       "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -253,17 +253,17 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 494,
+        "top": 570,
         "left": 1102,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "New User Revenue",
-      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and Step1 and LastStep and newUser IS true",
+      "customName": " ",
+      "query": "select sum(revenueproperty) as \"New User Revenue\" FROM usersession where useraction.application=\"MyApp\" and Step1 and LastStep and newUser IS true",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -272,17 +272,17 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 494,
+        "top": 570,
         "left": 1368,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Returning User Revenue",
-      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and Step1 and LastStep and newUser IS false",
+      "customName": " ",
+      "query": "select sum(revenueproperty) as \"Returning User Revenue\" FROM usersession where useraction.application=\"MyApp\" and Step1 and LastStep and newUser IS false",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -291,16 +291,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 494,
+        "top": 570,
         "left": 0,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Funnel Sessions",
+      "customName": " ",
       "query": "select count(userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" and Step1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -310,16 +310,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 664,
+        "top": 702,
         "left": 266,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Conversions",
+      "customName": " ",
       "query": "SELECT count(userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and Step1 and LastStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -329,16 +329,16 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 664,
+        "top": 702,
         "left": 532,
         "width": 266,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Abandons",
+      "customName": " ",
       "query": "SELECT count(userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and Step1 and not LastStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -439,224 +439,80 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 874,
+    "top": 836,
     "left": 0,
     "width": 266,
-    "height": 76
+    "height": 456
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## Overview Links\n ## [Executive Overview](#dashboard;id=3aa5be20-8833-4af1-a847-2f84cb5da313)\n ## [Marketing Overview](#dashboard;id=934b0dce-bbf4-443d-b0f0-e370faeda313)\n"
+   "markdown": "![Overview Links]()\n## [Executive Overview](#dashboard;id=3aa5be20-8833-4af1-a847-2f84cb5da313)\n![]()\n## [Marketing Overview](#dashboard;id=934b0dce-bbf4-443d-b0f0-e370faeda313)\n"
   },
     {
       "name": "Markdown",
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 874,
+        "top": 836,
         "left": 266,
         "width": 266,
-        "height": 38
+        "height": 456
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)"
+      "markdown": "![Compare Links]()\n## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [Funnel Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)\n![]()\n## [Revenue Compare](#dashboard;id=b85ba6e4-e575-4cbb-b7b4-7621bbada313)"
     },
     {
       "name": "Markdown",
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 912,
-        "left": 266,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Funnel Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 950,
-        "left": 266,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Revenue Compare](#dashboard;id=b85ba6e4-e575-4cbb-b7b4-7621bbada313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 874,
+        "top": 836,
         "left": 532,
         "width": 266,
-        "height": 38
+        "height": 456
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Revenue Analysis](#dashboard;id=f8c73b94-d5ef-4cbf-bcb8-d866c91da313)"
+      "markdown": "![Analysis Links]()\n## [Revenue Analysis](#dashboard;id=f8c73b94-d5ef-4cbf-bcb8-d866c91da313)\n![]()\n## [Conversion Analysis](#dashboard;id=ba9ecfe5-e7ec-451d-a187-060a724da313)\n![]()\n## [Abandon Analysis](#dashboard;id=7afde609-dbbe-486f-b2c0-0bde4c4da313)\n![]()\n## [Duration Analysis](#dashboard;id=c16cb11a-22be-41ab-a336-412369ada313)\n![]()\n## [Error Analysis](#dashboard;id=8a487b1b-c491-41f7-adf2-7460165da313)\n![]()\n## [Rage Analysis](#dashboard;id=7eb2b38c-bae4-46c5-8955-c3eabb9da313)\n![]()\n## [Nonengaged Analysis](#dashboard;id=7f063e1f-e142-44f1-81a0-523f7e5da313)\n![]()\n## [User Action Analysis](#dashboard;id=2829b22c-ea5c-48bf-9fe3-f746160da313)\n![]()\n## [Session Analysis](#dashboard;id=dc858870-3724-4df3-b341-67156f9da313)"
     },
     {
       "name": "Markdown",
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 912,
-        "left": 532,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Conversion Analysis](#dashboard;id=ba9ecfe5-e7ec-451d-a187-060a724da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 950,
-        "left": 532,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Abandon Analysis](#dashboard;id=7afde609-dbbe-486f-b2c0-0bde4c4da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 988,
-        "left": 532,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Duration Analysis](#dashboard;id=c16cb11a-22be-41ab-a336-412369ada313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1026,
-        "left": 532,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Error Analysis](#dashboard;id=8a487b1b-c491-41f7-adf2-7460165da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1064,
-        "left": 532,
-        "width": 228,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Rage Analysis](#dashboard;id=7eb2b38c-bae4-46c5-8955-c3eabb9da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1102,
-        "left": 532,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Nonengaged Analysis](#dashboard;id=7f063e1f-e142-44f1-81a0-523f7e5da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1140,
-        "left": 532,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [User Action Analysis](#dashboard;id=2829b22c-ea5c-48bf-9fe3-f746160da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 1178,
-        "left": 532,
-        "width": 266,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Session Analysis](#dashboard;id=dc858870-3724-4df3-b341-67156f9da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 874,
+        "top": 836,
         "left": 836,
         "width": 266,
-        "height": 38
+        "height": 456
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Book Travel Funnel](#dashboard;id=65312f05-ca6c-4896-b2b4-1bc8ce3da313)"
+      "markdown": "![Funnel Links]()\n## [Book Travel Funnel](#dashboard;id=65312f05-ca6c-4896-b2b4-1bc8ce3da313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 836,
+        "left": 1102,
+        "width": 266,
+        "height": 456
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![Custom Links]()\n"
     }
  ]
 }

@@ -25,17 +25,17 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 608,
+    "top": 684,
     "left": 0,
     "width": 266,
-    "height": 152
+    "height": 114
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\"",
+   "customName": " ",
+   "query": "select count(usersessionid) as \"Satisfied Users\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -44,17 +44,17 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 608,
+    "top": 684,
     "left": 266,
     "width": 266,
-    "height": 152
+    "height": 114
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\"",
+   "customName": " ",
+   "query": "select count(usersessionid) as \"Tolerated Users\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -63,17 +63,17 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 608,
+    "top": 684,
     "left": 532,
     "width": 266,
-    "height": 152
+    "height": 114
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\"",
+   "customName": " ",
+   "query": "select count(usersessionid) as \"Frustrated Users\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -82,10 +82,10 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 342,
+    "top": 304,
     "left": 0,
     "width": 532,
-    "height": 266
+    "height": 380
    },
    "tileFilter": {
     "timeframe": null,
@@ -100,10 +100,10 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 342,
+    "top": 304,
     "left": 570,
     "width": 532,
-    "height": 266
+    "height": 380
    },
    "tileFilter": {
     "timeframe": null,
@@ -118,10 +118,10 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 342,
+    "top": 304,
     "left": 1140,
     "width": 532,
-    "height": 266
+    "height": 380
    },
    "tileFilter": {
     "timeframe": null,
@@ -136,17 +136,17 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 608,
+    "top": 684,
     "left": 874,
     "width": 266,
-    "height": 152
+    "height": 114
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Duration",
-   "query": "select PERCENTILE(duration,90) as \"90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "customName": " ",
+   "query": "select PERCENTILE(duration,90) as \"Duration 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -155,17 +155,17 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 608,
+    "top": 684,
     "left": 1140,
     "width": 266,
-    "height": 152
+    "height": 114
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Visually Complete",
-   "query": "select PERCENTILE(visuallyCompleteTime,90) as \"90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "customName": " ",
+   "query": "select PERCENTILE(visuallyCompleteTime,90) as \"Visually Complete 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -174,17 +174,17 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 608,
+    "top": 684,
     "left": 1406,
     "width": 266,
-    "height": 152
+    "height": 114
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "Speed Index",
-   "query": "select PERCENTILE(speedIndex,90) as \"90th Percentile\" from useraction where useraction.application=\"MyApp\"",
+   "customName": " ",
+   "query": "select PERCENTILE(speedIndex,90) as \"Speed Index 90th Percentile\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -193,7 +193,7 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 760,
+    "top": 836,
     "left": 0,
     "width": 266,
     "height": 38
@@ -204,173 +204,13 @@
    },
    "markdown": "## [MyFunnel Overview](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
   },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 760,
-    "left": 266,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [2 Logs](#logmonitoring)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 760,
-    "left": 532,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [3 Smartscape](#smartscape)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 760,
-    "left": 874,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [4 Diagnostics](#diagnostictools)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 760,
-    "left": 1140,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [5 Services](#newservices)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 760,
-    "left": 1406,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [6 Databases](#newdatabases)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 798,
-    "left": 0,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [7 Hosts](#newhosts)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 798,
-    "left": 266,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [8 Technologies](#newprocessessummary)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 798,
-    "left": 532,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [9 Deploy](#deploy)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 798,
-    "left": 874,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [10 Applications](#uemapplications)"
-  },
-  {
+ {
    "name": "Markdown",
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
     "top": 798,
     "left": 1140,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [11 Sessions](#usersearchoverview)"
-  },
-	 {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 798,
-    "left": 1406,
     "width": 266,
     "height": 38
    },
@@ -385,7 +225,7 @@
    "tileType": "SESSION_METRICS",
    "configured": true,
    "bounds": {
-    "top": 38,
+    "top": 0,
     "left": 342,
     "width": 304,
     "height": 304
@@ -403,7 +243,7 @@
    "tileType": "USERS",
    "configured": true,
    "bounds": {
-    "top": 38,
+    "top": 0,
     "left": 684,
     "width": 304,
     "height": 304
@@ -421,7 +261,7 @@
    "tileType": "UEM_JSERRORS_OVERALL",
    "configured": true,
    "bounds": {
-    "top": 38,
+    "top": 0,
     "left": 1368,
     "width": 304,
     "height": 304
@@ -439,7 +279,7 @@
    "tileType": "APPLICATION",
    "configured": true,
    "bounds": {
-    "top": 38,
+    "top": 0,
     "left": 1026,
     "width": 304,
     "height": 304
@@ -457,7 +297,7 @@
    "tileType": "UEM_ACTIVE_SESSIONS",
    "configured": true,
    "bounds": {
-    "top": 38,
+    "top": 0,
     "left": 0,
     "width": 304,
     "height": 304
@@ -472,9 +312,9 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 0,
-    "left": 1520,
-    "width": 152,
+    "top": 798,
+    "left": 1406,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
@@ -482,6 +322,66 @@
     "managementZone": null
    },
    "markdown": "## \ud83d\ude80 [Return](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
-  }
+  },
+          {
+      "name": "Funnel Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 0,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Funnel Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 266,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Funnel Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 532,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Custom Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 874,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    }
  ]
 }
