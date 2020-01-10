@@ -130,7 +130,7 @@
     "managementZone": null
    },
    "customName": "Funnel",
-   "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyApp\"",
+   "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyCompareApp\"",
    "type": "FUNNEL",
    "timeFrameShift": "dynamic"
   }

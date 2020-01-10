@@ -73,7 +73,7 @@
     "managementZone": null
    },
    "customName": "Lost Revenue All Funnels",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastStep",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "-2h"
   },
@@ -203,7 +203,7 @@
     "managementZone": null
    },
    "customName": "Lost Revenue All Funnels",
-   "query": "select sum(comparerevenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not LastStep",
+   "query": "select sum(comparerevenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "-2h"
   },

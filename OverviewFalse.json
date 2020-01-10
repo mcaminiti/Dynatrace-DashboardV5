@@ -230,7 +230,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastStep and userExperienceScore=\"SATISFIED\"",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -249,7 +249,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastStep and userExperienceScore=\"TOLERATED\"",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -268,7 +268,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastStep and userExperienceScore=\"FRUSTRATED\"",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -287,7 +287,7 @@
     "managementZone": null
    },
    "customName": "Conversions",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastStep",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -325,7 +325,7 @@
     "managementZone": null
    },
    "customName": "Abandons",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and not (LastStep)",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not (LastFunnelStep)",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -344,7 +344,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and not LastStep and userExperienceScore=\"SATISFIED\"",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -363,7 +363,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and not LastStep and userExperienceScore=\"TOLERATED\"",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -382,7 +382,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and not LastStep and userExperienceScore=\"FRUSTRATED\"",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -439,7 +439,7 @@
     "managementZone": null
    },
    "customName": "New Funnel Users",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and newUser IS true and Step1",
+   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and newUser IS true and StepFunnel1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -458,7 +458,7 @@
     "managementZone": null
    },
    "customName": "Returning Funnel Users",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and newUser IS false and Step1",
+   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and newUser IS false and StepFunnel1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -477,7 +477,7 @@
     "managementZone": null
    },
    "customName": "Total Funnel Users",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1",
+   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -496,7 +496,7 @@
     "managementZone": null
    },
    "customName": "Conversions",
-   "query": "select userExperienceScore, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastStep group by userExperienceScore",
+   "query": "select userExperienceScore, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep group by userExperienceScore",
    "type": "PIE_CHART",
    "timeFrameShift": "dynamic"
   },
@@ -515,7 +515,7 @@
     "managementZone": null
    },
    "customName": "Abandons",
-   "query": "select userExperienceScore, count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and not (LastStep) group by userExperienceScore",
+   "query": "select userExperienceScore, count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not (LastFunnelStep) group by userExperienceScore",
    "type": "PIE_CHART",
    "timeFrameShift": "dynamic"
   },
@@ -534,7 +534,7 @@
     "managementZone": null
    },
    "customName": "Duration",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" FROM usersession where useraction.application=\"MyApp\" and LastStep",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep",
    "type": "COLUMN_CHART"
   },
   {

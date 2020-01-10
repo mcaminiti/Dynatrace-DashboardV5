@@ -71,7 +71,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude22",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastStep",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {

@@ -35,7 +35,7 @@
 				"managementZone": null
 			},
 			"customName": "\uD83D\uDE22",
-			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and LastStep and\n\trevenueproperty>0\n\n",
+			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and LastFunnelStep and\n\trevenueproperty>0\n\n",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -53,7 +53,7 @@
 				"managementZone": null
 			},
 			"customName": "\uD83D\uDE41",
-			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and LastStep and\n\trevenueproperty>0",
+			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and LastFunnelStep and\n\trevenueproperty>0",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -71,7 +71,7 @@
 				"managementZone": null
 			},
 			"customName": "\uD83D\uDE03",
-			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and LastStep and\n\trevenueproperty>0\n",
+			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and LastFunnelStep and\n\trevenueproperty>0\n",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -255,7 +255,7 @@
 				"managementZone": null
 			},
 			"customName": "\ud83d\udcb0",
-			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and not (LastStep) and\n\trevenueproperty>0\n",
+			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -273,7 +273,7 @@
 				"managementZone": null
 			},
 			"customName": "\ud83d\udcb0",
-			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and not (LastStep) and\n\trevenueproperty>0\n",
+			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -291,7 +291,7 @@
 				"managementZone": null
 			},
 			"customName": "\ud83d\udcb0",
-			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and not (LastStep) and\n\trevenueproperty>0\n",
+			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -309,7 +309,7 @@
 				"managementZone": null
 			},
 			"customName": "\u2620",
-			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and not (LastStep) and\n\trevenueproperty>0",
+			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and not (LastFunnelStep) and\n\trevenueproperty>0",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -327,7 +327,7 @@
 				"managementZone": null
 			},
 			"customName": "\u2620",
-			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and not (LastStep) and\n\trevenueproperty>0\n",
+			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
@@ -345,7 +345,7 @@
 				"managementZone": null
 			},
 			"customName": "\u2620",
-			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and not (LastStep) and\n\trevenueproperty>0\n",
+			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{

@@ -35,7 +35,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE22",
-   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and LastStep\n",
+   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and LastFunnelStep\n",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -53,7 +53,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE41",
-   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and LastStep",
+   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -71,7 +71,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE03",
-   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and LastStep",
+   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -104,7 +104,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [No Rages (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20and%20Step1%20and%20LastURLStep%20&visualization=TABLE)"
+   "markdown": "## [No Rages (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20and%20StepFunnel1%20and%20LastURLStep%20&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -120,7 +120,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Low Rages (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20and%20Step1%20and%20LastURLStep%20&visualization=TABLE)"
+   "markdown": "## [Low Rages (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20and%20StepFunnel1%20and%20LastURLStep%20&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -136,7 +136,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [High Rages (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%203%20and%20Step1%20and%20LastURLStep%20&visualization=TABLE)"
+   "markdown": "## [High Rages (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%203%20and%20StepFunnel1%20and%20LastURLStep%20&visualization=TABLE)"
   },
   {
    "name": "DTAQL",
@@ -153,7 +153,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE03",
-   "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and Step1 and not (LastStep) ",
+   "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and StepFunnel1 and not (LastFunnelStep) ",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -171,7 +171,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE41",
-   "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and Step1 and not (LastStep)",
+   "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and StepFunnel1 and not (LastFunnelStep)",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -189,7 +189,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE22",
-   "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and Step1 and not (LastStep)",
+   "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and StepFunnel1 and not (LastFunnelStep)",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -206,7 +206,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [No Rages (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20and%20Step1%20and%20not%20LastURLStep%20&visualization=TABLE)"
+   "markdown": "## [No Rages (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20and%20StepFunnel1%20and%20not%20LastURLStep%20&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -222,7 +222,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Low Rages (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20and%20Step1%20and%20not%20LastURLStep%20&visualization=TABLE)"
+   "markdown": "## [Low Rages (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20and%20StepFunnel1%20and%20not%20LastURLStep%20&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -238,7 +238,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [High Rages (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%203%20and%20Step1%20and%20not%20LastURLStep%20&visualization=TABLE)"
+   "markdown": "## [High Rages (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%203%20and%20StepFunnel1%20and%20not%20LastURLStep%20&visualization=TABLE)"
   },
   {
    "name": "User Sessions Query",

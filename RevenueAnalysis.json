@@ -71,7 +71,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude22",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastStep",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -286,7 +286,7 @@
     "managementZone": null
    },
    "customName": "\u1F60A",
-   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and LastStep",
+   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {

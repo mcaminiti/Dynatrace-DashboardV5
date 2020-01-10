@@ -71,7 +71,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude22",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastStep",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -89,7 +89,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude22",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastStep ",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep ",
    "type": "COLUMN_CHART"
   },
   {
@@ -171,7 +171,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude22",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastStep and newUser=true",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep and newUser=true",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -189,7 +189,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude22",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastStep and newUser=false",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep and newUser=false",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {

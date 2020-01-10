@@ -35,7 +35,7 @@
   "managementZone": null
   },
   "customName": "StepHeader1",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -54,7 +54,7 @@
   "managementZone": null
   },
   "customName": "StepHeader4",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -73,7 +73,7 @@
   "managementZone": null
   },
   "customName": "StepHeader5",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -92,7 +92,7 @@
   "managementZone": null
   },
   "customName": "StepHeader1",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and not Step2",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not StepFunnel2",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -111,7 +111,7 @@
   "managementZone": null
   },
   "customName": "StepHeader4",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and not Step5",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and not StepFunnel5",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -130,7 +130,7 @@
   "managementZone": null
   },
   "customName": "StepHeader5",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and not Step6",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and not StepFunnel6",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -149,7 +149,7 @@
   "managementZone": null
   },
   "customName": "StepHeader6",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and not Step7",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and not StepFunnel7",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -292,7 +292,7 @@
   "managementZone": null
   },
   "customName": "StepHeader4",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step4",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -311,7 +311,7 @@
   "managementZone": null
   },
   "customName": "StepHeader1",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step1",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel1",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -330,7 +330,7 @@
   "managementZone": null
   },
   "customName": "StepHeader5",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step5",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel5",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -349,7 +349,7 @@
   "managementZone": null
   },
   "customName": "StepHeader6",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step6",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel6",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -368,7 +368,7 @@
   "managementZone": null
   },
   "customName": "StepHeader6",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -387,7 +387,7 @@
   "managementZone": null
   },
   "customName": "StepHeader1",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step1",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel1",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -406,7 +406,7 @@
   "managementZone": null
   },
   "customName": "StepHeader4",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step4",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -425,7 +425,7 @@
   "managementZone": null
   },
   "customName": "StepHeader5",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step5",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel5",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -444,7 +444,7 @@
   "managementZone": null
   },
   "customName": "StepHeader6",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step6",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel6",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -479,7 +479,7 @@
   "managementZone": null
   },
   "customName": "StepHeader2",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -498,7 +498,7 @@
   "managementZone": null
   },
   "customName": "StepHeader3",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -517,7 +517,7 @@
   "managementZone": null
   },
   "customName": "StepHeader2",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and not Step3",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and not StepFunnel3",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -536,7 +536,7 @@
   "managementZone": null
   },
   "customName": "StepHeader3",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and not Step4",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and not StepFunnel4",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -555,7 +555,7 @@
   "managementZone": null
   },
   "customName": "StepHeader2",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step2 ",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel2 ",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -574,7 +574,7 @@
   "managementZone": null
   },
   "customName": "StepHeader3",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step3",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel3",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -593,7 +593,7 @@
   "managementZone": null
   },
   "customName": "StepHeader2",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step2",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel2",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -612,7 +612,7 @@
   "managementZone": null
   },
   "customName": "StepHeader3",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step3",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel3",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -679,7 +679,7 @@
   "managementZone": null
   },
   "customName": "StepHeader7",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 ",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 ",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -698,7 +698,7 @@
   "managementZone": null
   },
   "customName": "StepHeader7",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 and not Step8",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 and not StepFunnel8",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -717,7 +717,7 @@
   "managementZone": null
   },
   "customName": "StepHeader7",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step7",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel7",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -736,7 +736,7 @@
   "managementZone": null
   },
   "customName": "StepHeader7",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step7",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel7",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -771,7 +771,7 @@
   "managementZone": null
   },
   "customName": "StepHeader8",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 and Step8 ",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 and StepFunnel8 ",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -790,7 +790,7 @@
   "managementZone": null
   },
   "customName": "StepHeader8",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 and Step8 and not Step9",
+  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 and StepFunnel8 and not StepFunnel9",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -809,7 +809,7 @@
   "managementZone": null
   },
   "customName": "StepHeader8",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step8",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel8",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -828,7 +828,7 @@
   "managementZone": null
   },
   "customName": "StepHeader8",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step8",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel8",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -863,7 +863,7 @@
   "managementZone": null
   },
   "customName": "StepHeader9",
-  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 and Step8 and Step9 ",
+  "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 and StepFunnel8 and StepFunnel9 ",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -901,7 +901,7 @@
   "managementZone": null
   },
   "customName": "StepHeader9",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and Step9",
+  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel9",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -920,7 +920,7 @@
   "managementZone": null
   },
   "customName": "StepHeader9",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and Step9",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel9",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -939,7 +939,7 @@
   "managementZone": null
   },
   "customName": "StepHeader1",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -972,7 +972,7 @@
   "managementZone": null
   },
   "customName": "StepHeader2",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -990,7 +990,7 @@
   "managementZone": null
   },
   "customName": "StepHeader3",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -1008,7 +1008,7 @@
   "managementZone": null
   },
   "customName": "StepHeader4",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -1026,7 +1026,7 @@
   "managementZone": null
   },
   "customName": "StepHeader5",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -1044,7 +1044,7 @@
   "managementZone": null
   },
   "customName": "StepHeader6",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -1062,7 +1062,7 @@
   "managementZone": null
   },
   "customName": "StepHeader7",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -1080,7 +1080,7 @@
   "managementZone": null
   },
   "customName": "StepHeader8",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 and Step8 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 and StepFunnel8 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  },
  {
@@ -1098,7 +1098,7 @@
   "managementZone": null
   },
   "customName": "StepHeader9",
-  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and Step1 and Step2 and Step3 and Step4 and Step5 and Step6 and Step7 and Step8 and Step9 GROUP BY userExperienceScore ORDER BY count(*) DESC",
+  "query": "select userExperienceScore as \"Experience Score\", count(*) as \"Count\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and StepFunnel2 and StepFunnel3 and StepFunnel4 and StepFunnel5 and StepFunnel6 and StepFunnel7 and StepFunnel8 and StepFunnel9 GROUP BY userExperienceScore ORDER BY count(*) DESC",
   "type": "TABLE"
  }
  ]
