@@ -355,7 +355,7 @@
       }
     },
     {
-      "name": "Custom Links \u25BC",
+      "name": "Availability Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -462,7 +462,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Custom Links1]()\n"
+   "markdown": "![Availability Links]()\n## [Availability](#dashboard;id=fd4b3162-465b-46ee-a1bc-8f979cfda313)\n![]()\n"
   },
   {
    "name": "Markdown",
@@ -478,7 +478,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Custom Links2]()\n"
+   "markdown": "![Custom Links1]()\n"
   }
 	]
 }
