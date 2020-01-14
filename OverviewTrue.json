@@ -404,7 +404,7 @@
       }
     },
     {
-      "name": "Forecasting Links \u25BC",
+      "name": "Custom Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -496,7 +496,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Funnel Links]()\n## [MyFunnel Funnel](#dashboard;id=65312f05-ca6c-4896-b2b4-1bc8ce3da313)"
+      "markdown": "![Funnel Links]()\n## [Book Travel Funnel](#dashboard;id=65312f05-ca6c-4896-b2b4-1bc8ce3da313)"
     },
     {
       "name": "Markdown",
@@ -512,7 +512,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Forecasting Links]()\n"
+      "markdown": "![Forecast Links]()\n## [Funnel Forecast](#dashboard;id=18e35e26-8734-467e-9c04-0f398e2da313)\n![]()\n## [Application Forecast](#dashboard;id=18e35e26-8734-467e-9c04-0f398e1da313)\n![]()\n## [Revenue Forecast](#dashboard;id=18e35e26-8734-467e-9c04-0f398e0da313)"
     }
  ]
 }
