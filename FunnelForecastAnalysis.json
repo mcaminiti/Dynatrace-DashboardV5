@@ -215,7 +215,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (funconv1*64 + funconv2*32 + funconv3*16 + funconv4*4 + funconv5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((funconv1*256 + funconv2*16 + funconv3*4 + funconv4*2 + funconv5)/279) + (funconv1 + ((((funconv1-funconv2) - (funconv2-funconv3))) - (((funconv2-funconv3) - (funconv3-funconv4))) + ((funconv1-funconv2) - (funconv2-funconv3)) + (funconv1-funconv2) + ((funconv2-funconv3) - (funconv3-funconv4)) + (funconv2-funconv3) + ((funconv3-funconv4) - (funconv4-funconv5)) + (funconv3-funconv4) + (funconv4-funconv5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -233,7 +233,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funconv1 as \" \" from useraction",
+      "query": "select funconv1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -251,7 +251,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funconv2 as \" \" from useraction",
+      "query": "select funconv2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -269,7 +269,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funconv3 as \" \" from useraction",
+      "query": "select funconv3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -287,7 +287,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funconv4 as \" \" from useraction",
+      "query": "select funconv4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -305,7 +305,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funconv5 as \" \" from useraction",
+      "query": "select funconv5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -323,7 +323,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (funaban1*64 + funaban2*32 + funaban3*16 + funaban4*4 + funaban5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((funaban1*256 + funaban2*16 + funaban3*4 + funaban4*2 + funaban5)/279) + (funaban1 + ((((funaban1-funaban2) - (funaban2-funaban3))) - (((funaban2-funaban3) - (funaban3-funaban4))) + ((funaban1-funaban2) - (funaban2-funaban3)) + (funaban1-funaban2) + ((funaban2-funaban3) - (funaban3-funaban4)) + (funaban2-funaban3) + ((funaban3-funaban4) - (funaban4-funaban5)) + (funaban3-funaban4) + (funaban4-funaban5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -341,7 +341,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funaban1 as \" \" from useraction",
+      "query": "select funaban1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -359,7 +359,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funaban2 as \" \" from useraction",
+      "query": "select funaban2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -377,7 +377,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funaban3 as \" \" from useraction",
+      "query": "select funaban3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -395,7 +395,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funaban4 as \" \" from useraction",
+      "query": "select funaban4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -413,7 +413,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funaban5 as \" \" from useraction",
+      "query": "select funaban5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -431,7 +431,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (funvisit1*64 + funvisit2*32 + funvisit3*16 + funvisit4*4 + funvisit5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((funvisit1*256 + funvisit2*16 + funvisit3*4 + funvisit4*2 + funvisit5)/279) + (funvisit1 + ((((funvisit1-funvisit2) - (funvisit2-funvisit3))) - (((funvisit2-funvisit3) - (funvisit3-funvisit4))) + ((funvisit1-funvisit2) - (funvisit2-funvisit3)) + (funvisit1-funvisit2) + ((funvisit2-funvisit3) - (funvisit3-funvisit4)) + (funvisit2-funvisit3) + ((funvisit3-funvisit4) - (funvisit4-funvisit5)) + (funvisit3-funvisit4) + (funvisit4-funvisit5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -449,7 +449,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funvisit1 as \" \" from useraction",
+      "query": "select funvisit1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -467,7 +467,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funvisit2 as \" \" from useraction",
+      "query": "select funvisit2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -485,7 +485,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funvisit3 as \" \" from useraction",
+      "query": "select funvisit3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -503,7 +503,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funvisit4 as \" \" from useraction",
+      "query": "select funvisit4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -521,7 +521,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select funvisit5 as \" \" from useraction",
+      "query": "select funvisit5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -539,7 +539,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (fnosu1*64 + fnosu2*32 + fnosu3*16 + fnosu4*4 + fnosu5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((fnosu1*256 + fnosu2*16 + fnosu3*4 + fnosu4*2 + fnosu5)/279) + (fnosu1 + ((((fnosu1-fnosu2) - (fnosu2-fnosu3))) - (((fnosu2-fnosu3) - (fnosu3-fnosu4))) + ((fnosu1-fnosu2) - (fnosu2-fnosu3)) + (fnosu1-fnosu2) + ((fnosu2-fnosu3) - (fnosu3-fnosu4)) + (fnosu2-fnosu3) + ((fnosu3-fnosu4) - (fnosu4-fnosu5)) + (fnosu3-fnosu4) + (fnosu4-fnosu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -557,7 +557,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fnosu1 as \" \" from useraction",
+      "query": "select fnosu1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -575,7 +575,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fnosu2 as \" \" from useraction",
+      "query": "select fnosu2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -593,7 +593,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fnosu3 as \" \" from useraction",
+      "query": "select fnosu3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -611,7 +611,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fnosu4 as \" \" from useraction",
+      "query": "select fnosu4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -629,7 +629,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fnosu5 as \" \" from useraction",
+      "query": "select fnosu5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -647,7 +647,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (fundur1*64 + fundur2*32 + fundur3*16 + fundur4*4 + fundur5)/117 as \" \" from useraction",
+      "query": "select (((fundur1*256 + fundur2*16 + fundur3*4 + fundur4*2 + fundur5)/279) + (fundur1 + ((((fundur1-fundur2) - (fundur2-fundur3))) - (((fundur2-fundur3) - (fundur3-fundur4))) + ((fundur1-fundur2) - (fundur2-fundur3)) + (fundur1-fundur2) + ((fundur2-fundur3) - (fundur3-fundur4)) + (fundur2-fundur3) + ((fundur3-fundur4) - (fundur4-fundur5)) + (fundur3-fundur4) + (fundur4-fundur5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -665,7 +665,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fundur1 as \" \" from useraction",
+      "query": "select fundur1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -683,7 +683,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fundur2 as \" \" from useraction",
+      "query": "select fundur2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -701,7 +701,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fundur3 as \" \" from useraction",
+      "query": "select fundur3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -719,7 +719,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fundur4 as \" \" from useraction",
+      "query": "select fundur4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -737,8 +737,24 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select fundur5 as \" \" from useraction",
+      "query": "select fundur5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
-    }
+    },
+	  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 798,
+    "left": 1406,
+    "width": 266,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## \u27b2 [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da667)"
+  }
   ]
 }

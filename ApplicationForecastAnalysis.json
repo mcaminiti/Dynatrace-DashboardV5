@@ -215,7 +215,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (anosu1*64 + anosu2*32 + anosu3*16 + anosu4*4 + anosu5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((anosu1*256 + anosu2*16 + anosu3*4 + anosu4*2 + anosu5)/279) + (anosu1 + ((((anosu1-anosu2) - (anosu2-anosu3))) - (((anosu2-anosu3) - (anosu3-anosu4))) + ((anosu1-anosu2) - (anosu2-anosu3)) + (anosu1-anosu2) + ((anosu2-anosu3) - (anosu3-anosu4)) + (anosu2-anosu3) + ((anosu3-anosu4) - (anosu4-anosu5)) + (anosu3-anosu4) + (anosu4-anosu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -233,7 +233,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anosu1 as \" \" from useraction",
+      "query": "select anosu1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -251,7 +251,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anosu2 as \" \" from useraction",
+      "query": "select anosu2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -269,7 +269,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anosu3 as \" \" from useraction",
+      "query": "select anosu3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -287,7 +287,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anosu4 as \" \" from useraction",
+      "query": "select anosu4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -305,7 +305,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anosu5 as \" \" from useraction",
+      "query": "select anosu5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -323,7 +323,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (anotu1*64 + anotu2*32 + anotu3*16 + anotu4*4 + anotu5)/117 as \" \" from useraction",
+      "query": "select (((anotu1*256 + anotu2*16 + anotu3*4 + anotu4*2 + anotu5)/279) + (anotu1 + ((((anotu1-anotu2) - (anotu2-anotu3))) - (((anotu2-anotu3) - (anotu3-anotu4))) + ((anotu1-anotu2) - (anotu2-anotu3)) + (anotu1-anotu2) + ((anotu2-anotu3) - (anotu3-anotu4)) + (anotu2-anotu3) + ((anotu3-anotu4) - (anotu4-anotu5)) + (anotu3-anotu4) + (anotu4-anotu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -341,7 +341,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anotu1 as \" \" from useraction",
+      "query": "select anotu1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -359,7 +359,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anotu2 as \" \" from useraction",
+      "query": "select anotu2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -377,7 +377,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anotu3 as \" \" from useraction",
+      "query": "select anotu3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -395,7 +395,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anotu4 as \" \" from useraction",
+      "query": "select anotu4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -413,7 +413,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anotu5 as \" \" from useraction",
+      "query": "select anotu5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -431,7 +431,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (anofu1*64 + anofu2*32 + anofu3*16 + anofu4*4 + anofu5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((anofu1*256 + anofu2*16 + anofu3*4 + anofu4*2 + anofu5)/279) + (anofu1 + ((((anofu1-anofu2) - (anofu2-anofu3))) - (((anofu2-anofu3) - (anofu3-anofu4))) + ((anofu1-anofu2) - (anofu2-anofu3)) + (anofu1-anofu2) + ((anofu2-anofu3) - (anofu3-anofu4)) + (anofu2-anofu3) + ((anofu3-anofu4) - (anofu4-anofu5)) + (anofu3-anofu4) + (anofu4-anofu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -449,7 +449,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anofu1 as \" \" from useraction",
+      "query": "select anofu1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -467,7 +467,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anofu2 as \" \" from useraction",
+      "query": "select anofu2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -485,7 +485,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anofu3 as \" \" from useraction",
+      "query": "select anofu3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -503,7 +503,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anofu4 as \" \" from useraction",
+      "query": "select anofu4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -521,7 +521,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select anofu5 as \" \" from useraction",
+      "query": "select anofu5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -539,7 +539,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (appdur1*64 + appdur2*32 + appdur3*16 + appdur4*4 + appdur5)/117 as \" \" from useraction",
+      "query": "select (((appdur1*256 + appdur2*16 + appdur3*4 + appdur4*2 + appdur5)/279) + (appdur1 + ((((appdur1-appdur2) - (appdur2-appdur3))) - (((appdur2-appdur3) - (appdur3-appdur4))) + ((appdur1-appdur2) - (appdur2-appdur3)) + (appdur1-appdur2) + ((appdur2-appdur3) - (appdur3-appdur4)) + (appdur2-appdur3) + ((appdur3-appdur4) - (appdur4-appdur5)) + (appdur3-appdur4) + (appdur4-appdur5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -557,7 +557,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select appdur1 as \" \" from useraction",
+      "query": "select appdur1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -575,7 +575,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select appdur2 as \" \" from useraction",
+      "query": "select appdur2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -593,7 +593,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select appdur3 as \" \" from useraction",
+      "query": "select appdur3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -611,7 +611,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select appdur4 as \" \" from useraction",
+      "query": "select appdur4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -629,7 +629,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select appdur5 as \" \" from useraction",
+      "query": "select appdur5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -647,7 +647,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (apperr1*64 + apperr2*32 + apperr3*16 + apperr4*4 + apperr5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((apperr1*256 + apperr2*16 + apperr3*4 + apperr4*2 + apperr5)/279) + (apperr1 + ((((apperr1-apperr2) - (apperr2-apperr3))) - (((apperr2-apperr3) - (apperr3-apperr4))) + ((apperr1-apperr2) - (apperr2-apperr3)) + (apperr1-apperr2) + ((apperr2-apperr3) - (apperr3-apperr4)) + (apperr2-apperr3) + ((apperr3-apperr4) - (apperr4-apperr5)) + (apperr3-apperr4) + (apperr4-apperr5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -665,7 +665,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select apperr1 as \" \" from useraction",
+      "query": "select apperr1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -683,7 +683,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select apperr2 as \" \" from useraction",
+      "query": "select apperr2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -701,7 +701,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select apperr3 as \" \" from useraction",
+      "query": "select apperr3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -719,7 +719,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select apperr4 as \" \" from useraction",
+      "query": "select apperr4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -737,8 +737,24 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select apperr5 as \" \" from useraction",
+      "query": "select apperr5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
-    }
+    },
+	  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 798,
+    "left": 1406,
+    "width": 266,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## \u27b2 [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da667)"
+  }
   ]
 }

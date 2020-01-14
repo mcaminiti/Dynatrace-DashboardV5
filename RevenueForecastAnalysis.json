@@ -215,7 +215,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (revenue1*64 + revenue2*32 + revenue3*16 + revenue4*4 + revenue5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((revenue1*256 + revenue2*16 + revenue3*4 + revenue4*2 + revenue5)/279) + (revenue1 + ((((revenue1-revenue2) - (revenue2-revenue3))) - (((revenue2-revenue3) - (revenue3-revenue4))) + ((revenue1-revenue2) - (revenue2-revenue3)) + (revenue1-revenue2) + ((revenue2-revenue3) - (revenue3-revenue4)) + (revenue2-revenue3) + ((revenue3-revenue4) - (revenue4-revenue5)) + (revenue3-revenue4) + (revenue4-revenue5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -233,7 +233,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select revenue1 as \" \" from useraction",
+      "query": "select revenue1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -251,7 +251,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select revenue2 as \" \" from useraction",
+      "query": "select revenue2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -269,7 +269,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select revenue3 as \" \" from useraction",
+      "query": "select revenue3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -287,7 +287,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select revenue4 as \" \" from useraction",
+      "query": "select revenue4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -305,7 +305,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select revenue5 as \" \" from useraction",
+      "query": "select revenue5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -323,7 +323,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (acv1*64 + acv2*32 + acv3*16 + acv4*4 + acv5)/117 as \" \" from useraction",
+      "query": "select (((acv1*256 + acv2*16 + acv3*4 + acv4*2 + acv5)/279) + (acv1 + ((((acv1-acv2) - (acv2-acv3))) - (((acv2-acv3) - (acv3-acv4))) + ((acv1-acv2) - (acv2-acv3)) + (acv1-acv2) + ((acv2-acv3) - (acv3-acv4)) + (acv2-acv3) + ((acv3-acv4) - (acv4-acv5)) + (acv3-acv4) + (acv4-acv5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -341,7 +341,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select acv1 as \" \" from useraction",
+      "query": "select acv1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -359,7 +359,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select acv2 as \" \" from useraction",
+      "query": "select acv2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -377,7 +377,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select acv3 as \" \" from useraction",
+      "query": "select acv3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -395,7 +395,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select acv4 as \" \" from useraction",
+      "query": "select acv4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -413,7 +413,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select acv5 as \" \" from useraction",
+      "query": "select acv5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -431,7 +431,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (riskrev1*64 + riskrev2*32 + riskrev3*16 + riskrev4*4 + riskrev5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((riskrev1*256 + riskrev2*16 + riskrev3*4 + riskrev4*2 + riskrev5)/279) + (riskrev1 + ((((riskrev1-riskrev2) - (riskrev2-riskrev3))) - (((riskrev2-riskrev3) - (riskrev3-riskrev4))) + ((riskrev1-riskrev2) - (riskrev2-riskrev3)) + (riskrev1-riskrev2) + ((riskrev2-riskrev3) - (riskrev3-riskrev4)) + (riskrev2-riskrev3) + ((riskrev3-riskrev4) - (riskrev4-riskrev5)) + (riskrev3-riskrev4) + (riskrev4-riskrev5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -449,7 +449,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select riskrev1 as \" \" from useraction",
+      "query": "select riskrev1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -467,7 +467,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select riskrev2 as \" \" from useraction",
+      "query": "select riskrev2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -485,7 +485,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select riskrev3 as \" \" from useraction",
+      "query": "select riskrev3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -503,7 +503,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select riskrev4 as \" \" from useraction",
+      "query": "select riskrev4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -521,7 +521,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select riskrev5 as \" \" from useraction",
+      "query": "select riskrev5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -539,7 +539,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (lostrev1*64 + lostrev2*32 + lostrev3*16 + lostrev4*4 + lostrev5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((lostrev1*256 + lostrev2*16 + lostrev3*4 + lostrev4*2 + lostrev5)/279) + (lostrev1 + ((((lostrev1-lostrev2) - (lostrev2-lostrev3))) - (((lostrev2-lostrev3) - (lostrev3-lostrev4))) + ((lostrev1-lostrev2) - (lostrev2-lostrev3)) + (lostrev1-lostrev2) + ((lostrev2-lostrev3) - (lostrev3-lostrev4)) + (lostrev2-lostrev3) + ((lostrev3-lostrev4) - (lostrev4-lostrev5)) + (lostrev3-lostrev4) + (lostrev4-lostrev5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -557,7 +557,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select lostrev1 as \" \" from useraction",
+      "query": "select lostrev1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -575,7 +575,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select lostrev2 as \" \" from useraction",
+      "query": "select lostrev2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -593,7 +593,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select lostrev3 as \" \" from useraction",
+      "query": "select lostrev3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -611,7 +611,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select lostrev4 as \" \" from useraction",
+      "query": "select lostrev4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -629,7 +629,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select lostrev5 as \" \" from useraction",
+      "query": "select lostrev5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -647,7 +647,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (nur1*64 + nur2*32 + nur3*16 + nur4*4 + nur5)/117*tfactor/100 as \" \" from useraction",
+      "query": "select (((nur1*256 + nur2*16 + nur3*4 + nur4*2 + nur5)/279) + (nur1 + ((((nur1-nur2) - (nur2-nur3))) - (((nur2-nur3) - (nur3-nur4))) + ((nur1-nur2) - (nur2-nur3)) + (nur1-nur2) + ((nur2-nur3) - (nur3-nur4)) + (nur2-nur3) + ((nur3-nur4) - (nur4-nur5)) + (nur3-nur4) + (nur4-nur5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -665,7 +665,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select nur1 as \" \" from useraction",
+      "query": "select nur1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -683,7 +683,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select nur2 as \" \" from useraction",
+      "query": "select nur2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -701,7 +701,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select nur3 as \" \" from useraction",
+      "query": "select nur3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -719,7 +719,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select nur4 as \" \" from useraction",
+      "query": "select nur4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -737,8 +737,24 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select nur5 as \" \" from useraction",
+      "query": "select nur5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
-    }
+    },
+	  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 798,
+    "left": 1406,
+    "width": 266,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## \u27b2 [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da667)"
+  }
   ]
 }
