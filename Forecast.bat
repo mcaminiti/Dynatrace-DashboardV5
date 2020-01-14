@@ -132,22 +132,22 @@ set "startdate=%filterdate%"
 set "titledate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -167,22 +167,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -202,22 +202,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -237,22 +237,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -272,22 +272,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20sum(!revenue!)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20newUser%%20is%%20true%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -310,22 +310,22 @@ set "startdate=%filterdate%"
 set "titledate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -345,22 +345,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20not%%20!laststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -380,22 +380,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -415,22 +415,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -450,22 +450,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -488,22 +488,22 @@ set "startdate=%filterdate%"
 set "titledate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22SATISFIED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -523,22 +523,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22TOLERATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -558,22 +558,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%21%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(usersessionid)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20userExperienceScore%%3D%%22FRUSTRATED%%22%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -593,22 +593,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20avg(useraction.duration)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -628,22 +628,22 @@ call GetDate 0
 set "startdate=%filterdate%"
 call GetDate 7
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk1.json
 set "startdate=%enddate%"
 call GetDate 14
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk2.json
 set "startdate=%enddate%"
 call GetDate 21
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk3.json
 set "startdate=%enddate%"
 call GetDate 28
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk4.json
 call GetDate 35
 set "enddate=%filterdate%"
-curl.exe -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
+curl -X GET "https://!tenant!/api/v1/userSessionQueryLanguage/table?query=select%%20count(useraction.errorCount)%%20as%%20%%22Revenue%%22%%20from%%20usersession%%20where%%20useraction.application%%3D%%22!appname!%%22%%20and%%20!firststep!%%20and%%20startTime%%20between%%20%%22!enddate!%%22%%20and%%20%%22!startdate!%%22&startTimestamp=1000000000000&explain=false" -H "accept: application/json" -H "Authorization: Api-Token %1" > ./Transform/jk5.json
 
 powershell -Command "Get-ChildItem -Path ./Transform\jk*.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern '\]\]\}') {(Get-Content $_ | ForEach {$_ -replace '\]\]\}', ''}) | Set-Content $_ -encoding ASCII}}"
 
@@ -670,6 +670,8 @@ echo | set /p=.
 powershell -Command "Get-ChildItem -Path ./Transform\*ForecastAnalysis.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern 'tfactor') {(Get-Content $_ | ForEach {$_ -replace 'tfactor', '!trafficfactor!'}) | Set-Content $_ -encoding UTF8}}"
 
 REM Replace Revenue forecast data
+echo | set /p=.
+powershell -Command "Get-ChildItem -Path ./Transform\*ForecastAnalysis.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern 'da313') {(Get-Content $_ | ForEach {$_ -replace 'da313', 'da%dashboardkey%'}) | Set-Content $_ -encoding UTF8}}"
 echo | set /p=.
 powershell -Command "Get-ChildItem -Path ./Transform\*ForecastAnalysis.json -recurse | ForEach {If (Get-Content $_.FullName | Select-String -Pattern 'revenue1') {(Get-Content $_ | ForEach {$_ -replace 'revenue1', '!rev1!'}) | Set-Content $_ -encoding UTF8}}"
 echo | set /p=.
@@ -830,8 +832,8 @@ echo | set /p=.
 echo .
 
 REM Upload Forecasting Dashboards
-curl -X PUT "https://!tenant!/api/config/v1/dashboards/18e35e26-8734-467e-9c04-0f398e0da313" -H "accept: application/json; charset=utf-8" -H "Authorization: Api-Token %1" -H "Content-Type: application/json; charset=utf-8" -d @./Transform\RevenueForecastAnalysis.json
-curl -X PUT "https://!tenant!/api/config/v1/dashboards/18e35e26-8734-467e-9c04-0f398e1da313" -H "accept: application/json; charset=utf-8" -H "Authorization: Api-Token %1" -H "Content-Type: application/json; charset=utf-8" -d @./Transform\ApplicationForecastAnalysis.json
-curl -X PUT "https://!tenant!/api/config/v1/dashboards/18e35e26-8734-467e-9c04-0f398e2da313" -H "accept: application/json; charset=utf-8" -H "Authorization: Api-Token %1" -H "Content-Type: application/json; charset=utf-8" -d @./Transform\FunnelForecastAnalysis.json
+curl -X PUT "https://!tenant!/api/config/v1/dashboards/18e35e26-8734-467e-9c04-0f398e0da%dashboardkey%" -H "accept: application/json; charset=utf-8" -H "Authorization: Api-Token %1" -H "Content-Type: application/json; charset=utf-8" -d @./Transform\RevenueForecastAnalysis.json
+curl -X PUT "https://!tenant!/api/config/v1/dashboards/18e35e26-8734-467e-9c04-0f398e1da%dashboardkey%" -H "accept: application/json; charset=utf-8" -H "Authorization: Api-Token %1" -H "Content-Type: application/json; charset=utf-8" -d @./Transform\ApplicationForecastAnalysis.json
+curl -X PUT "https://!tenant!/api/config/v1/dashboards/18e35e26-8734-467e-9c04-0f398e2da%dashboardkey%" -H "accept: application/json; charset=utf-8" -H "Authorization: Api-Token %1" -H "Content-Type: application/json; charset=utf-8" -d @./Transform\FunnelForecastAnalysis.json
  
 
