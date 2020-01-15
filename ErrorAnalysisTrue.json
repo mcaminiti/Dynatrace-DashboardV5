@@ -36,7 +36,7 @@
 			},
 			"customName": "\ud83d\ude22",
 			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount > 2 and LastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -54,7 +54,7 @@
 			},
 			"customName": "\ud83d\ude12",
 			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount IN (1,2) and LastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -72,7 +72,7 @@
 			},
 			"customName": "\ud83d\ude00",
 			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount=0 and LastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "Markdown",
@@ -154,7 +154,7 @@
 			},
 			"customName": "\ud83d\ude00",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount=0 and CombinedStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -172,7 +172,7 @@
 			},
 			"customName": "\ud83d\ude12",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount IN (1,2) and CombinedStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -190,7 +190,7 @@
 			},
 			"customName": "\ud83d\ude22",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount > 2 and CombinedStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "Markdown",
@@ -256,7 +256,7 @@
 			},
 			"customName": "\ud83d\ude00",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount=0 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -274,7 +274,7 @@
 			},
 			"customName": "\ud83d\ude12",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount IN (1,2) and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -292,7 +292,7 @@
 			},
 			"customName": "\ud83d\ude22",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount > 2 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -310,7 +310,7 @@
 			},
 			"customName": "\ud83d\ude00",
 			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount=0 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -328,7 +328,7 @@
 			},
 			"customName": "\ud83d\ude12",
 			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount IN (1,2) and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "User Sessions Query",
@@ -346,7 +346,7 @@
 			},
 			"customName": "\ud83d\ude22",
 			"query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount > 2 and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "Markdown",

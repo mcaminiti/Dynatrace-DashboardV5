@@ -37,7 +37,7 @@
    "customName": "Satisfied Users",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "DTAQL",
@@ -56,7 +56,7 @@
    "customName": "Tolerated Users",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "DTAQL",
@@ -75,7 +75,7 @@
    "customName": "Frustrated Users",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "User Sessions Query",
@@ -94,7 +94,7 @@
    "customName": "Duration",
    "query": "select PERCENTILE(duration,90) as \"90th Percentile\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "User Sessions Query",
@@ -113,7 +113,7 @@
    "customName": "Visually Complete",
    "query": "select PERCENTILE(visuallyCompleteTime,90) as \"90th Percentile\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "User Sessions Query",
@@ -132,7 +132,7 @@
    "customName": "Speed Index",
    "query": "select PERCENTILE(speedIndex,90) as \"90th Percentile\" from useraction where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "User behavior",
@@ -259,7 +259,7 @@
    "customName": "Satisfied Users",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyCompareApp\" and userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "DTAQL",
@@ -278,7 +278,7 @@
    "customName": "Tolerated Users",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyCompareApp\" and userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "DTAQL",
@@ -297,7 +297,7 @@
    "customName": "Frustrated Users",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyCompareApp\" and userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "User Sessions Query",
@@ -316,7 +316,7 @@
    "customName": "Duration",
    "query": "select PERCENTILE(duration,90) as \"90th Percentile\" from useraction where useraction.application=\"MyCompareApp\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "User Sessions Query",
@@ -335,7 +335,7 @@
    "customName": "Visually Complete",
    "query": "select PERCENTILE(visuallyCompleteTime,90) as \"90th Percentile\" from useraction where useraction.application=\"MyCompareApp\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "User Sessions Query",
@@ -354,7 +354,7 @@
    "customName": "Speed Index",
    "query": "select PERCENTILE(speedIndex,90) as \"90th Percentile\" from useraction where useraction.application=\"MyCompareApp\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "Markdown",

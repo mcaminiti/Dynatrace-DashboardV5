@@ -36,7 +36,7 @@
 			},
 			"customName": "\uD83C\uDFC1",
 			"query": "select count(usersessionid) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and userid is not null and LastFunnelStep",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "Markdown",
@@ -86,7 +86,7 @@
 			},
 			"customName": "\ud83d\udcb0",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and CombinedStep",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "Markdown",
@@ -120,7 +120,7 @@
 			},
 			"customName": "\ud83d\udcb0",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and not (LastFunnelStep)",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -138,7 +138,7 @@
 			},
 			"customName": "\u2620",
 			"query": "select count(usersessionid) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and userid is not null and not (LastFunnelStep)",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "Markdown",

@@ -36,7 +36,7 @@
    },
    "customName": "\uD83D\uDE22",
    "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and LastFunnelStep\n",
-   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
   },
   {
    "name": "DTAQL",
@@ -54,7 +54,7 @@
    },
    "customName": "\uD83D\uDE41",
    "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and LastFunnelStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
   },
   {
    "name": "DTAQL",
@@ -72,7 +72,7 @@
    },
    "customName": "\uD83D\uDE03",
    "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and LastFunnelStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
   },
   {
    "name": "Markdown",
@@ -154,7 +154,7 @@
    },
    "customName": "\uD83D\uDE03",
    "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks=0 and StepFunnel1 and not (LastFunnelStep) ",
-   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
   },
   {
    "name": "DTAQL",
@@ -172,7 +172,7 @@
    },
    "customName": "\uD83D\uDE41",
    "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks BETWEEN 1 and 3 and StepFunnel1 and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
   },
   {
    "name": "User Sessions Query",
@@ -190,7 +190,7 @@
    },
    "customName": "\uD83D\uDE22",
    "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tnumberOfRageClicks> 3 and StepFunnel1 and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
   },
   {
    "name": "Markdown",

@@ -36,7 +36,7 @@
 			},
 			"customName": "\uD83D\uDE0A",
 			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"SATISFIED\" and LastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -54,7 +54,7 @@
 			},
 			"customName": "\uD83D\uDE1F",
 			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"TOLERATED\" and LastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -72,7 +72,7 @@
 			},
 			"customName": "\uD83D\uDE22",
 			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"FRUSTRATED\" and LastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "User Sessions Query",
@@ -268,7 +268,7 @@
 			},
 			"customName": "\ud83d\udcb0",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"SATISFIED\" and CombinedStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -286,7 +286,7 @@
 			},
 			"customName": "\ud83d\udcb0",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"TOLERATED\" and CombinedStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -304,7 +304,7 @@
 			},
 			"customName": "\ud83d\udcb0",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"FRUSTRATED\" and CombinedStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -454,7 +454,7 @@
 			},
 			"customName": "\ud83d\udcb0",
 			"query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tCombinedStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "DTAQL",
@@ -472,7 +472,7 @@
 			},
 			"customName": "\ud83c\udfc1",
 			"query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tLastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
+			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
 		},
 		{
 			"name": "Markdown",

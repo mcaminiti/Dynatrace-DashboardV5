@@ -5,9 +5,9 @@
   ],
   "clusterVersion": "1.178.0.20190908-201059"
  },
- "id": "934b0dce-bbf4-443d-b0f0-e370faeda313",
+ "id": "835b0dce-bbf4-443d-b0f0-e370faeda313",
  "dashboardMetadata": {
-  "name": "\u2615 Marketing Overview",
+  "name": "\ud83c\udfae New Feature Overview",
   "shared": true,
   "owner": "MyEmail",
   "sharingDetails": {
@@ -205,8 +205,8 @@
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "\u1F3C1",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep ",
+   "customName": "\u2620",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep ",
    "type": "COLUMN_CHART"
   },
   {
@@ -226,7 +226,7 @@
    "markdown": "## [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
   },
   {
-   "name": "PromHeaderStep Campaign",
+   "name": "FeatureHeaderStep Feature",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -288,7 +288,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Abandons](#dashboard;id=935b0dce-bbf4-443d-b0f0-e370faeda313)"
+   "markdown": "## [Conversions](#dashboard;id=834b0dce-bbf4-443d-b0f0-e370faeda313)"
   },
   {
    "name": "Markdown",
@@ -304,7 +304,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## Conversions"
+   "markdown": "## Abandons"
   }
  ]
 }

@@ -97,7 +97,7 @@
    "customName": "Funnel",
    "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyApp\"",
    "type": "FUNNEL",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   },
   {
    "name": "Markdown",
@@ -132,7 +132,7 @@
    "customName": "Funnel",
    "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyCompareApp\"",
    "type": "FUNNEL",
-   "timeFrameShift": "dynamic"
+   "timeFrameShift": "-2h"
   }
  ]
 }

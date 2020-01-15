@@ -5,9 +5,9 @@
   ],
   "clusterVersion": "1.178.0.20190905-195631"
  },
- "id": "0149758a-c29a-4e3b-96ed-b073438da313",
+ "id": "81e4da5e-d4c7-4816-9d31-6698719da313",
  "dashboardMetadata": {
-  "name": "\u2615 Marketing Overview",
+  "name": "\ud83c\udfae New Feature Overview",
   "shared": true,
   "owner": "MyEmail",
   "sharingDetails": {
@@ -304,7 +304,8 @@
       "query": "select avg(visuallyCompleteTime) as \"Visually Complete\" from useraction where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "-2h"
-    },  {
+    },
+  {
    "name": "User Sessions Query",
    "tileType": "DTAQL",
    "configured": true,
@@ -318,8 +319,8 @@
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "\u2620",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and StepFunnel1",
+   "customName": "\ud83c\udfc1",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and StepFunnel1",
    "type": "COLUMN_CHART"
   },
   {
@@ -339,7 +340,7 @@
    "markdown": "## [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
   },
   {
-   "name": "PromHeaderStep Campaign",
+   "name": "FeatureHeaderStep Feature",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -369,7 +370,7 @@
    }
   },
   {
-   "name": "Abandons",
+   "name": "Conversions",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -397,7 +398,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Conversions](#dashboard;id=21e4da5e-d4c7-4816-9d31-6698719da313)"
+   "markdown": "## [Revenue](#dashboard;id=834b0dce-bbf4-443d-b0f0-e370faeda313)"
   },
   {
    "name": "Markdown",
@@ -413,7 +414,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Revenue](#dashboard;id=934b0dce-bbf4-443d-b0f0-e370faeda313)"
+   "markdown": "## [Abandons](#dashboard;id=8149758a-c29a-4e3b-96ed-b073438da313)"
   }
  ]
 }
