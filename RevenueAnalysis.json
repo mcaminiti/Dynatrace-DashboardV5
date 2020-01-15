@@ -36,7 +36,7 @@
    },
    "customName": "\ud83d\ude0a",
    "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -54,7 +54,7 @@
    },
    "customName": "\ud83d\ude1f",
    "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and userExperienceScore!=\"SATISFIED\"",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -72,7 +72,7 @@
    },
    "customName": "\ud83d\ude22",
    "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -172,7 +172,7 @@
    },
    "customName": "\ud83d\ude0a",
    "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=true",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -190,7 +190,7 @@
    },
    "customName": "\ud83d\ude0a",
    "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=false",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -287,7 +287,7 @@
    },
    "customName": "\u1F60A",
    "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",

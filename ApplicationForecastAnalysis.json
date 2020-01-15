@@ -539,7 +539,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (((appdur1*256 + appdur2*16 + appdur3*4 + appdur4*2 + appdur5)/279) + (appdur1 + ((((appdur1-appdur2) - (appdur2-appdur3))) - (((appdur2-appdur3) - (appdur3-appdur4))) + ((appdur1-appdur2) - (appdur2-appdur3)) + (appdur1-appdur2) + ((appdur2-appdur3) - (appdur3-appdur4)) + (appdur2-appdur3) + ((appdur3-appdur4) - (appdur4-appdur5)) + (appdur3-appdur4) + (appdur4-appdur5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "query": "select (((appdur1*256 + appdur2*16 + appdur3*4 + appdur4*2 + appdur5)/279) + (appdur1 + ((((appdur1-appdur2) - (appdur2-appdur3))) - (((appdur2-appdur3) - (appdur3-appdur4))) + ((appdur1-appdur2) - (appdur2-appdur3)) + (appdur1-appdur2) + ((appdur2-appdur3) - (appdur3-appdur4)) + (appdur2-appdur3) + ((appdur3-appdur4) - (appdur4-appdur5)) + (appdur3-appdur4) + (appdur4-appdur5))/10)*2)/3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {

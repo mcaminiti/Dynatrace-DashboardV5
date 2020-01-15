@@ -36,7 +36,7 @@
    },
    "customName": "\ud83d\ude0a",
    "query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tStepFunnel1 and userExperienceScore=\"SATISFIED\" and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -54,7 +54,7 @@
    },
    "customName": "\ud83d\ude1f",
    "query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tStepFunnel1 and userExperienceScore=\"TOLERATED\" and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -72,7 +72,7 @@
    },
    "customName": "\ud83d\ude22",
    "query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tStepFunnel1 and userExperienceScore=\"FRUSTRATED\" and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -269,7 +269,7 @@
    },
    "customName": "\u2620",
    "query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tStepFunnel1 and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   }
  ]
 }

@@ -647,7 +647,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (((fundur1*256 + fundur2*16 + fundur3*4 + fundur4*2 + fundur5)/279) + (fundur1 + ((((fundur1-fundur2) - (fundur2-fundur3))) - (((fundur2-fundur3) - (fundur3-fundur4))) + ((fundur1-fundur2) - (fundur2-fundur3)) + (fundur1-fundur2) + ((fundur2-fundur3) - (fundur3-fundur4)) + (fundur2-fundur3) + ((fundur3-fundur4) - (fundur4-fundur5)) + (fundur3-fundur4) + (fundur4-fundur5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "query": "select (((fundur1*256 + fundur2*16 + fundur3*4 + fundur4*2 + fundur5)/279) + (fundur1 + ((((fundur1-fundur2) - (fundur2-fundur3))) - (((fundur2-fundur3) - (fundur3-fundur4))) + ((fundur1-fundur2) - (fundur2-fundur3)) + (fundur1-fundur2) + ((fundur2-fundur3) - (fundur3-fundur4)) + (fundur2-fundur3) + ((fundur3-fundur4) - (fundur4-fundur5)) + (fundur3-fundur4) + (fundur4-fundur5))/10)*2)/3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {

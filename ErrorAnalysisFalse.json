@@ -36,7 +36,7 @@
    },
    "customName": "\ud83d\ude22",
    "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount > 2 and LastFunnelStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -54,7 +54,7 @@
    },
    "customName": "\ud83d\ude12",
    "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount IN (1,2) and LastFunnelStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -72,7 +72,7 @@
    },
    "customName": "\ud83d\ude00",
    "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount=0 and LastFunnelStep",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -154,7 +154,7 @@
    },
    "customName": "\ud83d\ude00",
    "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount=0 and StepFunnel1 and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -172,7 +172,7 @@
    },
    "customName": "\ud83d\ude12",
    "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount IN (1,2) and StepFunnel1 and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -190,7 +190,7 @@
    },
    "customName": "\ud83d\ude22",
    "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\ttotalErrorCount > 2 and StepFunnel1 and not (LastFunnelStep)",
-   "type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+   "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",

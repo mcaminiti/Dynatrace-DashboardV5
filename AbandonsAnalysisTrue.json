@@ -36,7 +36,7 @@
 			},
 			"customName": "\ud83d\ude0a",
 			"query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"SATISFIED\" and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
 			"name": "DTAQL",
@@ -54,7 +54,7 @@
 			},
 			"customName": "\ud83d\ude1f",
 			"query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"TOLERATED\" and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
 			"name": "DTAQL",
@@ -72,7 +72,7 @@
 			},
 			"customName": "\ud83d\ude22",
 			"query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"FRUSTRATED\" and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
 			"name": "User Sessions Query",
@@ -268,7 +268,7 @@
 			},
 			"customName": "\ud83d\ude0a",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"SATISFIED\" and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
 			"name": "DTAQL",
@@ -286,7 +286,7 @@
 			},
 			"customName": "\ud83d\ude1f",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"TOLERATED\" and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
 			"name": "DTAQL",
@@ -304,7 +304,7 @@
 			},
 			"customName": "\ud83d\ude22",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"FRUSTRATED\" and not (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
 			"name": "Lost Revenue by Apdex",
@@ -486,7 +486,7 @@
 			},
 			"customName": "\u2620",
 			"query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
 			"name": "User Sessions Query",
@@ -504,7 +504,7 @@
 			},
 			"customName": "\u2620",
 			"query": "select count(distinct userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" and\n\tnot (LastFunnelStep) and\n\trevenueproperty>0\n",
-			"type": "SINGLE_VALUE", "timeFrameShift": "-2h"
+			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		}
 	]
 }

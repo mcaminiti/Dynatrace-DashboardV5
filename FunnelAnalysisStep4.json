@@ -139,7 +139,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -158,7 +158,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -177,7 +177,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -244,7 +244,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -263,7 +263,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -282,7 +282,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -349,7 +349,7 @@
    "customName": "\u1F40C",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and usersession.duration>180000 and StepFunnel4 and userActionCount<10",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -416,7 +416,7 @@
    "customName": "\u1F621",
    "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" and  numberOfRageClicks>0 and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -483,7 +483,7 @@
    "customName": "\u1F621",
    "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" and  numberOfRageClicks>0 and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -502,7 +502,7 @@
    "customName": "\u1F621",
    "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" and  numberOfRageClicks>0 and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -521,7 +521,7 @@
    "customName": "\u1F40C",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and usersession.duration>180000 and StepFunnel4 and StepFunnel5 and userActionCount<10",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -540,7 +540,7 @@
    "customName": "\u1F40C",
    "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and usersession.duration>180000 and StepFunnel4 and not StepFunnel5 and userActionCount<10",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -575,7 +575,7 @@
    "customName": "StepHeader4",
    "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel4 ",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -594,7 +594,7 @@
    "customName": "Continue",
    "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -613,7 +613,7 @@
    "customName": "Exit",
    "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -632,7 +632,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -651,7 +651,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -670,7 +670,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -689,7 +689,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -708,7 +708,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.cdnBusyTime) as \"CDN Busy\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -727,7 +727,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -746,7 +746,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.thirdPartyBusyTime) as \"3rd Party Busy\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -765,7 +765,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.httpRequestsWithErrors) as \"HTTP Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -784,7 +784,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -803,7 +803,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.failedXhrRequests) as \"Failed Xhr Requests\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Request Breakdown",
@@ -897,7 +897,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -916,7 +916,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -935,7 +935,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -954,7 +954,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -973,7 +973,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -992,7 +992,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1011,7 +1011,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1030,7 +1030,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1049,7 +1049,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.cdnBusyTime) as \"CDN Busy\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1068,7 +1068,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.cdnBusyTime) as \"CDN Busy\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1087,7 +1087,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.thirdPartyBusyTime) as \"3rd Party Busy\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1106,7 +1106,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.thirdPartyBusyTime) as \"3rd Party Busy\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1125,7 +1125,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1144,7 +1144,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1163,7 +1163,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.httpRequestsWithErrors) as \"HTTP Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1182,7 +1182,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.httpRequestsWithErrors) as \"HTTP Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1201,7 +1201,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1220,7 +1220,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1239,7 +1239,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.failedXhrRequests) as \"Failed Xhr Requests\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1258,7 +1258,7 @@
    "customName": "\u1F6A8",
    "query": "select sum(useraction.failedXhrRequests) as \"Failed Xhr Requests\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -1437,7 +1437,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1456,7 +1456,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" and StepFunnel4",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -1507,7 +1507,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1526,7 +1526,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1545,7 +1545,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -1564,7 +1564,7 @@
    "customName": "\u23F1",
    "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" and StepFunnel4 and not StepFunnel5",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",

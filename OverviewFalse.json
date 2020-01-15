@@ -55,7 +55,7 @@
       "customName": " ",
       "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -74,7 +74,7 @@
       "customName": " ",
       "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -93,7 +93,7 @@
       "customName": " ",
       "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and duration > 180000 and userActionCount < 10 and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -112,7 +112,7 @@
       "customName": " ",
       "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -131,7 +131,7 @@
       "customName": " ",
       "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -150,7 +150,7 @@
       "customName": " ",
       "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -169,7 +169,7 @@
       "customName": "Conversions by User Experience",
       "query": "select userExperienceScore, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep group by userExperienceScore",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -188,7 +188,7 @@
       "customName": "Abandons by User Experience",
       "query": "select userExperienceScore, count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep group by userExperienceScore",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -207,7 +207,7 @@
       "customName": "Conversions by Region",
       "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and region!=\"synthetic\" group by Region",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -226,7 +226,7 @@
       "customName": "Abandons by Region",
       "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and region!=\"synthetic\" group by Region",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "Overview Links \u25BC",
@@ -349,7 +349,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Compare Links]()\n## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [Funnel Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)"
+      "markdown": "![Compare Links]()\n## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [Funnel Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)\n![]()\n## [New Feature Compare](#dashboard;id=7e481cc8-bea9-46ba-b1f8-23ebdd1da313)"
     },
     {
       "name": "Markdown",

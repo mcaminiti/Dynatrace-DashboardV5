@@ -37,7 +37,7 @@
    "customName": "Revenue",
    "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -56,7 +56,7 @@
    "customName": "Risk Revenue",
    "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and userExperienceScore!=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -75,7 +75,7 @@
    "customName": "Lost Revenue All Funnels",
    "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -110,7 +110,7 @@
    "customName": "New User Revenue",
    "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=true",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -129,7 +129,7 @@
    "customName": "Returning User Revenue",
    "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=false",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -148,7 +148,7 @@
    "customName": "Average Order Value",
    "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -167,7 +167,7 @@
    "customName": "Revenue",
    "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -186,7 +186,7 @@
    "customName": "Risk Revenue",
    "query": "select sum(comparerevenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and userExperienceScore!=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -205,7 +205,7 @@
    "customName": "Lost Revenue All Funnels",
    "query": "select sum(comparerevenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -224,7 +224,7 @@
    "customName": "New User Revenue",
    "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and newUser=true",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -243,7 +243,7 @@
    "customName": "Average Order Value",
    "query": "select avg(comparerevenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -262,7 +262,7 @@
    "customName": "Returning User Revenue",
    "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and newUser=false",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "______________________________________________________________________________________________________________________________________________________________________________________________________________________________",

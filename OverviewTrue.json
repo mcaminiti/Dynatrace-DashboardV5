@@ -37,7 +37,7 @@
    "customName": "MyFunnel Funnel",
    "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyApp\"",
    "type": "FUNNEL",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
     {
       "name": "DTAQL",
@@ -56,7 +56,7 @@
       "customName": "Revenue by User Experience",
       "query": "SELECT userExperienceScore, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep group by userExperienceScore order by sum(revenueproperty) desc",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -75,7 +75,7 @@
       "customName": "Lost Revenue by User Experience",
       "query": "SELECT userExperienceScore, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep group by userExperienceScore order by sum(revenueproperty) desc",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -94,7 +94,7 @@
       "customName": "Conversions by User Experience",
       "query": "SELECT userExperienceScore, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep group by userExperienceScore order by count(userSessionId) desc",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -113,7 +113,7 @@
       "customName": "Abandons by User Experience",
       "query": "SELECT userExperienceScore, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep group by userExperienceScore order by count(userSessionId) desc",
       "type": "PIE_CHART",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -132,7 +132,7 @@
       "customName": " ",
       "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -151,7 +151,7 @@
       "customName": " ",
       "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -170,7 +170,7 @@
       "customName": " ",
       "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -189,7 +189,7 @@
       "customName": " ",
       "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -208,7 +208,7 @@
       "customName": " ",
       "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and duration > 180000 and userActionCount < 10 and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -227,7 +227,7 @@
       "customName": " ",
       "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -246,7 +246,7 @@
       "customName": " ",
       "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -265,7 +265,7 @@
       "customName": " ",
       "query": "select sum(revenueproperty) as \"New User Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep and newUser IS true",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -284,7 +284,7 @@
       "customName": " ",
       "query": "select sum(revenueproperty) as \"Returning User Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep and newUser IS false",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
@@ -303,7 +303,7 @@
       "customName": " ",
       "query": "select count(userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -322,7 +322,7 @@
       "customName": " ",
       "query": "SELECT count(userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "DTAQL",
@@ -341,7 +341,7 @@
       "customName": " ",
       "query": "SELECT count(userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep",
       "type": "SINGLE_VALUE",
-      "timeFrameShift": "-2h"
+      "timeFrameShift": "dynamic"
     },
     {
       "name": "Overview Links \u25BC",
@@ -464,7 +464,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Compare Links]()\n## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [Funnel Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)\n![]()\n## [Revenue Compare](#dashboard;id=b85ba6e4-e575-4cbb-b7b4-7621bbada313)"
+      "markdown": "![Compare Links]()\n## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [Funnel Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)\n![]()\n## [New Feature Compare](#dashboard;id=7e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [Revenue Compare](#dashboard;id=b85ba6e4-e575-4cbb-b7b4-7621bbada313)"
     },
     {
       "name": "Markdown",

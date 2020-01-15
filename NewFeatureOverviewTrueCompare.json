@@ -5,9 +5,9 @@
   ],
   "clusterVersion": "1.180.0.20191003-203041"
  },
- "id": "6e481cc8-bea9-46ba-b1f8-23ebdd1da313",
+ "id": "7e481cc8-bea9-46ba-b1f8-23ebdd1da313",
  "dashboardMetadata": {
-  "name": "\ud83d\udd0e MyFunnel Overview Compare",
+  "name": "\ud83d\udd0e FeatureHeaderStep Overview Compare",
   "shared": true,
   "owner": "MyEmail",
   "sharingDetails": {
@@ -35,7 +35,7 @@
     "managementZone": null
    },
    "customName": "Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
+   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -54,7 +54,7 @@
     "managementZone": null
    },
    "customName": "Lost Revenue All Funnels",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep)",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -73,7 +73,7 @@
     "managementZone": null
    },
    "customName": "Risk Revenue",
-   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
+   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\") and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -92,7 +92,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"SATISFIED\" and revenueproperty>0",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"SATISFIED\" and revenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -111,7 +111,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"TOLERATED\" and revenueproperty>0",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"TOLERATED\" and revenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -130,7 +130,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"FRUSTRATED\" and revenueproperty>0",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"FRUSTRATED\" and revenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -149,7 +149,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"SATISFIED\" and revenueproperty>0",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"SATISFIED\" and revenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -168,7 +168,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"TOLERATED\" and revenueproperty>0",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"TOLERATED\" and revenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -187,7 +187,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"FRUSTRATED\" and revenueproperty>0",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"FRUSTRATED\" and revenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -206,7 +206,7 @@
     "managementZone": null
    },
    "customName": "Duration",
-   "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -225,7 +225,7 @@
     "managementZone": null
    },
    "customName": "Errors",
-   "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -243,8 +243,8 @@
     "timeframe": "-MyTimeh",
     "managementZone": null
    },
-   "customName": "New User Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser IS true",
+   "customName": "Requests",
+   "query": "select count(*) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -262,8 +262,8 @@
     "timeframe": "-MyTimeh",
     "managementZone": null
    },
-   "customName": "Returning User Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser IS false",
+   "customName": "Session Duration",
+   "query": "select avg(duration) as \"Session Duration\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -298,7 +298,7 @@
     "managementZone": null
    },
    "customName": "Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep",
+   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -317,7 +317,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"SATISFIED\" and comparerevenueproperty>0",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"SATISFIED\" and comparerevenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -336,7 +336,7 @@
     "managementZone": null
    },
    "customName": "Lost Revenue All Funnels",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not CompareLastFunnelStep",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not CompareLastFunnelStep and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -355,7 +355,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"FRUSTRATED\" and comparerevenueproperty>0",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"FRUSTRATED\" and comparerevenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -374,7 +374,7 @@
     "managementZone": null
    },
    "customName": "Risk Revenue",
-   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
+   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\") and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -393,7 +393,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"TOLERATED\" and comparerevenueproperty>0",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"TOLERATED\" and comparerevenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -412,7 +412,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"TOLERATED\" and comparerevenueproperty>0",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"TOLERATED\" and comparerevenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -431,7 +431,7 @@
     "managementZone": null
    },
    "customName": "Duration",
-   "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyCompareApp\"",
+   "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyCompareApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -449,8 +449,8 @@
     "timeframe": "-MyCompareTimeh to -MyTimeh",
     "managementZone": null
    },
-   "customName": "New User Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and CompareLastFunnelStep and newUser IS true",
+   "customName": "Requests",
+   "query": "select count(*) as \"Requests\" FROM usersession where useraction.application=\"MyCompareApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -469,7 +469,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"FRUSTRATED\" and comparerevenueproperty>0",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"FRUSTRATED\" and comparerevenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -488,7 +488,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"SATISFIED\" and comparerevenueproperty>0",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"SATISFIED\" and comparerevenueproperty>0 and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -507,7 +507,7 @@
     "managementZone": null
    },
    "customName": "Errors",
-   "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyCompareApp\"",
+   "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyCompareApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -525,8 +525,8 @@
     "timeframe": "-MyCompareTimeh to -MyTimeh",
     "managementZone": null
    },
-   "customName": "Returning User Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and CompareLastFunnelStep and newUser IS false",
+   "customName": "Session Duration",
+   "query": "select avg(duration) as \"Session Duration\" FROM usersession where useraction.application=\"MyCompareApp\" and StepNewFeature1",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -561,7 +561,7 @@
    }
   },
   {
-   "name": "MyCompareApp MyCompareFunnel Previous MyTime Hours",
+   "name": "MyCompareApp FeatureHeaderStep Previous MyTime Hours",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -576,7 +576,7 @@
    }
   },
   {
-   "name": "MyApp MyFunnel Last MyTime Hours",
+   "name": "MyApp FeatureHeaderStep Last MyTime Hours",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -605,7 +605,7 @@
     "managementZone": null
    },
    "customName": "Average Order Value",
-   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep",
+   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and StepNewFeature1",
    "type": "SINGLE_VALUE", 
    "timeFrameShift": "dynamic"
   },
@@ -624,7 +624,7 @@
     "managementZone": null
    },
    "customName": "Average Order Value",
-   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep",
+   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and StepNewFeature1",
    "type": "SINGLE_VALUE", 
    "timeFrameShift": "dynamic"
   }

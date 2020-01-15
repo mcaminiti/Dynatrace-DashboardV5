@@ -91,7 +91,7 @@
    "customName": " ",
    "query": "select count(usersessionid) as \"Satisfied Users\" from usersession where userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -110,7 +110,7 @@
    "customName": " ",
    "query": "select count(usersessionid) as \"Tolerated Users\" from usersession where userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -129,7 +129,7 @@
    "customName": " ",
    "query": "select count(usersessionid) as \"Frustrated Users\" from usersession where userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -148,7 +148,7 @@
    "customName": " ",
    "query": "select PERCENTILE(duration,90) as \"Duration 90th Percentile\" from useraction",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -167,7 +167,7 @@
    "customName": " ",
    "query": "select PERCENTILE(visuallyCompleteTime,90) as \"Visually Complete 90th Percentile\" from useraction",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -186,7 +186,7 @@
    "customName": " ",
    "query": "select PERCENTILE(speedIndex,90) as \"Speed Index 90th Percentile\" from useraction",
    "type": "SINGLE_VALUE",
-   "timeFrameShift": "-2h"
+   "timeFrameShift": "dynamic"
   },
   {
    "name": "Live user activity",
