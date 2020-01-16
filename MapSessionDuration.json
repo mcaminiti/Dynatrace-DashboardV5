@@ -1,0 +1,59 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      3
+    ],
+    "clusterVersion": "1.186.0.20200115-201640"
+  },
+  "id": "10604043-f873-4ff8-86f6-6b0f399da313",
+  "dashboardMetadata": {
+    "name": "\ud83c\udf0e Session Duration",
+    "shared": true,
+    "owner": "MyEmail",
+    "sharingDetails": {
+      "linkShared": true,
+      "published": true
+    },
+    "dashboardFilter": {
+      "timeframe": "",
+      "managementZone": null
+    }
+  },
+  "tiles": [
+    {
+      "name": "World map",
+      "tileType": "APPLICATION_WORLDMAP",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 190,
+        "width": 1292,
+        "height": 760
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "assignedEntities": [
+        "InternalAppID"
+      ],
+      "metric": "SESSION_DURATION"
+    },
+	  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 1520,
+    "width": 152,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## \ud83c\udfac [Return](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b3da313)"
+  }
+  ]
+}

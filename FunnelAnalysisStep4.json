@@ -330,7 +330,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20totalErrorCount%20as%20%22Funnel%20Click%20Path%20Errors%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
+   "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20totalErrorCount%20as%20%22Funnel%20Click%20Path%20Errors%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
   },
   {
    "name": "DTAQL",
@@ -1386,7 +1386,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.httpRequestsWithErrors%20as%20%22Funnel%20Click%20Path%20HTTP%20Errors%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20desc&visualization=TABLE)"
+   "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.httpRequestsWithErrors%20as%20%22Funnel%20Click%20Path%20HTTP%20Errors%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4%20and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20desc&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -1402,7 +1402,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.failedImages%20as%20%22Funnel%20Click%20Path%20Failed%20Iamges%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc&visualization=TABLE)"
+   "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.failedImages%20as%20%22Funnel%20Click%20Path%20Failed%20Iamges%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -1418,7 +1418,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.failedXhrRequests%20as%20%22Funnel%20Click%20Path%20Failed%20Xhr%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20desc&visualization=TABLE)"
+   "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.failedXhrRequests%20as%20%22Funnel%20Click%20Path%20Failed%20Xhr%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel4%20and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20desc&visualization=TABLE)"
   },
   {
    "name": "DTAQL",

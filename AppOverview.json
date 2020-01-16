@@ -234,7 +234,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Funnel Links3]()\n"
+   "markdown": "![World Map Links1]()\n## [APDEX](#dashboard;id=01604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Action Count](#dashboard;id=02604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Load Actions](#dashboard;id=03604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Load XHR](#dashboard;id=04604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [JS Errors](#dashboard;id=05604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Active Sessions](#dashboard;id=06604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Active Users](#dashboard;id=07604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Actions per Session](#dashboard;id=08604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Bounce Rate](#dashboard;id=09604043-f873-4ff8-86f6-6b0f399da313)\n![]()\n## [Session Duration](#dashboard;id=10604043-f873-4ff8-86f6-6b0f399da313)"
   },
   {
    "name": "Markdown",
@@ -402,7 +402,7 @@
       }
     },
     {
-      "name": "Funnel Links \u25BC",
+      "name": "World Map Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {

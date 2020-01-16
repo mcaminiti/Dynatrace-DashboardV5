@@ -59,7 +59,7 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 0,
+        "top": 38,
         "left": 1368,
         "width": 304,
         "height": 798
@@ -182,10 +182,10 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 798,
-    "left": 1406,
-    "width": 266,
-    "height": 38
+        "top": 0,
+        "left": 1520,
+        "width": 152,
+        "height": 38
    },
    "tileFilter": {
     "timeframe": null,

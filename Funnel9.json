@@ -882,7 +882,7 @@
   "managementZone": null
   },
   "customName": "StepHeader9",
-  "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and useraction.name=\"foo\"",
+  "query": "select 0 as \"Abandons\" from usersession limit 1",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
