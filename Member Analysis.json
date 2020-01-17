@@ -88,7 +88,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83c\udfc1",
+      "customName": "💰",
       "query": "SELECT stringProperties.memberstatus, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
@@ -382,7 +382,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83c\udfc1",
+      "customName": "😡",
       "query": "SELECT stringProperties.memberstatus, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
@@ -416,7 +416,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
+      "customName": "😡",
       "query": "SELECT stringProperties.memberstatus, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by count(userSessionId) desc",
       "type": "PIE_CHART"
     },
