@@ -102,7 +102,7 @@
    "bounds": {
     "top": 304,
     "left": 570,
-    "width": 532,
+    "width": 494,
     "height": 380
    },
    "tileFilter": {
@@ -119,7 +119,7 @@
    "configured": true,
    "bounds": {
     "top": 304,
-    "left": 1140,
+    "left": 1102,
     "width": 532,
     "height": 380
    },
@@ -137,7 +137,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 874,
+    "left": 836,
     "width": 266,
     "height": 114
    },
@@ -156,7 +156,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 1140,
+    "left": 1102,
     "width": 266,
     "height": 114
    },
@@ -175,7 +175,7 @@
    "configured": true,
    "bounds": {
     "top": 684,
-    "left": 1406,
+    "left": 1368,
     "width": 266,
     "height": 114
    },
@@ -209,8 +209,8 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 836,
-    "left": 266,
+    "top": 834,
+    "left": 1102,
     "width": 266,
     "height": 494
    },
@@ -218,7 +218,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Funnel Links2]()\n"
+   "markdown": "![Forecast Links1]()\n## [Application Forecast](#dashboard;id=18e35e26-8734-467e-9c04-0f398e1da313)"
   },
   {
    "name": "Markdown",
@@ -242,7 +242,7 @@
    "configured": true,
    "bounds": {
     "top": 836,
-    "left": 874,
+    "left": 836,
     "width": 266,
     "height": 494
    },
@@ -257,16 +257,16 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 798,
-    "left": 1140,
+    "top": 836,
+    "left": 266,
     "width": 266,
-    "height": 38
+    "height": 494
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Release Validation](#dashboard;id=56d9f8de-c0d1-4b91-8930-6641a73da313)"
+   "markdown": "![World Map Links1]()\n## [Release Validation](#dashboard;id=56d9f8de-c0d1-4b91-8930-6641a73da313)"
   },
   {
    "name": "User behavior",
@@ -292,7 +292,7 @@
    "configured": true,
    "bounds": {
     "top": 0,
-    "left": 684,
+    "left": 988,
     "width": 304,
     "height": 304
    },
@@ -310,8 +310,8 @@
    "configured": true,
    "bounds": {
     "top": 0,
-    "left": 1368,
-    "width": 304,
+    "left": 684,
+    "width": 266,
     "height": 304
    },
    "tileFilter": {
@@ -328,7 +328,7 @@
    "configured": true,
    "bounds": {
     "top": 0,
-    "left": 1026,
+    "left": 1330,
     "width": 304,
     "height": 304
    },
@@ -355,22 +355,6 @@
     "managementZone": null
    }
   },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 798,
-    "left": 1406,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## \ud83d\ude80 [Return](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
-  },
           {
       "name": "Funnel Links \u25BC",
       "tileType": "HEADER",
@@ -387,7 +371,7 @@
       }
     },
     {
-      "name": "Funnel Links \u25BC",
+      "name": "Compare Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -422,7 +406,7 @@
       "configured": true,
       "bounds": {
         "top": 798,
-        "left": 874,
+        "left": 836,
         "width": 266,
         "height": 38
       },
@@ -430,6 +414,53 @@
         "timeframe": null,
         "managementZone": null
       }
-    }
+    },
+    {
+      "name": "Forecast Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 798,
+        "left": 1102,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 798,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+   },
+   "markdown": "## [Explore Application](#uemapplications/uemappmetrics;uemapplicationId=InternalAppID)"
+    },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 1634,
+    "width": 38,
+    "height": 76
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "# [\u23ce](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
+  }
  ]
 }
