@@ -35,7 +35,7 @@
         "managementZone": null
       },
       "customName": "🥉",
-      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and useraction.name=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -53,7 +53,7 @@
         "managementZone": null
       },
       "customName": "🥈",
-      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and useraction.name=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -71,7 +71,7 @@
         "managementZone": null
       },
       "customName": "🥇",
-      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and useraction.name=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -89,7 +89,7 @@
         "managementZone": null
       },
       "customName": "\ud83c\udfc1",
-      "query": "SELECT stringProperties.memberstatus, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and useraction.name=\"Finish\" and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by sum(revenueproperty) desc",
+      "query": "SELECT stringProperties.memberstatus, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -106,7 +106,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Platinum Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Platinum%22%20and%20useraction.name%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Platinum Conversions"
     },
     {
       "name": "Markdown",
@@ -122,7 +122,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Gold Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20\"User\",%20revenueproperty%20as%20\"Revenue\"%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D\"Gold\"%20and%20useraction.name%3D\"Finish\"%20and%0A%09revenueproperty>0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Gold Conversions"
     },
     {
       "name": "Markdown",
@@ -138,7 +138,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Silver Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Silver%22%20and%20useraction.name%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Silver Conversions"
     },
     {
       "name": "DTAQL",
@@ -155,7 +155,7 @@
         "managementZone": null
       },
       "customName": "\ud83c\udfc1",
-      "query": "SELECT stringProperties.memberstatus, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and useraction.name=\"Finish\" and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by count(userSessionId) desc",
+      "query": "SELECT stringProperties.memberstatus, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by count(userSessionId) desc",
       "type": "PIE_CHART"
     },
     {
@@ -173,7 +173,7 @@
         "managementZone": null
       },
       "customName": "🥇",
-      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and useraction.name=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -191,7 +191,7 @@
         "managementZone": null
       },
       "customName": "🥈",
-      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and useraction.name=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -209,7 +209,7 @@
         "managementZone": null
       },
       "customName": "🥉",
-      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and useraction.name=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -226,7 +226,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Platinum Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Platinum%22%20and%20useraction.name%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Platinum Revenue"
     },
     {
       "name": "Markdown",
@@ -242,7 +242,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Gold Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20\"User\",%20revenueproperty%20as%20\"Revenue\"%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D\"Gold\"%20and%20useraction.name%3D\"Finish\"%20and%0A%09revenueproperty>0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Gold Revenue"
     },
     {
       "name": "Markdown",
@@ -258,7 +258,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Silver Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Silver%22%20and%20useraction.name%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Silver Revenue"
     },
     {
       "name": "DTAQL",
@@ -275,7 +275,7 @@
         "managementZone": null
       },
       "customName": "🥇",
-      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and useraction.name!=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -293,7 +293,7 @@
         "managementZone": null
       },
       "customName": "🥈",
-      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and useraction.name!=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -311,7 +311,7 @@
         "managementZone": null
       },
       "customName": "🥉",
-      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and useraction.name!=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -329,7 +329,7 @@
         "managementZone": null
       },
       "customName": "🥇",
-      "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and useraction.name!=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -347,7 +347,7 @@
         "managementZone": null
       },
       "customName": "🥈",
-      "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and useraction.name!=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -365,7 +365,7 @@
         "managementZone": null
       },
       "customName": "🥉",
-      "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and useraction.name!=\"Finish\" and\n\trevenueproperty>0\n",
+      "query": "select count(distinct userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -383,7 +383,7 @@
         "managementZone": null
       },
       "customName": "\ud83c\udfc1",
-      "query": "SELECT stringProperties.memberstatus, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and useraction.name!=\"Finish\" and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by sum(revenueproperty) desc",
+      "query": "SELECT stringProperties.memberstatus, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -400,7 +400,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Platinum Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Platinum%22%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Platinum Lost Revenue"
     },
     {
       "name": "DTAQL",
@@ -417,7 +417,7 @@
         "managementZone": null
       },
       "customName": "\ud83d\udcb0",
-      "query": "SELECT stringProperties.memberstatus, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and useraction.name!=\"Finish\" and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by count(userSessionId) desc",
+      "query": "SELECT stringProperties.memberstatus, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep and stringProperties.memberstatus IS NOT NULL group by stringProperties.memberstatus order by count(userSessionId) desc",
       "type": "PIE_CHART"
     },
     {
@@ -434,7 +434,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Gold Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Gold%22%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Gold Lost Revenue"
     },
     {
       "name": "Markdown",
@@ -450,7 +450,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Silver Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Silver%22%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE&visualization=TABLE)"
+      "markdown": "## Silver Lost Revenue"
     },
     {
       "name": "Markdown",
@@ -466,7 +466,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Platinum Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Platinum%22%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Platinum Abandons"
     },
     {
       "name": "Markdown",
@@ -482,7 +482,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Gold Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Gold%22%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Gold Abandons"
     },
     {
       "name": "Markdown",
@@ -498,7 +498,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Silver Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%3D%22Silver%22%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE&visualization=TABLE)"
+      "markdown": "## Silver Abandons"
     },
     {
       "name": "Markdown",
@@ -514,7 +514,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Revenue by Member Status](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20stringProperties.memberstatus%20as%20%22Member%20Status%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%20in%20(%22Platinum%22,%20%22Gold%22,%20%22Silver%22)%20and%20useraction.name%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&&visualization=TABLE)"
+      "markdown": "## Revenue by Member Status"
     },
     {
       "name": "Markdown",
@@ -530,7 +530,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Conversions by Member Status](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%20in%20(%22Platinum%22,%20%22Gold%22,%20%22Silver%22)%20and%20useraction.name%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Conversions by Member Status"
     },
     {
       "name": "Markdown",
@@ -546,7 +546,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Lost Revenue by Member Status](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20stringProperties.memberstatus%20as%20%22Member%20Status%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%20in%20(%22Platinum%22,%20%22Gold%22,%20%22Silver%22)%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+      "markdown": "## Lost Revenue by Member Status"
     },
     {
       "name": "Markdown",
@@ -562,39 +562,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Abandons by Member Status](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20stringProperties.memberstatus%20as%20%22Member%20Status%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09stringProperties.memberstatus%20in%20(%22Platinum%22,%20%22Gold%22,%20%22Silver%22)%20and%20useraction.name!%3D%22Finish%22%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 1558,
-        "width": 152,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 1558,
-        "width": 152,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
+      "markdown": "## Abandons by Member Status"
     }
   ]
 }
