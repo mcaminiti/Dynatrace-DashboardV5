@@ -1,4 +1,4 @@
-﻿{
+{
   "metadata": {
     "configurationVersions": [
       2
@@ -173,7 +173,7 @@
         "managementZone": null
       },
       "customName": "🥇",
-      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and LastFunnelStep and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Bookings\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -191,7 +191,7 @@
         "managementZone": null
       },
       "customName": "🥈",
-      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and LastFunnelStep and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Bookings\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -209,7 +209,7 @@
         "managementZone": null
       },
       "customName": "🥉",
-      "query": "select sum(revenueproperty) as \"Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and LastFunnelStep and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Bookings\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -226,7 +226,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Platinum Revenue"
+      "markdown": "## Platinum Bookings"
     },
     {
       "name": "Markdown",
@@ -242,7 +242,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Gold Revenue"
+      "markdown": "## Gold Bookings"
     },
     {
       "name": "Markdown",
@@ -258,7 +258,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Silver Revenue"
+      "markdown": "## Silver Bookings"
     },
     {
       "name": "DTAQL",
@@ -275,7 +275,7 @@
         "managementZone": null
       },
       "customName": "🥇",
-      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and not LastFunnelStep and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Lost Bookings\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Platinum\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -293,7 +293,7 @@
         "managementZone": null
       },
       "customName": "🥈",
-      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and not LastFunnelStep and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Lost Bookings\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Gold\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -311,7 +311,7 @@
         "managementZone": null
       },
       "customName": "🥉",
-      "query": "select sum(revenueproperty) as \"Lost Revenue\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and not LastFunnelStep and\n\trevenueproperty>0\n",
+      "query": "select sum(revenueproperty) as \"Lost Bookings\"  FROM usersession where useraction.application=\"MyApp\" and\n\tstringProperties.memberstatus=\"Silver\" and not LastFunnelStep and\n\trevenueproperty>0\n",
       "type": "SINGLE_VALUE"
     },
     {
@@ -400,7 +400,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Platinum Lost Revenue"
+      "markdown": "## Platinum Lost Bookings"
     },
     {
       "name": "DTAQL",
@@ -434,7 +434,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Gold Lost Revenue"
+      "markdown": "## Gold Lost Bookings"
     },
     {
       "name": "Markdown",
@@ -450,7 +450,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Silver Lost Revenue"
+      "markdown": "## Silver Lost Bookings"
     },
     {
       "name": "Markdown",
@@ -514,7 +514,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Revenue by Member Status"
+      "markdown": "## Bookings by Member Status"
     },
     {
       "name": "Markdown",
@@ -546,7 +546,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Lost Revenue by Member Status"
+      "markdown": "## Lost Bookings by Member Status"
     },
     {
       "name": "Markdown",
