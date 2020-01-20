@@ -3,11 +3,11 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.186.0.20200115-201640"
+    "clusterVersion": "1.186.3.20200117-115558"
   },
-  "id": "af663a92-726d-494f-addd-3e92461da313",
+  "id": "0663ef55-a070-4455-8ec8-080e736da313",
   "dashboardMetadata": {
-    "name": "\ud83d\udce1 Host Overview",
+    "name": "\ud83d\udce1 Disk Utilization",
     "shared": true,
     "owner": "MyEmail",
     "sharingDetails": {
@@ -25,151 +25,9 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 228,
-        "left": 0,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "CPU",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.cpu.usage",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "",
-      "tileType": "HOSTS",
-      "configured": true,
-      "bounds": {
         "top": 38,
         "left": 0,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "HOST",
-        "customName": "Host Health",
-        "defaultName": "Host Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      },
-      "chartVisible": true
-    },
-    {
-      "name": "",
-      "tileType": "HOSTS",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 570,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "HOST",
-        "customName": "Impacted Host Health",
-        "defaultName": "Impacted Host Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "HOST": {
-            "PROBLEM_IMPACT": [
-              "true"
-            ]
-          }
-        }
-      },
-      "chartVisible": true
-    },
-    {
-      "name": "",
-      "tileType": "HOSTS",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 1140,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "HOST",
-        "customName": "Non Impacted Host Health",
-        "defaultName": "Non Impacted Host Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "HOST": {
-            "PROBLEM_IMPACT": [
-              "false"
-            ]
-          }
-        }
-      },
-      "chartVisible": true
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 418,
-        "width": 418,
+        "width": 266,
         "height": 304
       },
       "tileFilter": {
@@ -178,60 +36,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Memory",
+        "customName": "Disk available %",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TOP_LIST",
+          "type": "SINGLE_VALUE",
           "series": [
             {
-              "metric": "builtin:host.mem.usage",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 836,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Network",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.net.nic.trafficIn",
+              "metric": "builtin:host.disk.free",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
@@ -245,7 +57,7 @@
                 },
                 {
                   "id": "1",
-                  "name": "Network interface",
+                  "name": "Disk",
                   "values": [],
                   "entityDimension": true
                 }
@@ -265,9 +77,9 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 228,
-        "left": 1254,
-        "width": 418,
+        "top": 38,
+        "left": 836,
+        "width": 266,
         "height": 304
       },
       "tileFilter": {
@@ -276,11 +88,11 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Disk",
+        "customName": "Disk used",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TOP_LIST",
+          "type": "SINGLE_VALUE",
           "series": [
             {
               "metric": "builtin:host.disk.usedPct",
@@ -317,9 +129,9 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
-        "left": 836,
-        "width": 418,
+        "top": 342,
+        "left": 0,
+        "width": 266,
         "height": 304
       },
       "tileFilter": {
@@ -328,82 +140,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Network",
+        "customName": "Disk throughput read",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TIMESERIES",
+          "type": "SINGLE_VALUE",
           "series": [
             {
-              "metric": "builtin:host.net.nic.trafficIn",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Host",
-                  "values": [],
-                  "entityDimension": true
-                },
-                {
-                  "id": "1",
-                  "name": "Network interface",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 1520,
-        "width": 152,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## \ud83d\ude80 [Return](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 532,
-        "left": 1254,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Disk",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [
-            {
-              "metric": "builtin:host.disk.usedPct",
+              "metric": "builtin:host.disk.throughput.read",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
@@ -437,9 +181,9 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
-        "left": 418,
-        "width": 418,
+        "top": 342,
+        "left": 836,
+        "width": 266,
         "height": 304
       },
       "tileFilter": {
@@ -448,14 +192,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Memory",
+        "customName": "Disk throughput write",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TIMESERIES",
+          "type": "SINGLE_VALUE",
           "series": [
             {
-              "metric": "builtin:host.mem.usage",
+              "metric": "builtin:host.disk.throughput.write",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
@@ -464,6 +208,12 @@
                 {
                   "id": "0",
                   "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Disk",
                   "values": [],
                   "entityDimension": true
                 }
@@ -483,9 +233,9 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
-        "left": 0,
-        "width": 418,
+        "top": 38,
+        "left": 266,
+        "width": 570,
         "height": 304
       },
       "tileFilter": {
@@ -494,22 +244,28 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "CPU",
+        "customName": "Disk available %",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
           "type": "TIMESERIES",
           "series": [
             {
-              "metric": "builtin:host.cpu.usage",
+              "metric": "builtin:host.disk.free",
               "aggregation": "AVG",
               "percentile": null,
-              "type": "LINE",
+              "type": "AREA",
               "entityType": "HOST",
               "dimensions": [
                 {
                   "id": "0",
                   "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Disk",
                   "values": [],
                   "entityDimension": true
                 }
@@ -523,6 +279,178 @@
         },
         "filtersPerEntityType": {}
       }
-    }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 266,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Disk throughput read",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:host.disk.throughput.read",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "HOST",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1102,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Disk used",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:host.disk.usedPct",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "HOST",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 1102,
+        "width": 570,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Disk throughput write",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:host.disk.throughput.write",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "HOST",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Disk",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 1634,
+    "width": 38,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [\u23ce](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
+  }
   ]
 }

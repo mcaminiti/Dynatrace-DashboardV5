@@ -3,11 +3,11 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.186.0.20200115-201640"
+    "clusterVersion": "1.186.3.20200117-115558"
   },
-  "id": "af663a92-726d-494f-addd-3e92461da313",
+  "id": "f2fe11ab-4a93-4b64-aa58-8203c4fda313",
   "dashboardMetadata": {
-    "name": "\ud83d\udce1 Host Overview",
+    "name": "\ud83d\udce1 Network Utilization",
     "shared": true,
     "owner": "MyEmail",
     "sharingDetails": {
@@ -25,152 +25,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 228,
-        "left": 0,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "CPU",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.cpu.usage",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "",
-      "tileType": "HOSTS",
-      "configured": true,
-      "bounds": {
         "top": 38,
         "left": 0,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "HOST",
-        "customName": "Host Health",
-        "defaultName": "Host Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      },
-      "chartVisible": true
-    },
-    {
-      "name": "",
-      "tileType": "HOSTS",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 570,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "HOST",
-        "customName": "Impacted Host Health",
-        "defaultName": "Impacted Host Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "HOST": {
-            "PROBLEM_IMPACT": [
-              "true"
-            ]
-          }
-        }
-      },
-      "chartVisible": true
-    },
-    {
-      "name": "",
-      "tileType": "HOSTS",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 1140,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "HOST",
-        "customName": "Non Impacted Host Health",
-        "defaultName": "Non Impacted Host Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "HOST": {
-            "PROBLEM_IMPACT": [
-              "false"
-            ]
-          }
-        }
-      },
-      "chartVisible": true
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 418,
-        "width": 418,
-        "height": 304
+        "width": 266,
+        "height": 266
       },
       "tileFilter": {
         "timeframe": null,
@@ -178,57 +36,11 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Memory",
+        "customName": "Traffic in",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.mem.usage",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Host",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 836,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Network",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
+          "type": "SINGLE_VALUE",
           "series": [
             {
               "metric": "builtin:host.net.nic.trafficIn",
@@ -265,62 +77,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 228,
-        "left": 1254,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Disk",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "builtin:host.disk.usedPct",
-              "aggregation": "AVG",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "HOST",
-              "dimensions": [
-                {
-                  "id": "0",
-                  "name": "Host",
-                  "values": [],
-                  "entityDimension": true
-                },
-                {
-                  "id": "1",
-                  "name": "Disk",
-                  "values": [],
-                  "entityDimension": true
-                }
-              ],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
-      "name": "Custom chart",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 532,
+        "top": 38,
         "left": 836,
-        "width": 418,
-        "height": 304
+        "width": 266,
+        "height": 266
       },
       "tileFilter": {
         "timeframe": null,
@@ -328,14 +88,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Network",
+        "customName": "Traffic out",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TIMESERIES",
+          "type": "SINGLE_VALUE",
           "series": [
             {
-              "metric": "builtin:host.net.nic.trafficIn",
+              "metric": "builtin:host.net.nic.trafficOut",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
@@ -365,30 +125,14 @@
       }
     },
     {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 1520,
-        "width": 152,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## \ud83d\ude80 [Return](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
-    },
-    {
       "name": "Custom chart",
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
-        "left": 1254,
-        "width": 418,
-        "height": 304
+        "top": 304,
+        "left": 0,
+        "width": 266,
+        "height": 266
       },
       "tileFilter": {
         "timeframe": null,
@@ -396,14 +140,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Disk",
+        "customName": "Network interface packets received on host",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TIMESERIES",
+          "type": "SINGLE_VALUE",
           "series": [
             {
-              "metric": "builtin:host.disk.usedPct",
+              "metric": "builtin:host.net.nic.packets.rx",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
@@ -417,7 +161,7 @@
                 },
                 {
                   "id": "1",
-                  "name": "Disk",
+                  "name": "Network interface",
                   "values": [],
                   "entityDimension": true
                 }
@@ -437,10 +181,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
-        "left": 418,
-        "width": 418,
-        "height": 304
+        "top": 304,
+        "left": 836,
+        "width": 266,
+        "height": 266
       },
       "tileFilter": {
         "timeframe": null,
@@ -448,14 +192,14 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "Memory",
+        "customName": "Network interface packets sent on host",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TIMESERIES",
+          "type": "SINGLE_VALUE",
           "series": [
             {
-              "metric": "builtin:host.mem.usage",
+              "metric": "builtin:host.net.nic.packets.tx",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
@@ -466,6 +210,12 @@
                   "name": "Host",
                   "values": [],
                   "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Network interface",
+                  "values": [],
+                  "entityDimension": true
                 }
               ],
               "sortAscending": false,
@@ -483,10 +233,218 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
+        "top": 38,
+        "left": 266,
+        "width": 570,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Traffic in",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:host.net.nic.trafficIn",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "HOST",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Network interface",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 1102,
+        "width": 570,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Network interface packets sent on host",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:host.net.nic.packets.tx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "HOST",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Network interface",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1102,
+        "width": 570,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Traffic out",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:host.net.nic.trafficOut",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "HOST",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Network interface",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 266,
+        "width": 570,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Network interface packets received on host",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:host.net.nic.packets.rx",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "HOST",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Host",
+                  "values": [],
+                  "entityDimension": true
+                },
+                {
+                  "id": "1",
+                  "name": "Network interface",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
         "left": 0,
-        "width": 418,
-        "height": 304
+        "width": 266,
+        "height": 266
       },
       "tileFilter": {
         "timeframe": null,
@@ -494,22 +452,22 @@
       },
       "filterConfig": {
         "type": "MIXED",
-        "customName": "CPU",
+        "customName": "Throughput",
         "defaultName": "Custom chart",
         "chartConfig": {
           "legendShown": true,
-          "type": "TIMESERIES",
+          "type": "SINGLE_VALUE",
           "series": [
             {
-              "metric": "builtin:host.cpu.usage",
+              "metric": "builtin:tech.generic.network.throughput",
               "aggregation": "AVG",
               "percentile": null,
               "type": "LINE",
-              "entityType": "HOST",
+              "entityType": "PROCESS_GROUP_INSTANCE",
               "dimensions": [
                 {
                   "id": "0",
-                  "name": "Host",
+                  "name": "Process",
                   "values": [],
                   "entityDimension": true
                 }
@@ -523,6 +481,160 @@
         },
         "filtersPerEntityType": {}
       }
-    }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 266,
+        "width": 570,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Throughput",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:tech.generic.network.throughput",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "PROCESS_GROUP_INSTANCE",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Process",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 836,
+        "width": 266,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Application Network contribution",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "SINGLE_VALUE",
+          "series": [
+            {
+              "metric": "builtin:apps.web.networkContribution.load",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "LINE",
+              "entityType": "APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+    {
+      "name": "Custom chart",
+      "tileType": "CUSTOM_CHARTING",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 1102,
+        "width": 570,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "filterConfig": {
+        "type": "MIXED",
+        "customName": "Application Network contribution",
+        "defaultName": "Custom chart",
+        "chartConfig": {
+          "legendShown": true,
+          "type": "TIMESERIES",
+          "series": [
+            {
+              "metric": "builtin:apps.web.networkContribution.load",
+              "aggregation": "AVG",
+              "percentile": null,
+              "type": "AREA",
+              "entityType": "APPLICATION",
+              "dimensions": [
+                {
+                  "id": "0",
+                  "name": "Application",
+                  "values": [],
+                  "entityDimension": true
+                }
+              ],
+              "sortAscending": false,
+              "sortColumn": true,
+              "aggregationRate": "TOTAL"
+            }
+          ],
+          "resultMetadata": {}
+        },
+        "filtersPerEntityType": {}
+      }
+    },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 1634,
+    "width": 38,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [\u23ce](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
+  }
   ]
 }
