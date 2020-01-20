@@ -250,7 +250,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Custom Links1]()\n"
+   "markdown": "![Analysis Links1]()\n\n![]()\n## [User Action Analysis](#dashboard;id=2829b22c-ea5c-48bf-9fe3-f746160da313)\n![]()\n## [Session Analysis](#dashboard;id=dc858870-3724-4df3-b341-67156f9da313)"
   },
  {
    "name": "Markdown",
@@ -401,7 +401,7 @@
       }
     },
     {
-      "name": "Custom Links \u25BC",
+      "name": "Analysis Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -429,12 +429,12 @@
         "timeframe": null,
         "managementZone": null
       }
-    },
+  },
     {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
+      "name": "Custom Links \u25BC",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
         "top": 798,
         "left": 1368,
         "width": 266,
@@ -443,9 +443,24 @@
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-   },
-   "markdown": "## [Explore Application](#uemapplications/uemappmetrics;uemapplicationId=InternalAppID)"
+      }
     },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 798,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "![Custom Links1]()\n"
+  },
   {
    "name": "Markdown",
    "tileType": "MARKDOWN",
