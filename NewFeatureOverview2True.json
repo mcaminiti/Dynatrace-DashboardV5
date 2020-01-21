@@ -470,7 +470,7 @@
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
-    "top": 532,
+    "top": 418,
     "left": 38,
     "width": 228,
     "height": 38
@@ -511,7 +511,7 @@
     "managementZone": null
    },
    "customName": "\u2620",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and StepNewFeature1",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and StepNewFeature1",
    "type": "COLUMN_CHART"
   },
   {
