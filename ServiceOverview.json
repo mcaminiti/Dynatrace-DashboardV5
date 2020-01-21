@@ -339,7 +339,7 @@
         "managementZone": null
       },
       "filterConfig": {
-        "type": "NON_DATABASE_SERVICE",
+        "type": "SERVICE",
         "customName": "Impacted Service Health",
         "defaultName": "Impacted Service Health",
         "chartConfig": {
@@ -373,7 +373,7 @@
         "managementZone": null
       },
       "filterConfig": {
-        "type": "NON_DATABASE_SERVICE",
+        "type": "SERVICE",
         "customName": "Non Impacted Service Health",
         "defaultName": "Non Impacted Service Health",
         "chartConfig": {
