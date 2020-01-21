@@ -28,13 +28,13 @@
         "top": 228,
         "left": 988,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Rage Clicks",
+      "customName": " ",
       "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -47,13 +47,13 @@
         "top": 380,
         "left": 76,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Requests",
+      "customName": " ",
       "query": "select count(*) as \"Requests\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -66,13 +66,13 @@
         "top": 76,
         "left": 988,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Conversions",
+      "customName": " ",
       "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -85,13 +85,13 @@
         "top": 228,
         "left": 1292,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Nonengaged Sessions",
+      "customName": " ",
       "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -104,13 +104,13 @@
         "top": 76,
         "left": 1292,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Abandons",
+      "customName": " ",
       "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -123,13 +123,13 @@
         "top": 380,
         "left": 988,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Speed Index",
+      "customName": " ",
       "query": "select avg(speedIndex) as \"Speed Index\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -142,13 +142,13 @@
         "top": 380,
         "left": 1292,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
+      "customName": " ",
       "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -161,13 +161,13 @@
         "top": 76,
         "left": 76,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue",
+      "customName": " ",
       "query": "select sum(doubleProperties.cartamount) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -180,13 +180,13 @@
         "top": 76,
         "left": 684,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue All Funnels",
+      "customName": " ",
       "query": "select sum(doubleProperties.cartamount) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -199,13 +199,13 @@
         "top": 76,
         "left": 380,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue",
+      "customName": " ",
       "query": "select sum(doubleProperties.cartamount) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and userExperienceScore!=\"SATISFIED\"",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -218,13 +218,13 @@
         "top": 228,
         "left": 684,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Frustrated Sessions",
+      "customName": " ",
       "query": "select count(usersessionid) as \"Frustrated Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\" and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -237,13 +237,13 @@
         "top": 228,
         "left": 380,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Tolerated Sessions",
+      "customName": " ",
       "query": "select count(usersessionid) as \"Tolerated Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\" and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -256,13 +256,13 @@
         "top": 228,
         "left": 76,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Satisfied Sessions",
+      "customName": " ",
       "query": "select count(usersessionid) as \"Satisfied Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -275,13 +275,13 @@
         "top": 380,
         "left": 380,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Duration",
+      "customName": " ",
       "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -294,13 +294,13 @@
         "top": 380,
         "left": 684,
         "width": 304,
-        "height": 152
+        "height": 114
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Visually Complete",
+      "customName": " ",
       "query": "select avg(visuallyCompleteTime) as \"Visually Complete\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
