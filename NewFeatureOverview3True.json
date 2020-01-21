@@ -27,7 +27,7 @@
       "bounds": {
         "top": 228,
         "left": 988,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -46,7 +46,7 @@
       "bounds": {
         "top": 380,
         "left": 76,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -65,7 +65,7 @@
       "bounds": {
         "top": 76,
         "left": 988,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -84,7 +84,7 @@
       "bounds": {
         "top": 228,
         "left": 1292,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -103,7 +103,7 @@
       "bounds": {
         "top": 76,
         "left": 1292,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -122,7 +122,7 @@
       "bounds": {
         "top": 380,
         "left": 988,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -141,7 +141,7 @@
       "bounds": {
         "top": 380,
         "left": 1292,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -160,7 +160,7 @@
       "bounds": {
         "top": 76,
         "left": 76,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -179,7 +179,7 @@
       "bounds": {
         "top": 76,
         "left": 684,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -198,7 +198,7 @@
       "bounds": {
         "top": 76,
         "left": 380,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -217,7 +217,7 @@
       "bounds": {
         "top": 228,
         "left": 684,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -236,7 +236,7 @@
       "bounds": {
         "top": 228,
         "left": 380,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -255,7 +255,7 @@
       "bounds": {
         "top": 228,
         "left": 76,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -274,7 +274,7 @@
       "bounds": {
         "top": 380,
         "left": 380,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -293,7 +293,7 @@
       "bounds": {
         "top": 380,
         "left": 684,
-        "width": 304,
+        "width": 266,
         "height": 114
       },
       "tileFilter": {
@@ -345,7 +345,7 @@
    "bounds": {
     "top": 0,
     "left": 684,
-    "width": 304,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
@@ -375,7 +375,7 @@
    "bounds": {
     "top": 532,
     "left": 76,
-    "width": 304,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
@@ -390,7 +390,7 @@
    "bounds": {
     "top": 532,
     "left": 380,
-    "width": 304,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
@@ -406,7 +406,7 @@
    "bounds": {
     "top": 532,
     "left": 684,
-    "width": 304,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
