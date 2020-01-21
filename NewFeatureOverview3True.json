@@ -26,7 +26,7 @@
       "configured": true,
       "bounds": {
         "top": 228,
-        "left": 874,
+        "left": 722,
         "width": 228,
         "height": 114
       },
@@ -64,7 +64,7 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 874,
+        "left": 722,
         "width": 228,
         "height": 114
       },
@@ -83,7 +83,7 @@
       "configured": true,
       "bounds": {
         "top": 228,
-        "left": 1178,
+        "left": 950,
         "width": 228,
         "height": 114
       },
@@ -102,7 +102,7 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 1178,
+        "left": 950,
         "width": 228,
         "height": 114
       },
@@ -121,7 +121,7 @@
       "configured": true,
       "bounds": {
         "top": 380,
-        "left": 874,
+        "left": 722,
         "width": 228,
         "height": 114
       },
@@ -140,7 +140,7 @@
       "configured": true,
       "bounds": {
         "top": 380,
-        "left": 1178,
+        "left": 950,
         "width": 228,
         "height": 114
       },
@@ -178,7 +178,7 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 570,
+        "left": 494,
         "width": 228,
         "height": 114
       },
@@ -216,7 +216,7 @@
       "configured": true,
       "bounds": {
         "top": 228,
-        "left": 570,
+        "left": 494,
         "width": 228,
         "height": 114
       },
@@ -292,7 +292,7 @@
       "configured": true,
       "bounds": {
         "top": 380,
-        "left": 570,
+        "left": 494,
         "width": 228,
         "height": 114
       },
@@ -405,7 +405,7 @@
    "configured": true,
    "bounds": {
     "top": 532,
-    "left": 570,
+    "left": 494,
     "width": 228,
     "height": 38
    },
