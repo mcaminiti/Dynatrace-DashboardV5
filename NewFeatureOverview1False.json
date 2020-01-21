@@ -55,7 +55,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 190,
+        "top": 76,
         "left": 38,
         "width": 228,
         "height": 114
@@ -74,7 +74,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 190,
+        "top": 76,
         "left": 266,
         "width": 228,
         "height": 114
@@ -93,7 +93,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 190,
+        "top": 76,
         "left": 494,
         "width": 228,
         "height": 114
@@ -112,7 +112,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 190,
+        "top": 76,
         "left": 722,
         "width": 228,
         "height": 114
@@ -131,7 +131,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 190,
+        "top": 76,
         "left": 950,
         "width": 228,
         "height": 114
@@ -150,7 +150,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 190,
+        "top": 76,
         "left": 1178,
         "width": 228,
         "height": 114
@@ -169,7 +169,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 190,
+        "top": 76,
         "left": 1406,
         "width": 228,
         "height": 114
@@ -188,7 +188,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 304,
+        "top": 190,
         "left": 38,
         "width": 228,
         "height": 114
@@ -207,7 +207,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 304,
+        "top": 190,
         "left": 266,
         "width": 228,
         "height": 114
@@ -226,7 +226,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 304,
+        "top": 190,
         "left": 494,
         "width": 228,
         "height": 114
@@ -245,7 +245,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 304,
+        "top": 190,
         "left": 722,
         "width": 228,
         "height": 114
@@ -264,7 +264,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 304,
+        "top": 190,
         "left": 950,
         "width": 228,
         "height": 114
@@ -283,7 +283,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 304,
+        "top": 190,
         "left": 1178,
         "width": 228,
         "height": 114
@@ -302,7 +302,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 304,
+        "top": 190,
         "left": 1406,
         "width": 228,
         "height": 114
@@ -321,7 +321,7 @@
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
-    "top": 418,
+    "top": 304,
     "left": 38,
     "width": 228,
     "height": 38
@@ -336,7 +336,7 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
-    "top": 418,
+    "top": 304,
     "left": 266,
     "width": 228,
     "height": 38
@@ -352,10 +352,10 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
-    "top": 456,
+    "top": 342,
     "left": 38,
     "width": 1596,
-    "height": 378
+    "height": 492
    },
    "tileFilter": {
     "timeframe": null,
