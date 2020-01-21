@@ -20,6 +20,36 @@
   }
  },
  "tiles": [
+  {
+   "name": "PromHeaderStep Campaign",
+   "tileType": "HEADER",
+   "configured": true,
+   "bounds": {
+    "top": 0,
+    "left": 684,
+    "width": 304,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   }
+  },
+  {
+   "name": "_____________________________________________________________________________________________________________________________________________________________________________________________________________________",
+   "tileType": "HEADER",
+   "configured": true,
+   "bounds": {
+    "top": 38,
+    "left": 76,
+    "width": 1596,
+    "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   }
+  },
     {
       "name": "User Sessions Query",
       "tileType": "DTAQL",
@@ -27,7 +57,7 @@
       "bounds": {
         "top": 228,
         "left": 988,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -46,7 +76,7 @@
       "bounds": {
         "top": 380,
         "left": 76,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -65,7 +95,7 @@
       "bounds": {
         "top": 76,
         "left": 988,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -84,7 +114,7 @@
       "bounds": {
         "top": 228,
         "left": 1292,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -103,7 +133,7 @@
       "bounds": {
         "top": 76,
         "left": 1292,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -122,7 +152,7 @@
       "bounds": {
         "top": 380,
         "left": 988,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -141,7 +171,7 @@
       "bounds": {
         "top": 380,
         "left": 1292,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -160,7 +190,7 @@
       "bounds": {
         "top": 76,
         "left": 76,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -179,7 +209,7 @@
       "bounds": {
         "top": 76,
         "left": 684,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -198,7 +228,7 @@
       "bounds": {
         "top": 76,
         "left": 380,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -217,7 +247,7 @@
       "bounds": {
         "top": 228,
         "left": 684,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -236,7 +266,7 @@
       "bounds": {
         "top": 228,
         "left": 380,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -255,7 +285,7 @@
       "bounds": {
         "top": 228,
         "left": 76,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -274,7 +304,7 @@
       "bounds": {
         "top": 380,
         "left": 380,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -293,7 +323,7 @@
       "bounds": {
         "top": 380,
         "left": 684,
-        "width": 304,
+        "width": 266,
         "height": 152
       },
       "tileFilter": {
@@ -340,43 +370,13 @@
    "markdown": "## [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
   },
   {
-   "name": "PromHeaderStep Campaign",
-   "tileType": "HEADER",
-   "configured": true,
-   "bounds": {
-    "top": 0,
-    "left": 684,
-    "width": 304,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   }
-  },
-  {
-   "name": "_____________________________________________________________________________________________________________________________________________________________________________________________________________________",
-   "tileType": "HEADER",
-   "configured": true,
-   "bounds": {
-    "top": 38,
-    "left": 76,
-    "width": 1596,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   }
-  },
-  {
    "name": "Conversions",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
     "top": 532,
     "left": 76,
-    "width": 304,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
@@ -391,7 +391,7 @@
    "bounds": {
     "top": 532,
     "left": 380,
-    "width": 304,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
@@ -407,7 +407,7 @@
    "bounds": {
     "top": 532,
     "left": 684,
-    "width": 304,
+    "width": 266,
     "height": 38
    },
    "tileFilter": {
