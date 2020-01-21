@@ -312,7 +312,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Returning User Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and newUser=false",
+      "query": "select sum(usersession.totalerrorCount) as \"Session Errors\" from usersession where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },

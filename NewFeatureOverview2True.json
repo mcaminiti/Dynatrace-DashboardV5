@@ -312,7 +312,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Returning User Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and newUser=false",
+      "query": "select sum(usersession.totalerrorCount) as \"Session Errors\" from usersession where useraction.application=\"MyApp\" and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -471,7 +471,7 @@
    "configured": true,
    "bounds": {
     "top": 418,
-    "left": 38,
+    "left": 266,
     "width": 228,
     "height": 38
    },
@@ -511,7 +511,7 @@
     "managementZone": null
    },
    "customName": " ",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and StepNewFeature1",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and StepNewFeature1",
    "type": "COLUMN_CHART"
   },
   {
