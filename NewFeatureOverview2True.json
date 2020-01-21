@@ -26,7 +26,7 @@
    "configured": true,
    "bounds": {
     "top": 0,
-    "left": 646,
+    "left": 684,
     "width": 342,
     "height": 38
    },
@@ -36,13 +36,13 @@
    }
   },
   {
-   "name": "_____________________________________________________________________________________________________________________________________________________________________________________________________________________",
+   "name": "______________________________________________________________________________________________________________________________________________________________________________________________________________________________",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
     "top": 38,
     "left": 38,
-    "width": 1596,
+    "width": 1634,
     "height": 38
    },
    "tileFilter": {
@@ -503,14 +503,14 @@
    "bounds": {
     "top": 456,
     "left": 38,
-    "width": 1520,
-    "height": 380
+    "width": 1596,
+    "height": 416
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "customName": "\u2620",
+   "customName": " ",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and StepNewFeature1",
    "type": "COLUMN_CHART"
   },
