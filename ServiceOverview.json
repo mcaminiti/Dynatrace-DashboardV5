@@ -311,9 +311,9 @@
         "managementZone": null
       },
       "filterConfig": {
-        "type": "NON_DATABASE_SERVICE",
-        "customName": "Service Health",
-        "defaultName": "Service Health",
+        "type": "SERVICE",
+        "customName": "Services",
+        "defaultName": "Service",
         "chartConfig": {
           "legendShown": true,
           "type": "TIMESERIES",
