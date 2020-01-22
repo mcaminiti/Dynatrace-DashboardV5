@@ -92,7 +92,7 @@
     "managementZone": null
    },
    "customName": "Duration",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select useraction.application,percentile(useraction.duration,90) as \"90 Percentile\",percentile(useraction.duration,80) as \"80 Percentile\",percentile(useraction.duration,70) as \"70 Percentile\",percentile(useraction.duration,60) as \"60 Percentile\",percentile(useraction.duration,50) as \"50 Percentile\",percentile(useraction.duration,40) as \"40 Percentile\",percentile(useraction.duration,30) as \"30 Percentile\",percentile(useraction.duration,20) as \"20 Percentile\",percentile(useraction.duration,10) as \"10 Percentile\"from usersession where useraction.application=\"MyApp\" group by useraction.application",
    "type": "COLUMN_CHART"
   },
   {
@@ -110,7 +110,7 @@
     "managementZone": null
    },
    "customName": "Visually Complete",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(visuallyCompleteTime) as \"Visually Complete\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select useraction.application,percentile(useraction.visuallycompletetime,90) as \"90 Percentile\",percentile(useraction.visuallycompletetime,80) as \"80 Percentile\",percentile(useraction.visuallycompletetime,70) as \"70 Percentile\",percentile(useraction.visuallycompletetime,60) as \"60 Percentile\",percentile(useraction.visuallycompletetime,50) as \"50 Percentile\",percentile(useraction.visuallycompletetime,40) as \"40 Percentile\",percentile(useraction.visuallycompletetime,30) as \"30 Percentile\",percentile(useraction.visuallycompletetime,20) as \"20 Percentile\",percentile(useraction.visuallycompletetime,10) as \"10 Percentile\"from usersession where useraction.application=\"MyApp\" group by useraction.application",
    "type": "COLUMN_CHART"
   },
   {
@@ -128,7 +128,7 @@
     "managementZone": null
    },
    "customName": "Speed Index",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(speedIndex) as \"Speed Index\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select useraction.application,percentile(useraction.speedindex,90) as \"90 Percentile\",percentile(useraction.speedindex,80) as \"80 Percentile\",percentile(useraction.speedindex,70) as \"70 Percentile\",percentile(useraction.speedindex,60) as \"60 Percentile\",percentile(useraction.speedindex,50) as \"50 Percentile\",percentile(useraction.speedindex,40) as \"40 Percentile\",percentile(useraction.speedindex,30) as \"30 Percentile\",percentile(useraction.speedindex,20) as \"20 Percentile\",percentile(useraction.speedindex,10) as \"10 Percentile\"from usersession where useraction.application=\"MyApp\" group by useraction.application",
    "type": "COLUMN_CHART"
   },
   {
