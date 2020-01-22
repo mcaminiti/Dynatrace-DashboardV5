@@ -3,7 +3,7 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.186.0.20200109-170258"
+    "clusterVersion": "1.187.0.20200121-125453"
   },
   "id": "18e35e26-8734-467e-9c04-0f398e0da313",
   "dashboardMetadata": {
@@ -36,169 +36,196 @@
       }
     },
     {
-      "name": "Revenue",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 76,
         "left": 190,
-        "width": 304,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Revenue"
     },
     {
-      "name": "Average Cart Value",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 494,
-        "width": 304,
+        "left": 418,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Avg Cart Value"
     },
     {
-      "name": "Risk Revenue",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 798,
-        "width": 304,
+        "left": 646,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Risk Revenue"
     },
     {
-      "name": "Lost Revenue",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 874,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## Avg Risk Cart Value"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 76,
         "left": 1102,
-        "width": 304,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Lost Revenue"
     },
     {
-      "name": "New User Revenue",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 1406,
-        "width": 304,
+        "left": 1330,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Avg Lost Cart Value"
     },
     {
-      "name": "Forecast",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 152,
-        "left": 0,
-        "width": 190,
+        "left": 38,
+        "width": 152,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Forecast"
     },
     {
-      "name": "Last Week",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 266,
-        "left": 0,
-        "width": 190,
+        "left": 38,
+        "width": 152,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Week -1"
     },
     {
-      "name": "2 Weeks Ago",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 380,
-        "left": 0,
-        "width": 190,
+        "left": 38,
+        "width": 152,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Week -2"
     },
     {
-      "name": "3 Weeks Ago",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 494,
-        "left": 0,
-        "width": 190,
+        "left": 38,
+        "width": 152,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Week -3"
     },
     {
-      "name": "4 Weeks Ago",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 608,
-        "left": 0,
-        "width": 190,
+        "left": 38,
+        "width": 152,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Week -4"
     },
     {
-      "name": "5 Weeks Ago",
-      "tileType": "HEADER",
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
         "top": 722,
-        "left": 0,
-        "width": 190,
+        "left": 38,
+        "width": 152,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
-      }
+      },
+      "markdown": "## Week -5"
     },
     {
       "name": "User Sessions Query",
@@ -207,7 +234,7 @@
       "bounds": {
         "top": 114,
         "left": 190,
-        "width": 304,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -215,97 +242,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (((revenue1*256 + revenue2*16 + revenue3*4 + revenue4*2 + revenue5)/279) + (revenue1 + ((((revenue1-revenue2) - (revenue2-revenue3))) - (((revenue2-revenue3) - (revenue3-revenue4))) + ((revenue1-revenue2) - (revenue2-revenue3)) + (revenue1-revenue2) + ((revenue2-revenue3) - (revenue3-revenue4)) + (revenue2-revenue3) + ((revenue3-revenue4) - (revenue4-revenue5)) + (revenue3-revenue4) + (revenue4-revenue5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 190,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select revenue1 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 342,
-        "left": 190,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select revenue2 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 456,
-        "left": 190,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select revenue3 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 570,
-        "left": 190,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select revenue4 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 684,
-        "left": 190,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select revenue5 as \" \" from useraction limit 1",
+      "query": "select (((rev1*256 + rev2*16 + rev3*4 + rev4*2 + rev5)/279) + (rev1 + ((((rev1-rev2) - (rev2-rev3))) - (((rev2-rev3) - (rev3-rev4))) + ((rev1-rev2) - (rev2-rev3)) + (rev1-rev2) + ((rev2-rev3) - (rev3-rev4)) + (rev2-rev3) + ((rev3-rev4) - (rev4-rev5)) + (rev3-rev4) + (rev4-rev5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -314,8 +251,8 @@
       "configured": true,
       "bounds": {
         "top": 114,
-        "left": 494,
-        "width": 304,
+        "left": 418,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -331,99 +268,9 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 228,
-        "left": 494,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select acv1 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 342,
-        "left": 494,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select acv2 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 456,
-        "left": 494,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select acv3 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 570,
-        "left": 494,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select acv4 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 684,
-        "left": 494,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select acv5 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
         "top": 114,
-        "left": 798,
-        "width": 304,
+        "left": 646,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -439,9 +286,9 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 228,
-        "left": 798,
-        "width": 304,
+        "top": 114,
+        "left": 874,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -449,79 +296,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select riskrev1 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 342,
-        "left": 798,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select riskrev2 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 456,
-        "left": 798,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select riskrev3 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 570,
-        "left": 798,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select riskrev4 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 684,
-        "left": 798,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select riskrev5 as \" \" from useraction limit 1",
+      "query": "select (((arcv1*256 + arcv2*16 + arcv3*4 + arcv4*2 + arcv5)/279) + (arcv1 + ((((arcv1-arcv2) - (arcv2-arcv3))) - (((arcv2-arcv3) - (arcv3-arcv4))) + ((arcv1-arcv2) - (arcv2-arcv3)) + (arcv1-arcv2) + ((arcv2-arcv3) - (arcv3-arcv4)) + (arcv2-arcv3) + ((arcv3-arcv4) - (arcv4-arcv5)) + (arcv3-arcv4) + (arcv4-arcv5))/10)*2)/3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -531,7 +306,7 @@
       "bounds": {
         "top": 114,
         "left": 1102,
-        "width": 304,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -547,9 +322,99 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
+        "top": 114,
+        "left": 1330,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select (((alcv1*256 + alcv2*16 + alcv3*4 + alcv4*2 + alcv5)/279) + (alcv1 + ((((alcv1-alcv2) - (alcv2-alcv3))) - (((alcv2-alcv3) - (alcv3-alcv4))) + ((alcv1-alcv2) - (alcv2-alcv3)) + (alcv1-alcv2) + ((alcv2-alcv3) - (alcv3-alcv4)) + (alcv2-alcv3) + ((alcv3-alcv4) - (alcv4-alcv5)) + (alcv3-alcv4) + (alcv4-alcv5))/10)*2)/3 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 190,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select rev1 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 418,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select acv1 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 646,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select riskrev1 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 874,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select arcv1 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
         "top": 228,
         "left": 1102,
-        "width": 304,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -565,9 +430,99 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
+        "top": 228,
+        "left": 1330,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select alcv1 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 190,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select rev2 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 418,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select acv2 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 646,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select riskrev2 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 342,
+        "left": 874,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select arcv2 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
         "top": 342,
         "left": 1102,
-        "width": 304,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -583,9 +538,99 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
+        "top": 342,
+        "left": 1330,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select alcv2 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 190,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select rev3 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 418,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select acv3 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 646,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select riskrev3 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 874,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select arcv3 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
         "top": 456,
         "left": 1102,
-        "width": 304,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -601,9 +646,99 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
+        "top": 456,
+        "left": 1330,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select alcv3 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 190,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select rev4 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 418,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select acv4 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 646,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select riskrev4 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 874,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select arcv4 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
         "top": 570,
         "left": 1102,
-        "width": 304,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -619,9 +754,99 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
+        "top": 570,
+        "left": 1330,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select alcv4 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 190,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select rev5 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 418,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select acv5 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 646,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select riskrev5 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 874,
+        "width": 228,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select arcv5 as \" \" from useraction limit 1",
+      "type": "SINGLE_VALUE"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
         "top": 684,
         "left": 1102,
-        "width": 304,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -637,99 +862,9 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 114,
-        "left": 1406,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select (((nur1*256 + nur2*16 + nur3*4 + nur4*2 + nur5)/279) + (nur1 + ((((nur1-nur2) - (nur2-nur3))) - (((nur2-nur3) - (nur3-nur4))) + ((nur1-nur2) - (nur2-nur3)) + (nur1-nur2) + ((nur2-nur3) - (nur3-nur4)) + (nur2-nur3) + ((nur3-nur4) - (nur4-nur5)) + (nur3-nur4) + (nur4-nur5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 1406,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select nur1 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 342,
-        "left": 1406,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select nur2 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 456,
-        "left": 1406,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select nur3 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 570,
-        "left": 1406,
-        "width": 304,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select nur4 as \" \" from useraction limit 1",
-      "type": "SINGLE_VALUE"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
         "top": 684,
-        "left": 1406,
-        "width": 304,
+        "left": 1330,
+        "width": 228,
         "height": 114
       },
       "tileFilter": {
@@ -737,24 +872,8 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select nur5 as \" \" from useraction limit 1",
+      "query": "select alcv5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
-    },
-	  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 798,
-    "left": 1406,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## \u27b2 [Return](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
-  }
+    }
   ]
 }

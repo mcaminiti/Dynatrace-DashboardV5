@@ -36,7 +36,8 @@
    },
    "customName": "Satisfied Users",
    "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"SATISFIED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -54,7 +55,8 @@
    },
    "customName": "Tolerated Users",
    "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"TOLERATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -72,7 +74,8 @@
    },
    "customName": "Frustrated Users",
    "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"FRUSTRATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -90,7 +93,8 @@
    },
    "customName": "Satisfied Users",
    "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"SATISFIED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -108,7 +112,8 @@
    },
    "customName": "Tolerated Users",
    "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"TOLERATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -126,7 +131,8 @@
    },
    "customName": "Frustrated Users",
    "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"FRUSTRATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -144,7 +150,8 @@
    },
    "customName": "Duration",
    "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -162,7 +169,8 @@
    },
    "customName": "Errors",
    "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "Markdown",
@@ -196,7 +204,8 @@
    },
    "customName": "Satisfied Users",
    "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"SATISFIED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -214,7 +223,8 @@
    },
    "customName": "Frustrated Users",
    "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"FRUSTRATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -232,7 +242,8 @@
    },
    "customName": "Tolerated Users",
    "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyCompareApp\" and CompareLastFunnelStep and userExperienceScore=\"TOLERATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -250,7 +261,8 @@
    },
    "customName": "Tolerated Users",
    "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"TOLERATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -268,7 +280,8 @@
    },
    "customName": "Duration",
    "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyCompareApp\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -286,7 +299,8 @@
    },
    "customName": "Frustrated Users",
    "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"FRUSTRATED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "DTAQL",
@@ -304,7 +318,8 @@
    },
    "customName": "Satisfied Users",
    "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"SATISFIED\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -322,7 +337,8 @@
    },
    "customName": "Errors",
    "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyCompareApp\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "_______________________________________________________________________________________________________________________________________________________________________________________________",
@@ -400,7 +416,8 @@
    },
    "customName": "Rage Clicks",
    "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -418,7 +435,8 @@
    },
    "customName": "Nonengaged Sessions",
    "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -436,7 +454,8 @@
    },
    "customName": "Rage Clicks",
    "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyCompareApp\" and StepNewFeature1",
-    "type": "SINGLE_VALUE"
+    "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   },
   {
    "name": "User Sessions Query",
@@ -454,7 +473,8 @@
    },
    "customName": "Nonengaged Sessions",
    "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and StepNewFeature1",
-   "type": "SINGLE_VALUE"
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
   }
  ]
 }
