@@ -65,7 +65,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep",
+      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -84,7 +84,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep and userExperienceScore!=\"SATISFIED\"",
+      "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep and userExperienceScore!=\"SATISFIED\"",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -103,7 +103,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepFunnel1)",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepFunnel1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },

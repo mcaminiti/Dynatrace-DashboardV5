@@ -65,7 +65,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep",
+      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -84,7 +84,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and userExperienceScore!=\"SATISFIED\"",
+      "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and userExperienceScore!=\"SATISFIED\"",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -103,7 +103,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepNewFeature1)",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -122,7 +122,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(doubleProperties.cartamount) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep",
+      "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -141,7 +141,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(doubleProperties.cartamount) as \"Average Risk Order Value\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and userExperienceScore!=\"SATISFIED\"",
+      "query": "select avg(revenueproperty) as \"Average Risk Order Value\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and userExperienceScore!=\"SATISFIED\"",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -160,7 +160,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(doubleProperties.cartamount) as \"Average Lost Order Value\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepNewFeature1)",
+      "query": "select avg(revenueproperty) as \"Average Lost Order Value\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -179,7 +179,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(doubleProperties.cartamount) as \"New User Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and newUser=true",
+      "query": "select sum(revenueproperty) as \"New User Revenue\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1 and LastFunnelStep and newUser=true",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
