@@ -174,7 +174,7 @@
         "managementZone": null
       },
       "customName": "User Action Errors",
-      "query": "select useraction.name, count(*) as \"User Action Count\" from usersession where useraction.application=\"Easy Travel\" and totalErrorCount>0 group by useraction.name",
+      "query": "select useraction.name, count(*) as \"User Action Count\" from usersession where useraction.application=\"MyApp\" and totalErrorCount>0 group by useraction.name",
       "type": "COLUMN_CHART"
     },
     {
