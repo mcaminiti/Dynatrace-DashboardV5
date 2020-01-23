@@ -365,21 +365,21 @@
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and StepNewFeature1",
    "type": "COLUMN_CHART"
   },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
     "top": 0,
     "left": 1634,
     "width": 38,
     "height": 76
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "# [\u23ce](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "# [\u21e6](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
   }
  ]
 }
