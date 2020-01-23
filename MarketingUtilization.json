@@ -56,7 +56,26 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 76,
+        "left": 38,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 304,
         "width": 266,
         "height": 114
       },
@@ -75,7 +94,7 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 380,
+        "left": 570,
         "width": 266,
         "height": 114
       },
@@ -94,7 +113,7 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 684,
+        "left": 836,
         "width": 266,
         "height": 114
       },
@@ -113,7 +132,7 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 988,
+        "left": 1102,
         "width": 266,
         "height": 114
       },
@@ -132,7 +151,7 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 1292,
+        "left": 1368,
         "width": 266,
         "height": 114
       },
@@ -141,7 +160,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Satisfied Abandons\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" and not LastFunnelStep and (StepFunnel1)",
+      "query": "select count(usersessionid) as \"Satisfied Not Converted\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" and not LastFunnelStep and (StepFunnel1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -151,7 +170,26 @@
       "configured": true,
       "bounds": {
         "top": 190,
-        "left": 76,
+        "left": 38,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select avg(duration) as \"Session Duration\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 190,
+        "left": 304,
         "width": 266,
         "height": 114
       },
@@ -170,7 +208,7 @@
       "configured": true,
       "bounds": {
         "top": 190,
-        "left": 380,
+        "left": 570,
         "width": 266,
         "height": 114
       },
@@ -189,7 +227,7 @@
       "configured": true,
       "bounds": {
         "top": 190,
-        "left": 684,
+        "left": 836,
         "width": 266,
         "height": 114
       },
@@ -208,7 +246,7 @@
       "configured": true,
       "bounds": {
         "top": 190,
-        "left": 988,
+        "left": 1102,
         "width": 266,
         "height": 114
       },
@@ -227,7 +265,7 @@
       "configured": true,
       "bounds": {
         "top": 190,
-        "left": 1292,
+        "left": 1368,
         "width": 266,
         "height": 114
       },
@@ -236,7 +274,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Tolerated Abandons\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\" and not LastFunnelStep and (StepFunnel1)",
+      "query": "select count(usersessionid) as \"Tolerated Not Converted\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\" and not LastFunnelStep and (StepFunnel1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -246,7 +284,26 @@
       "configured": true,
       "bounds": {
         "top": 304,
-        "left": 76,
+        "left": 38,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select count(totalErrorCount) as \"Session Errors\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 304,
+        "left": 304,
         "width": 266,
         "height": 114
       },
@@ -265,7 +322,7 @@
       "configured": true,
       "bounds": {
         "top": 304,
-        "left": 380,
+        "left": 570,
         "width": 266,
         "height": 114
       },
@@ -284,7 +341,7 @@
       "configured": true,
       "bounds": {
         "top": 304,
-        "left": 684,
+        "left": 836,
         "width": 266,
         "height": 114
       },
@@ -303,7 +360,7 @@
       "configured": true,
       "bounds": {
         "top": 304,
-        "left": 988,
+        "left": 1102,
         "width": 266,
         "height": 114
       },
@@ -322,7 +379,7 @@
       "configured": true,
       "bounds": {
         "top": 304,
-        "left": 1292,
+        "left": 1368,
         "width": 266,
         "height": 114
       },
@@ -331,7 +388,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Frustrated Abandons\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\" and not LastFunnelStep and (StepFunnel1)",
+      "query": "select count(usersessionid) as \"Frustrated Not Converted\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\" and not LastFunnelStep and (StepFunnel1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -371,7 +428,26 @@
       "configured": true,
       "bounds": {
         "top": 494,
-        "left": 76,
+        "left": 38,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" and not StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 304,
         "width": 266,
         "height": 114
       },
@@ -390,7 +466,7 @@
       "configured": true,
       "bounds": {
         "top": 494,
-        "left": 380,
+        "left": 570,
         "width": 266,
         "height": 114
       },
@@ -409,7 +485,7 @@
       "configured": true,
       "bounds": {
         "top": 494,
-        "left": 684,
+        "left": 836,
         "width": 266,
         "height": 114
       },
@@ -428,7 +504,7 @@
       "configured": true,
       "bounds": {
         "top": 494,
-        "left": 988,
+        "left": 1102,
         "width": 266,
         "height": 114
       },
@@ -447,7 +523,7 @@
       "configured": true,
       "bounds": {
         "top": 494,
-        "left": 1292,
+        "left": 1368,
         "width": 266,
         "height": 114
       },
@@ -456,7 +532,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Satisfied Abandons\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" and not LastFunnelStep and not (StepFunnel1)",
+      "query": "select count(usersessionid) as \"Satisfied Not Converted\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" and not LastFunnelStep and not (StepFunnel1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -466,7 +542,26 @@
       "configured": true,
       "bounds": {
         "top": 608,
-        "left": 76,
+        "left": 38,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select avg(duration) as \"Session Duration\" FROM usersession where useraction.application=\"MyApp\" and not StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 608,
+        "left": 304,
         "width": 266,
         "height": 114
       },
@@ -485,7 +580,7 @@
       "configured": true,
       "bounds": {
         "top": 608,
-        "left": 380,
+        "left": 570,
         "width": 266,
         "height": 114
       },
@@ -504,7 +599,7 @@
       "configured": true,
       "bounds": {
         "top": 608,
-        "left": 684,
+        "left": 836,
         "width": 266,
         "height": 114
       },
@@ -523,7 +618,7 @@
       "configured": true,
       "bounds": {
         "top": 608,
-        "left": 988,
+        "left": 1102,
         "width": 266,
         "height": 114
       },
@@ -542,7 +637,7 @@
       "configured": true,
       "bounds": {
         "top": 608,
-        "left": 1292,
+        "left": 1368,
         "width": 266,
         "height": 114
       },
@@ -551,7 +646,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Tolerated Abandons\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\" and not LastFunnelStep and not (StepFunnel1)",
+      "query": "select count(usersessionid) as \"Tolerated Not Converted\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\" and not LastFunnelStep and not (StepFunnel1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -561,7 +656,26 @@
       "configured": true,
       "bounds": {
         "top": 722,
-        "left": 76,
+        "left": 38,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select count(totalErrorCount) as \"Session Errors\" FROM usersession where useraction.application=\"MyApp\" and not StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 722,
+        "left": 304,
         "width": 266,
         "height": 114
       },
@@ -580,7 +694,7 @@
       "configured": true,
       "bounds": {
         "top": 722,
-        "left": 380,
+        "left": 570,
         "width": 266,
         "height": 114
       },
@@ -599,7 +713,7 @@
       "configured": true,
       "bounds": {
         "top": 722,
-        "left": 684,
+        "left": 836,
         "width": 266,
         "height": 114
       },
@@ -618,7 +732,7 @@
       "configured": true,
       "bounds": {
         "top": 722,
-        "left": 988,
+        "left": 1102,
         "width": 266,
         "height": 114
       },
@@ -637,7 +751,7 @@
       "configured": true,
       "bounds": {
         "top": 722,
-        "left": 1292,
+        "left": 1368,
         "width": 266,
         "height": 114
       },
@@ -646,7 +760,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Frustrated Abandons\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\" and not LastFunnelStep and not (StepFunnel1)",
+      "query": "select count(usersessionid) as \"Frustrated Not Converted\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\" and not LastFunnelStep and not (StepFunnel1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
