@@ -74,21 +74,21 @@
       "query": "select distinct name as \"User Action Name\", avg(duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" order by Duration DESC",
       "type": "TABLE"
     },
-{
+    {
       "name": "Markdown",
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 0,
-        "left": 1482,
-        "width": 190,
-        "height": 38
+    "top": 0,
+    "left": 1634,
+    "width": 38,
+    "height": 76
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## \u27B2 [Return](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b3da313)"
+      "markdown": "# [\u21e6](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b3da313)"
     },
     {
       "name": "User Sessions Query",
