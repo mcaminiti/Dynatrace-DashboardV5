@@ -250,7 +250,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Analysis Links1]()\n\n![]()\n## [User Action Analysis](#dashboard;id=2829b22c-ea5c-48bf-9fe3-f746160da313)\n![]()\n## [Session Analysis](#dashboard;id=dc858870-3724-4df3-b341-67156f9da313)\n![]()\n## [Key Load Analysis](#dashboard;id=54e86185-b4be-4307-bbd4-c3dcccc4c749)\n![]()\n## [Key Xhr Analysis](#dashboard;id=53e86185-b4be-4307-bbd4-c3dccccda313)"
+   "markdown": "![Analysis Links1]()\n## [User Action Analysis](#dashboard;id=2829b22c-ea5c-48bf-9fe3-f746160da313)\n![]()\n## [Session Analysis](#dashboard;id=dc858870-3724-4df3-b341-67156f9da313)\n![]()\n## [Key Load Analysis](#dashboard;id=54e86185-b4be-4307-bbd4-c3dcccc4c749)\n![]()\n## [Key Xhr Analysis](#dashboard;id=53e86185-b4be-4307-bbd4-c3dccccda313)"
   },
  {
    "name": "Markdown",
@@ -266,7 +266,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![World Map Links1]()\n## [Release Validation](#dashboard;id=56d9f8de-c0d1-4b91-8930-6641a73da313)"
+   "markdown": "![Compare Links1]()\n## [Release Validation](#dashboard;id=56d9f8de-c0d1-4b91-8930-6641a73da313)"
   },
   {
    "name": "User behavior",
@@ -431,7 +431,7 @@
       }
   },
     {
-      "name": "Custom Links \u25BC",
+      "name": "MDA Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -459,7 +459,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Custom Links1]()\n"
+   "markdown": "![MDA Links1]()\n## [Browsers](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=browser;a=Browser)\n![]()\n## [User Types](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=usertype;a=Browser)\n![]()\n## [Geolocations](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=worldmap;a=Worldmap)\n![]()\n## [Compare APDEX](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppID;visiblepart=apdex)\n![]()\n## [Performance](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=action;contribution=p50;metric=V)\n![]()\n## [Metrics](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=contributors;filtr3facttyp=Load;contribution=p50;metric=V)\n![]()\n## [Errors](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=errors;a=JavascriptErrors;errortype=HTTP)\n![]()\n## [Compare Resources](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppID;visiblepart=resources;resType=%20)\n![]()\n## [Service Flow](https://MyTenant/#serviceflow;sci=InternalAppID;mode=RESPONSE_TIME)\n![]()\n## [Entry Actions](https://MyTenant/#uemapplications/uemvisituseractions;uemapplicationId=InternalAppID;visiblepart=entrypages)\n![]()\n## [Exit Actions](https://MyTenant/#uemapplications/uemvisituseractions;uemapplicationId=InternalAppID;visiblepart=exitpages)\n![]()\n## [Compare Bounces](https://MyTenant/#uemapplications/uemvisitcompareoverview;uemapplicationId=InternalAppID;visiblepart=visitBounces)"
   },
   {
    "name": "Markdown",
