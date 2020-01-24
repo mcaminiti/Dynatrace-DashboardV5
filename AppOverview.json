@@ -530,6 +530,86 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
+        "top": 1026,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Metrics](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=contributors;filtr3facttyp=Load;contribution=p50;metric=V)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 1064,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Errors](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=errors;a=JavascriptErrors;errortype=HTTP"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 1102,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Resources](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppID;visiblepart=resources;resType=%20"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 1140,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [APDEX](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppId;visiblepart=apdex"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 1178,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Service Flow](https://MyTenant/#serviceflow;sci=InternalAppId"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
     "top": 0,
     "left": 1634,
     "width": 38,
