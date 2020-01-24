@@ -587,7 +587,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [APDEX](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppId;visiblepart=apdex)"
+   "markdown": "## [APDEX](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppID;visiblepart=apdex)"
   },
   {
    "name": "Markdown",
@@ -603,7 +603,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Service Flow](https://MyTenant/#serviceflow;sci=InternalAppId)"
+   "markdown": "## [Service Flow](https://MyTenant/#serviceflow;sci=InternalAppID)"
   },
   {
    "name": "Markdown",
