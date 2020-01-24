@@ -453,13 +453,77 @@
         "top": 836,
         "left": 1368,
         "width": 266,
-        "height": 494
+        "height": 38
    },
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![MDA Links1]()\n## [Browsers](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=browser;a=Browser)\n![]()\n## [User Types](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=usertype;a=Browser)\n![]()\n## [Geolocations](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=worldmap;a=Worldmap)\n![]()\n## [Entry Actions](https://MyTenant/#uemapplications/uemvisituseractions;uemapplicationId=InternalAppID;visiblepart=entrypages)\n![]()\n## [Exit Actions](https://MyTenant/#uemapplications/uemvisituseractions;uemapplicationId=InternalAppID;visiblepart=exitpages)"
+   "markdown": "## [Browsers](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=browser;a=Browser)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 874,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [User Types](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=usertype;a=Browser)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 912,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Geolocations](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=worldmap;a=Worldmap)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 950,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Entry Actions](https://MyTenant/#uemapplications/uemvisituseractions;uemapplicationId=InternalAppID;visiblepart=entrypages)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 988,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Exit Actions](https://MyTenant/#uemapplications/uemvisituseractions;uemapplicationId=InternalAppID;visiblepart=exitpages)"
   },
   {
    "name": "Markdown",
