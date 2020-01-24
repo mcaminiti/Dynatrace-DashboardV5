@@ -555,7 +555,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Errors](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=errors;a=JavascriptErrors;errortype=HTTP"
+   "markdown": "## [Errors](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=errors;a=JavascriptErrors;errortype=HTTP)"
   },
   {
    "name": "Markdown",
@@ -571,7 +571,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Resources](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppID;visiblepart=resources;resType=%20"
+   "markdown": "## [Resources](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppID;visiblepart=resources;resType=%20)"
   },
   {
    "name": "Markdown",
@@ -587,7 +587,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [APDEX](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppId;visiblepart=apdex"
+   "markdown": "## [APDEX](https://MyTenant/#uemapplications/uemcompareoverview;uemapplicationId=InternalAppId;visiblepart=apdex)"
   },
   {
    "name": "Markdown",
@@ -603,7 +603,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Service Flow](https://MyTenant/#serviceflow;sci=InternalAppId"
+   "markdown": "## [Service Flow](https://MyTenant/#serviceflow;sci=InternalAppId)"
   },
   {
    "name": "Markdown",
