@@ -21,7 +21,7 @@
   },
   "tiles": [
     {
-      "name": "Service health",
+      "name": "Service Health",
       "tileType": "SERVICES",
       "configured": true,
       "bounds": {
@@ -38,7 +38,7 @@
       "chartVisible": true
     },
     {
-      "name": "Host health",
+      "name": "Host Health",
       "tileType": "HOSTS",
       "configured": true,
       "bounds": {
@@ -94,7 +94,7 @@
       }
     },
     {
-      "name": "Synthetic monitor health",
+      "name": "Synthetic Monitor Health",
       "tileType": "SYNTHETIC_TESTS",
       "configured": true,
       "bounds": {
@@ -111,7 +111,7 @@
       "chartVisible": true
     },
     {
-      "name": "Application health",
+      "name": "Application Health",
       "tileType": "APPLICATIONS",
       "configured": true,
       "bounds": {
@@ -128,7 +128,7 @@
       "chartVisible": true
     },
     {
-      "name": "Database health",
+      "name": "Database Health",
       "tileType": "DATABASES_OVERVIEW",
       "configured": true,
       "bounds": {
