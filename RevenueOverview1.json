@@ -1,0 +1,367 @@
+{
+  "metadata": {
+    "configurationVersions": [
+      3
+    ],
+    "clusterVersion": "1.187.0.20200124-105915"
+  },
+  "id": "1bb5be20-8833-4af1-a847-2f84cb5da313",
+  "dashboardMetadata": {
+    "name": "\ud83d\udd0e  Revenue Overview",
+    "shared": true,
+    "owner": "MyEmail",
+    "sharingDetails": {
+      "linkShared": true,
+      "published": true
+    },
+    "dashboardFilter": {
+      "timeframe": "l_2_HOURS",
+      "managementZone": null
+    }
+  },
+  "tiles": [
+    {
+      "name": "Revenue Metrics",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 684,
+        "width": 418,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "____________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 0,
+        "width": 1672,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 0,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Revenue",
+      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 418,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Risk Revenue",
+      "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 836,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Lost Revenue",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 1254,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "New User Revenue",
+      "query": "select sum(revenueproperty) as \"New User Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 0,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Average Order Value",
+      "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 418,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Average Risk Order Value",
+      "query": "select avg(revenueproperty) as \"Average Risk Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 836,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Average Lost Order Value",
+      "query": "select avg(revenueproperty) as \"Average Lost Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 1254,
+        "width": 380,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Returning User Revenue",
+      "query": "select sum(revenueproperty) as \"Returning User Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS false",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 456,
+        "left": 0,
+        "width": 1634,
+        "height": 380
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "💰",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep ",
+      "type": "COLUMN_CHART"
+    },
+    {
+      "name": "Revenue",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 0,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 190,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Avg Cart](#dashboard;id=21a04cb8-804b-4755-b530-d4c40feda313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 380,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Risk Revenue](#dashboard;id=dbd5f52f-bd79-45fd-b45c-7f1b171da313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1634,
+        "width": 38,
+        "height": 76
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "# [⇦](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 1140,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [New User Revenue](#dashboard;id=dbd5f52f-bd79-45fd-b45c-7f1b171da313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 950,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Avg Lost Cart](#dashboard;id=dbd5f52f-bd79-45fd-b45c-7f1b171da313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Returning User Revenue](#dashboard;id=dbd5f52f-bd79-45fd-b45c-7f1b171da313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 760,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Lost Revenue](#dashboard;id=dbd5f52f-bd79-45fd-b45c-7f1b171da313)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 570,
+        "width": 190,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Avg Risk Cart](#dashboard;id=dbd5f52f-bd79-45fd-b45c-7f1b171da313)"
+    }
+  ]
+}

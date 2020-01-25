@@ -53,7 +53,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" and StepFunnel1",
+      "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -72,7 +72,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and LastFunnelStep",
+      "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and LastFunnelStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -91,7 +91,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and duration > 180000 and userActionCount < 10 and StepFunnel1",
+      "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and duration > 180000 and userActionCount < 10 and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -110,7 +110,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep",
+      "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -129,7 +129,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" and StepFunnel1",
+      "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -148,7 +148,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" and StepFunnel1",
+      "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -167,7 +167,7 @@
         "managementZone": null
       },
       "customName": "Conversions by User Experience",
-      "query": "select userExperienceScore, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep group by userExperienceScore",
+      "query": "select userExperienceScore, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep group by userExperienceScore",
       "type": "PIE_CHART",
       "timeFrameShift": "dynamic"
     },
@@ -186,7 +186,7 @@
         "managementZone": null
       },
       "customName": "Abandons by User Experience",
-      "query": "select userExperienceScore, count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep group by userExperienceScore",
+      "query": "select userExperienceScore, count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep group by userExperienceScore",
       "type": "PIE_CHART",
       "timeFrameShift": "dynamic"
     },
@@ -205,7 +205,7 @@
         "managementZone": null
       },
       "customName": "Conversions by Region",
-      "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and region!=\"synthetic\" group by Region",
+      "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and region!=\"synthetic\" group by Region",
       "type": "PIE_CHART",
       "timeFrameShift": "dynamic"
     },
@@ -224,7 +224,7 @@
         "managementZone": null
       },
       "customName": "Abandons by Region",
-      "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and region!=\"synthetic\" group by Region",
+      "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep and region!=\"synthetic\" group by Region",
       "type": "PIE_CHART",
       "timeFrameShift": "dynamic"
     },
@@ -317,7 +317,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Overview Links]()\n## [Executive Overview](#dashboard;id=3aa5be20-8833-4af1-a847-2f84cb5da313)\n![]()\n## [Marketing Overview](#dashboard;id=934b0dce-bbf4-443d-b0f0-e370faeda313)\n![]()\n## [New Feature Overview](#dashboard;id=834b0dce-bbf4-443d-b0f0-e370faeda313)\n"
+   "markdown": "![Overview Links]()\n## [Executive Overview](#dashboard;id=3aa5be20-8833-4af1-a847-2f84cb5da313)\n![]()\n## [Marketing Overview](#dashboard;id=934b0dce-bbf4-443d-b0f0-e370faeda313)\n![]()\n## [New Feature Overview](#dashboard;id=834b0dce-bbf4-443d-b0f0-e370faeda313)\n![]()\n## [Revenue Overview](#dashboard;id=1bb5be20-8833-4af1-a847-2f84cb5da313)\n"
   },
     {
       "name": "Markdown",
