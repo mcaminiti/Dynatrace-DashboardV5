@@ -312,15 +312,18 @@
       },
       "filterConfig": {
         "type": "SERVICE",
-        "customName": "Services",
-        "defaultName": "Service",
+        "customName": "Service Health",
+        "defaultName": "Servic Health",
         "chartConfig": {
           "legendShown": true,
           "type": "TIMESERIES",
           "series": [],
           "resultMetadata": {}
         },
-        "filtersPerEntityType": {}
+        "filtersPerEntityType": {
+          "NON_DATABASE_SERVICE": {
+          }
+        }
       },
       "chartVisible": true
     },
