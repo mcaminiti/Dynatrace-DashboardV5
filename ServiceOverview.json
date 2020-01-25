@@ -310,21 +310,6 @@
         "timeframe": null,
         "managementZone": null
       },
-      "filterConfig": {
-        "type": "SERVICE",
-        "customName": "Service Health",
-        "defaultName": "Servic Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "NON_DATABASE_SERVICE": {
-          }
-        }
-      },
       "chartVisible": true
     },
     {
@@ -341,24 +326,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "filterConfig": {
-        "type": "SERVICE",
-        "customName": "Impacted Service Health",
-        "defaultName": "Impacted Service Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "NON_DATABASE_SERVICE": {
-            "PROBLEM_IMPACT": [
-              "true"
-            ]
-          }
-        }
-      },
+      "filterConfig": null,
       "chartVisible": true
     },
     {
