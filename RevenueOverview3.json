@@ -5,7 +5,7 @@
     ],
     "clusterVersion": "1.187.0.20200124-105915"
   },
-  "id": "1bb5be20-8833-4af1-a847-2f84cb5da313",
+  "id": "3bb5be20-8833-4af1-a847-2f84cb5da313",
   "dashboardMetadata": {
     "name": "\ud83d\udd0e Revenue Overview",
     "shared": true,
@@ -217,7 +217,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep ",
+      "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
       "type": "COLUMN_CHART"
     },
     {
@@ -234,7 +234,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## Revenue"
+      "markdown": "## [Revenue](#dashboard;id=1bb5be20-8833-4af1-a847-2f84cb5da313))"
     },
     {
       "name": "Markdown",
@@ -266,7 +266,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Risk Revenue](#dashboard;id=3bb5be20-8833-4af1-a847-2f84cb5da313)"
+      "markdown": "## Risk Revenue"
     },
     {
       "name": "Markdown",
