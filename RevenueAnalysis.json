@@ -35,7 +35,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude0a",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
+   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -53,7 +53,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude1f",
-   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and userExperienceScore!=\"SATISFIED\"",
+   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and userExperienceScore!=\"SATISFIED\"",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -71,7 +71,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude22",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -89,7 +89,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude0a",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
    "type": "COLUMN_CHART"
   },
   {
@@ -138,7 +138,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Lost Revenue All Funnels](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%20not%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%20not%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
   },
     {
       "name": "Markdown",
@@ -171,7 +171,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude0a",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=true",
+   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser=true",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -189,7 +189,7 @@
     "managementZone": null
    },
    "customName": "\ud83d\ude0a",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=false",
+   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser=false",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -269,7 +269,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Lost Revenue All Funnels](#dashboard;id=361e6756-3227-43bb-9fdd-69305feda313)"
+   "markdown": "## [Lost Revenue](#dashboard;id=361e6756-3227-43bb-9fdd-69305feda313)"
   },
 	{
    "name": "DTAQL",
@@ -286,7 +286,7 @@
     "managementZone": null
    },
    "customName": "\u1F60A",
-   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep",
+   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {

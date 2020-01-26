@@ -35,7 +35,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE0A",
-   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"SATISFIED\" and LastFunnelStep",
+   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tuserExperienceScore=\"SATISFIED\" and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -53,7 +53,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE1F",
-   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"TOLERATED\" and LastFunnelStep",
+   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tuserExperienceScore=\"TOLERATED\" and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -71,7 +71,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE22",
-   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tuserExperienceScore=\"FRUSTRATED\" and LastFunnelStep",
+   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tuserExperienceScore=\"FRUSTRATED\" and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
     {
@@ -153,7 +153,7 @@
     "managementZone": null
    },
    "customName": "\uD83C\uDFC1",
-   "query": "select distinct DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tLastFunnelStep",
+   "query": "select distinct DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tLastFunnelStep",
    "type": "COLUMN_CHART"
   },
   {
@@ -186,7 +186,7 @@
     "managementZone": null
    },
    "customName": "\uD83C\uDFC1",
-   "query": "SELECT userExperienceScore, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep group by userExperienceScore order by count(userSessionId) desc",
+   "query": "SELECT userExperienceScore, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep group by userExperienceScore order by count(userSessionId) desc",
    "type": "PIE_CHART"
   },
   {
@@ -204,7 +204,7 @@
     "managementZone": null
    },
    "customName": "\uD83C\uDFC1",
-   "query": "SELECT region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and LastFunnelStep and region!=\"synthetic\" and region IS NOT NULL group by region order by count(userSessionId) desc",
+   "query": "SELECT region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and region!=\"synthetic\" and region IS NOT NULL group by region order by count(userSessionId) desc",
    "type": "PIE_CHART"
   },
   {
@@ -252,7 +252,7 @@
     "managementZone": null
    },
    "customName": "\uD83C\uDFC1",
-   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and\n\tLastFunnelStep",
+   "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tLastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {

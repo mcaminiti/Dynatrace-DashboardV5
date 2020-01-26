@@ -35,7 +35,7 @@
     "managementZone": null
    },
    "customName": "Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
+   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -54,7 +54,7 @@
     "managementZone": null
    },
    "customName": "Risk Revenue",
-   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and userExperienceScore!=\"SATISFIED\"",
+   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and userExperienceScore!=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -72,8 +72,8 @@
     "timeframe": "-MyTimeh",
     "managementZone": null
    },
-   "customName": "Lost Revenue All Funnels",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" and not LastFunnelStep",
+   "customName": "Lost Revenue",
+   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not LastFunnelStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -108,7 +108,7 @@
     "managementZone": null
    },
    "customName": "New User Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=true",
+   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser=true",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -127,7 +127,7 @@
     "managementZone": null
    },
    "customName": "Returning User Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep and newUser=false",
+   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser=false",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -146,7 +146,7 @@
     "managementZone": null
    },
    "customName": "Average Order Value",
-   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" and CombinedStep",
+   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -202,7 +202,7 @@
     "timeframe": "-MyCompareTimeh to -MyTimeh",
     "managementZone": null
    },
-   "customName": "Lost Revenue All Funnels",
+   "customName": "Lost Revenue",
    "query": "select sum(comparerevenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not LastFunnelStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"

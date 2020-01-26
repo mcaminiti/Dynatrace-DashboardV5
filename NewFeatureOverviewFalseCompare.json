@@ -65,7 +65,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and (StepNewFeature1)",
+      "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -84,7 +84,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and not (LastFunnelStep) and (StepNewFeature1)",
+      "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep) and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -103,7 +103,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(usersession.duration) as \"Session Duration\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select avg(usersession.duration) as \"Session Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -122,7 +122,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Satisfied Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"SATISFIED\" and (StepNewFeature1)",
+      "query": "select count(usersessionid) as \"Satisfied Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and userExperienceScore=\"SATISFIED\" and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -141,7 +141,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Tolerated Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"TOLERATED\" and (StepNewFeature1)",
+      "query": "select count(usersessionid) as \"Tolerated Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and userExperienceScore=\"TOLERATED\" and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -160,7 +160,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Frustrated Sessions\" from usersession where useraction.application=\"MyApp\" and userExperienceScore=\"FRUSTRATED\" and (StepNewFeature1)",
+      "query": "select count(usersessionid) as \"Frustrated Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and userExperienceScore=\"FRUSTRATED\" and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -179,7 +179,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(usersession.totalerrorCount) as \"Session Errors\" from usersession where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select sum(usersession.totalerrorCount) as \"Session Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -198,7 +198,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(*) as \"Requests\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select count(*) as \"Requests\" from useraction where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -217,7 +217,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -236,7 +236,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(visuallyCompleteTime) as \"Visually Complete\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select avg(visuallyCompleteTime) as \"Visually Complete\" from useraction where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -255,7 +255,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(speedIndex) as \"Speed Index\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select avg(speedIndex) as \"Speed Index\" from useraction where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -274,7 +274,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -293,7 +293,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and (StepNewFeature1)",
+      "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10 and (StepNewFeature1)",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -312,7 +312,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" and StepNewFeature1",
+      "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepNewFeature1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },

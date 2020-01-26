@@ -73,7 +73,7 @@
         "managementZone": null
       },
       "customName": "Sessions by Region",
-      "query": "select region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "query": "select region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and region!=\"synthetic\" and region IS NOT NULL group by region",
       "type": "PIE_CHART"
     },
     {
@@ -107,7 +107,7 @@
         "managementZone": null
       },
       "customName": "Sessions by Region",
-      "query": "select region, count(userSessionId) as \"Session Count\" FROM usersession where useraction.application=\"MyApp\" and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "query": "select region, count(userSessionId) as \"Session Count\" FROM usersession where useraction.application=\"MyApp\" MyFilter and region!=\"synthetic\" and region IS NOT NULL group by region",
       "type": "COLUMN_CHART"
     }
   ]

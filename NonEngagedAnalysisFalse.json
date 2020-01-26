@@ -35,7 +35,7 @@
     "managementZone": null
    },
    "customName": "\uD83C\uDFC1",
-   "query": "select count(usersessionid) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and userid is not null and LastFunnelStep",
+   "query": "select count(usersessionid) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10 and userid is not null and LastFunnelStep",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
     {
@@ -85,7 +85,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE22",
-   "query": "select count(usersessionid) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and userid is not null and StepFunnel1 and not (LastFunnelStep)",
+   "query": "select count(usersessionid) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10 and userid is not null and StepFunnel1 and not (LastFunnelStep)",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -119,7 +119,7 @@
     "managementZone": null
    },
    "customName": "\uD83D\uDE34",
-   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\",count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10 and userid is not null and StepFunnel1",
+   "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\",count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10 and userid is not null and StepFunnel1",
    "type": "COLUMN_CHART"
   },
   {

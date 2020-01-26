@@ -35,7 +35,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"SATISFIED\"",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -54,7 +54,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"TOLERATED\"",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -73,7 +73,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" and LastFunnelStep and userExperienceScore=\"FRUSTRATED\"",
+   "query": "select count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -92,7 +92,7 @@
     "managementZone": null
    },
    "customName": "Satisfied Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"SATISFIED\"",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"SATISFIED\"",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -111,7 +111,7 @@
     "managementZone": null
    },
    "customName": "Tolerated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"TOLERATED\"",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"TOLERATED\"",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -130,7 +130,7 @@
     "managementZone": null
    },
    "customName": "Frustrated Users",
-   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"FRUSTRATED\"",
+   "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep and userExperienceScore=\"FRUSTRATED\"",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -434,7 +434,7 @@
     "managementZone": null
    },
    "customName": "Nonengaged Sessions",
-   "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10",
+   "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -472,7 +472,7 @@
     "managementZone": null
    },
    "customName": "Nonengaged Sessions",
-   "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" and duration > 180000 and userActionCount < 10",
+   "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   }
