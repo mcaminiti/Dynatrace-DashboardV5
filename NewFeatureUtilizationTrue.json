@@ -21,7 +21,7 @@
   },
   "tiles": [
     {
-      "name": "With FeatureHeaderStep Campaign",
+      "name": "With FeatureHeaderStep New Feature",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -378,7 +378,7 @@
       "timeFrameShift": "dynamic"
     },
     {
-      "name": "Without PromHeaderStep Campaign",
+      "name": "Without PromHeaderStep New Feature",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
