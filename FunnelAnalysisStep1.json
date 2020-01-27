@@ -34,7 +34,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Continue",
+      "customName": "Location",
       "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and StepFunnel2 and region!=\"synthetic\" and region IS NOT NULL group by region",
       "type": "PIE_CHART"
     },
@@ -52,7 +52,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Exit",
+      "customName": "Location",
       "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not StepFunnel2 and region!=\"synthetic\" and region IS NOT NULL group by region",
       "type": "PIE_CHART"
     },
@@ -382,7 +382,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Continue",
+      "customName": "\ud83d\udc4d",
       "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and StepFunnel2",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -401,7 +401,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Exit",
+      "customName": "\ud83d\udc4e",
       "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not StepFunnel2",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
@@ -1172,8 +1172,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Continue",
-      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and StepFunnel2 and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "customName": "Browser",
+      "query": "select count(usersessionid) as \"Requests\",browserFamily FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and StepFunnel2 group by browserFamily",
       "type": "PIE_CHART"
     },
     {
@@ -1190,8 +1190,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Exit",
-      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not StepFunnel2 and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "customName": "Browser",
+      "query": "select count(usersessionid) as \"Requests\",browserFamily FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not StepFunnel2 group by browserFamily",
       "type": "PIE_CHART"
     },
     {
