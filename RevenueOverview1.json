@@ -36,7 +36,7 @@
       }
     },
     {
-      "name": "____________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+            "name": "__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -57,7 +57,7 @@
       "bounds": {
         "top": 76,
         "left": 0,
-        "width": 380,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
@@ -75,8 +75,8 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 418,
-        "width": 380,
+        "left": 342,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
@@ -94,8 +94,8 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 836,
-        "width": 380,
+        "left": 684,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
@@ -113,8 +113,8 @@
       "configured": true,
       "bounds": {
         "top": 76,
-        "left": 1254,
-        "width": 380,
+        "left": 1026,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
@@ -131,9 +131,28 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
+        "top": 76,
+        "left": 1368,
+        "width": 304,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Returning User Revenue",
+      "query": "select sum(revenueproperty) as \"Returning User Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS false",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
         "top": 228,
         "left": 0,
-        "width": 380,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
@@ -151,8 +170,8 @@
       "configured": true,
       "bounds": {
         "top": 228,
-        "left": 418,
-        "width": 380,
+        "left": 342,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
@@ -170,8 +189,8 @@
       "configured": true,
       "bounds": {
         "top": 228,
-        "left": 836,
-        "width": 380,
+        "left": 684,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
@@ -189,16 +208,35 @@
       "configured": true,
       "bounds": {
         "top": 228,
-        "left": 1254,
-        "width": 380,
+        "left": 1026,
+        "width": 304,
         "height": 152
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Returning User Revenue",
-      "query": "select sum(revenueproperty) as \"Returning User Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS false",
+      "customName": "Average New User Order Value",
+      "query": "select avg(revenueproperty) as \"Average New User Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 1368,
+        "width": 304,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Average Returning User Order Value",
+      "query": "select avg(revenueproperty) as \"Average Returning User Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS false",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -209,7 +247,7 @@
       "bounds": {
         "top": 456,
         "left": 0,
-        "width": 1634,
+        "width": 1672,
         "height": 380
       },
       "tileFilter": {
