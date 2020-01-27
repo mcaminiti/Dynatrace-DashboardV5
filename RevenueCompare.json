@@ -21,250 +21,6 @@
  },
  "tiles": [
   {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 0,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 266,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Risk Revenue",
-   "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and userExperienceScore!=\"SATISFIED\"",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 532,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Lost Revenue",
-   "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not LastFunnelStep",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-     {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-    "top": 0,
-    "left": 1634,
-    "width": 38,
-    "height": 76
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "# [\u21e6](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 1064,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyTimeh",
-    "managementZone": null
-   },
-   "customName": "New User Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser=true",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 1330,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Returning User Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser=false",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 798,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Average Order Value",
-   "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 418,
-    "left": 0,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyCompareTimeh to -MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 418,
-    "left": 266,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyCompareTimeh to -MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Risk Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and userExperienceScore!=\"SATISFIED\"",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 418,
-    "left": 532,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyCompareTimeh to -MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Lost Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not LastFunnelStep",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 418,
-    "left": 1064,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyCompareTimeh to -MyTimeh",
-    "managementZone": null
-   },
-   "customName": "New User Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and newUser=true",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 418,
-    "left": 798,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyCompareTimeh to -MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Average Order Value",
-   "query": "select avg(comparerevenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 418,
-    "left": 1330,
-    "width": 266,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": "-MyCompareTimeh to -MyTimeh",
-    "managementZone": null
-   },
-   "customName": "Returning User Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and newUser=false",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
    "name": "______________________________________________________________________________________________________________________________________________________________________________________________________________________________",
    "tileType": "HEADER",
    "configured": true,
@@ -323,6 +79,288 @@
     "timeframe": null,
     "managementZone": null
    }
+  },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 0,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Revenue",
+      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 456,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Risk Revenue",
+      "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and userExperienceScore!=\"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 912,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Lost Revenue",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not LastFunnelStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 1368,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyTimeh",
+        "managementZone": null
+      },
+      "customName": "New User Revenue",
+      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser=true",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 228,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Average Order Value",
+      "query": "select avg(revenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 0,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyCompareTimeh to -MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Revenue",
+      "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 456,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyCompareTimeh to -MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Risk Revenue",
+      "query": "select sum(comparerevenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and userExperienceScore!=\"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 912,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyCompareTimeh to -MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Lost Revenue",
+      "query": "select sum(comparerevenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and not LastFunnelStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 1368,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyCompareTimeh to -MyTimeh",
+        "managementZone": null
+      },
+      "customName": "New User Revenue",
+      "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and newUser=true",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 228,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyCompareTimeh to -MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Average Order Value",
+      "query": "select avg(comparerevenueproperty) as \"Average Order Value\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 684,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Average Risk Order Value",
+      "query": "select avg(revenueproperty) as \"Average Risk Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and userExperienceScore!=\"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 684,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyCompareTimeh to -MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Average Risk Order Value",
+      "query": "select avg(comparerevenueproperty) as \"Average Risk Order Value\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareCombinedStep and userExperienceScore!=\"SATISFIED\"",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 76,
+        "left": 1140,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Average Lost Order Value",
+      "query": "select avg(revenueproperty) as \"Average Lost Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not LastFunnelStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 418,
+        "left": 1140,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": "-MyCompareTimeh to -MyTimeh",
+        "managementZone": null
+      },
+      "customName": "Average Lost Order Value",
+      "query": "select avg(comparerevenueproperty) as \"Average Lost Order Value\" FROM usersession where useraction.application=\"MyCompareApp\" and not LastFunnelStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+     {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+    "top": 0,
+    "left": 1634,
+    "width": 38,
+    "height": 76
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "# [\u21e6](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebcc1da313)"
   }
  ]
 }
