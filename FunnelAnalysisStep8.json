@@ -19,444 +19,1284 @@
 			"managementZone": null
 		}
 	},
- "tiles": [
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 0,
-    "width": 342,
-    "height": 266
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "Continue",
-   "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9 and region!=\"synthetic\" and region IS NOT NULL group by region",
-   "type": "PIE_CHART"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 0,
-    "width": 342,
-    "height": 266
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "Exit",
-   "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9 and region!=\"synthetic\" and region IS NOT NULL group by region",
-   "type": "PIE_CHART"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 0,
-    "width": 342,
-    "height": 266
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "StepHeader8",
-   "query": "select count(usersessionid) as \"Requests\", region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and region!=\"synthetic\" and region IS NOT NULL group by region",
-   "type": "PIE_CHART"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 380,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [StepHeader8](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8order%20by%20duration%20desc&visualization=TABLE) \u25B6"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 380,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Continue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE) \u25B6"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 380,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Exit](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE) \u25B6"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 646,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 646,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 646,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 646,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 646,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 646,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 2964,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 2964,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 2964,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 2964,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 2964,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20DESC&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 2964,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20totalErrorCount%20as%20%22Funnel%20Click%20Path%20Errors%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 3914,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F40C",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and usersession.duration>180000 and StepFunnel8 and userActionCount<10",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 3914,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=55885bfd-7d70-450d-b0a6-8570fe60dd00&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20usersession.duration%3E180000%20and%20StepFunnel8%20and%20StepFunnel9%20and%20userActionCount%3C10&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 3914,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=dd66617c-b601-44f6-982c-a871cc80b8a0&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20usersession.duration%3E180000%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20userActionCount%3C10&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 3914,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=c4518621-1c74-46a3-9a81-2239272ec607&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20usersession.duration%3E180000%20and%20StepFunnel8%20and%20userActionCount%3C10&visualization=TABLE)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 4142,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F621",
-   "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" MyFilter and  numberOfRageClicks>0 and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 4142,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel8%20and%20StepFunnel9&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 4142,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel8%20and%20not%20StepFunnel9&visualization=TABLE)"
-  },
+  "tiles": [
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 152,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Location",
+      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9 and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 152,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Location",
+      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9 and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 950,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 950,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 1292,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 1292,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1292,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 1292,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 3762,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDEA8",
+      "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 3762,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDEA8",
+      "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 3762,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 3762,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20DESC&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 4408,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=55885bfd-7d70-450d-b0a6-8570fe60dd00&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20usersession.duration%3E180000%20and%20StepFunnel8%20and%20StepFunnel9%20and%20userActionCount%3C10&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 4408,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=dd66617c-b601-44f6-982c-a871cc80b8a0&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20usersession.duration%3E180000%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20userActionCount%3C10&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 4712,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel8%20and%20StepFunnel9&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 4712,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel8%20and%20not%20StepFunnel9&visualization=TABLE)"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 4712,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDE21",
+      "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" MyFilter and  numberOfRageClicks>0 and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 4712,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDE21",
+      "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" MyFilter and  numberOfRageClicks>0 and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 4408,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDE34",
+      "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and usersession.duration>180000 and StepFunnel8 and StepFunnel9 and userActionCount<10",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 4408,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDE34",
+      "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and usersession.duration>180000 and StepFunnel8 and not StepFunnel9 and userActionCount<10",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 950,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\ud83d\udc4d",
+      "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 950,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\ud83d\udc4e",
+      "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "Request Breakdown",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 950,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Performance Breakdown",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 1292,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 152,
+        "width": 4864,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Error Breakdown",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 3762,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Usability Breakdown",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 4408,
+        "width": 266,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 2204,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 2204,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 2508,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 2508,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 2812,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 2812,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 3116,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 3116,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 3420,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 3420,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 1102,
+        "left": 3724,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDEA8",
+      "query": "select sum(useraction.httpRequestsWithErrors) as \"HTTP Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 4066,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDEA8",
+      "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 4066,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDEA8",
+      "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 1102,
+        "left": 4180,
+        "width": 228,
+        "height": 228
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\uD83D\uDEA8",
+      "query": "select sum(useraction.failedXhrRequests) as \"Failed Xhr Requests\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 1596,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 1900,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 1596,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 1900,
+        "width": 304,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "\u23F1",
+      "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1596,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 1596,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 1900,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 1900,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 2204,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 2204,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 2508,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 2508,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 2812,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 2812,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 3116,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 3116,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 3420,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 3420,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 1064,
+        "left": 3724,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.httpRequestsWithErrors%20as%20%22HTTP%20Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20DESC&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 4066,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 4066,
+        "width": 304,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20DESC&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 1064,
+        "left": 4180,
+        "width": 228,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedXhrRequests%20as%20%22Failed%20Xhr%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20DESC&visualization=TABLE)"
+    },
+    {
+      "name": "Environment Breakdown",
+      "tileType": "HEADER",
+      "configured": true,
+      "bounds": {
+        "top": 0,
+        "left": 152,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      }
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 152,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 152,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 152,
+        "left": 532,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Browser",
+      "query": "select count(usersessionid) as \"Requests\",browserFamily FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9 group by browserFamily",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 532,
+        "width": 380,
+        "height": 266
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Browser",
+      "query": "select count(usersessionid) as \"Requests\",browserFamily FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9 group by browserFamily",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 114,
+        "left": 532,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Requests by Browser](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 494,
+        "left": 532,
+        "width": 380,
+        "height": 38
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "## [Requests by Browser](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20duration%20desc&visualization=TABLE)"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 190,
+        "left": 0,
+        "width": 114,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![]()\n## Sessions![]()\n## That![]()\n## Continued"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 190,
+        "left": 114,
+        "width": 38,
+        "height": 76
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![]()\n![]()\n # ▶"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 0,
+        "width": 114,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![]()\n## Sessions![]()\n## That![]()\n## Exited"
+    },
+    {
+      "name": "Markdown",
+      "tileType": "MARKDOWN",
+      "configured": true,
+      "bounds": {
+        "top": 570,
+        "left": 114,
+        "width": 38,
+        "height": 76
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "markdown": "![]()\n![]()\n # ▶"
+    },
     {
       "name": "Markdown",
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
     "top": 0,
-    "left": 4332,
+    "left": 4978,
     "width": 38,
     "height": 76
       },
@@ -465,1490 +1305,6 @@
         "managementZone": null
       },
       "markdown": "# [\u21e6](#dashboard;id=65312f05-ca6c-4896-b2b4-1bc8ce3da313)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 4142,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F621",
-   "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" MyFilter and  numberOfRageClicks>0 and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 4142,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F621",
-   "query": "select sum(numberOfRageClicks) as \"Rages\" from usersession where useraction.application=\"MyApp\" MyFilter and  numberOfRageClicks>0 and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 3914,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F40C",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and usersession.duration>180000 and StepFunnel8 and StepFunnel9 and userActionCount<10",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 3914,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F40C",
-   "query": "select count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and usersession.duration>180000 and StepFunnel8 and not StepFunnel9 and userActionCount<10",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 4142,
-    "width": 152,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=26ef21fb-156b-42f0-8220-9fd9becddb2a&sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel8&visualization=TABLE)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 380,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "StepHeader8",
-   "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 ",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 380,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "Continue",
-   "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 380,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "Exit",
-   "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 2698,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 1330,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 2014,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 1786,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 2242,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.cdnBusyTime) as \"CDN Busy\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 1558,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 2470,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.thirdPartyBusyTime) as \"3rd Party Busy\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 3192,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.httpRequestsWithErrors) as \"HTTP Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 3420,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 3648,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.failedXhrRequests) as \"Failed Xhr Requests\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Request Breakdown",
-   "tileType": "HEADER",
-   "configured": true,
-   "bounds": {
-    "top": 0,
-    "left": 266,
-    "width": 304,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   }
-  },
-  {
-   "name": "Performance Breakdown",
-   "tileType": "HEADER",
-   "configured": true,
-   "bounds": {
-    "top": 0,
-    "left": 1672,
-    "width": 304,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   }
-  },
-  {
-   "name": "________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________",
-   "tileType": "HEADER",
-   "configured": true,
-   "bounds": {
-    "top": 38,
-    "left": 0,
-    "width": 4446,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   }
-  },
-  {
-   "name": "Error Breakdown",
-   "tileType": "HEADER",
-   "configured": true,
-   "bounds": {
-    "top": 0,
-    "left": 3344,
-    "width": 304,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   }
-  },
-  {
-   "name": "Usability Breakdown",
-   "tileType": "HEADER",
-   "configured": true,
-   "bounds": {
-    "top": 0,
-    "left": 4028,
-    "width": 266,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   }
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 1330,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 1330,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.serverTime) as \"Server\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 1558,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 1558,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.networkTime) as \"Network\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 1786,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 1786,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.requestStart) as \"Request Start\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 2014,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 2014,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.loadEventEnd) as \"Load Event End\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 2242,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.cdnBusyTime) as \"CDN Busy\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 2242,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.cdnBusyTime) as \"CDN Busy\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 2470,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.thirdPartyBusyTime) as \"3rd Party Busy\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 2470,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.thirdPartyBusyTime) as \"3rd Party Busy\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 2698,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 2698,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.documentInteractiveTime) as \"DOM Interactive\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 3192,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.httpRequestsWithErrors) as \"HTTP Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 3192,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.httpRequestsWithErrors) as \"HTTP Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 3420,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 3420,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.failedImages) as \"Failed Images\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 3648,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.failedXhrRequests) as \"Failed Xhr Requests\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 3648,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u1F6A8",
-   "query": "select sum(useraction.failedXhrRequests) as \"Failed Xhr Requests\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 1330,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 1558,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 1786,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 2014,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 2242,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [CDN Busy](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 2470,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [3rd Party Busy](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.thirdPartyBusyTime%20as%20%22Funnel%20Click%20Path%203rd%20Party%20Busy%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.thirdPartyBusyTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 2698,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 3192,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.httpRequestsWithErrors%20as%20%22Funnel%20Click%20Path%20HTTP%20Errors%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 3420,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.failedImages%20as%20%22Funnel%20Click%20Path%20Failed%20Iamges%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 3648,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20useraction.failedXhrRequests%20as%20%22Funnel%20Click%20Path%20Failed%20Xhr%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 874,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 114,
-    "left": 1102,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 874,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 76,
-    "left": 1102,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 874,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 380,
-    "left": 1102,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 874,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.visuallyCompleteTime) as \"Visually Complete\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "DTAQL",
-   "tileType": "DTAQL",
-   "configured": true,
-   "bounds": {
-    "top": 646,
-    "left": 1102,
-    "width": 228,
-    "height": 228
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "customName": "\u23F1",
-   "query": "select AVG(useraction.speedIndex) as \"Speed Index\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel8 and not StepFunnel9",
-   "type": "SINGLE_VALUE",
-   "timeFrameShift": "dynamic"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 874,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 874,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 1102,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 1102,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 1330,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 1330,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 1558,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 1558,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 1786,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 1786,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 2014,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 2014,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 2242,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [CDN Busy](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.cdnBusyTime%20as%20%22Funnel%20Click%20Path%20CDN%20Busy%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.cdnBusyTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 2242,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [CDN Busy](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.cdnBusyTime%20as%20%22Funnel%20Click%20Path%20CDN%20Busy%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.cdnBusyTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 2470,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [3rd Party Busy](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.thirdPartyBusyTime%20as%20%22Funnel%20Click%20Path%203rd%20Party%20Busy%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.thirdPartyBusyTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 2470,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [3rd Party Busy](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.thirdPartyBusyTime%20as%20%22Funnel%20Click%20Path%203rd%20Party%20Busy%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.thirdPartyBusyTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 2698,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 2698,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 3192,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.httpRequestsWithErrors%20as%20%22HTTP%20Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 3192,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.httpRequestsWithErrors%20as%20%22HTTP%20Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20DESC&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 3420,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 3420,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20DESC&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 608,
-    "left": 3648,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedXhrRequests%20as%20%22Failed%20Xhr%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20not%20StepFunnel9%20and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20DESC&visualization=TABLE)"
-  },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 342,
-    "left": 3648,
-    "width": 228,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-   "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedXhrRequests%20as%20%22Failed%20Xhr%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel8%20and%20StepFunnel9%20and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20desc&visualization=TABLE)"
   }
- ]
+  ]
 }
