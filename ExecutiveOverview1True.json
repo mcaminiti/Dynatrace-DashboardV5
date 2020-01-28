@@ -337,8 +337,8 @@
    }
   },
   {
-   "name": "Revenue",
-   "tileType": "HEADER",
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
     "top": 418,
@@ -349,7 +349,8 @@
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
-   }
+   },
+   "markdown": "## Revenue"
   },
   {
    "name": "Markdown",

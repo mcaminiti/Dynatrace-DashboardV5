@@ -337,8 +337,8 @@
    }
   },
   {
-   "name": "Abandons",
-   "tileType": "HEADER",
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
     "top": 418,
@@ -349,7 +349,8 @@
    "tileFilter": {
     "timeframe": null,
     "managementZone": null
-   }
+   },
+   "markdown": "## [Revenue](#dashboard;id=3aa5be20-8833-4af1-a847-2f84cb5da313)"
   },
   {
    "name": "Markdown",
@@ -381,7 +382,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Revenue](#dashboard;id=3aa5be20-8833-4af1-a847-2f84cb5da313)"
+   "markdown": "## Abandons"
   }
  ]
 }
