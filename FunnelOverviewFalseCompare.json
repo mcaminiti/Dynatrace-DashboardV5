@@ -140,6 +140,25 @@
    "configured": true,
    "bounds": {
     "top": 228,
+    "left": 228,
+    "width": 228,
+    "height": 152
+   },
+   "tileFilter": {
+    "timeframe": "-MyTimeh",
+    "managementZone": null
+   },
+   "customName": "Requests",
+   "query": "select count(usersessionid) as \"Requests\" from usersession where useraction.application=\"MyApp\"",
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 228,
     "left": 380,
     "width": 228,
     "height": 152
@@ -261,6 +280,25 @@
    },
    "customName": "Tolerated Users",
    "query": "select count(usersessionid) as \"Abandons\" from usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and not CompareLastFunnelStep and userExperienceScore=\"TOLERATED\"",
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 646,
+    "left": 228,
+    "width": 228,
+    "height": 152
+   },
+   "tileFilter": {
+    "timeframe": "-MyCompareTimeh to -MyTimeh",
+    "managementZone": null
+   },
+   "customName": "Requests",
+   "query": "select count(usersessionid) as \"Requests\" from usersession where useraction.application=\"MyApp\"",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
