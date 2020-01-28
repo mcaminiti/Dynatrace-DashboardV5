@@ -264,7 +264,7 @@
       "timeFrameShift": "dynamic"
     },
     {
-      "name": "Without PromHeaderStep New Feature",
+      "name": "Without FeatureHeaderStep New Feature",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
