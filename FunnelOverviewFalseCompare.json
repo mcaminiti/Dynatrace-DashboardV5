@@ -140,7 +140,7 @@
    "configured": true,
    "bounds": {
     "top": 228,
-    "left": 228,
+    "left": 152,
     "width": 228,
     "height": 152
    },
@@ -289,7 +289,7 @@
    "configured": true,
    "bounds": {
     "top": 646,
-    "left": 228,
+    "left": 152,
     "width": 228,
     "height": 152
    },
