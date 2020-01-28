@@ -262,8 +262,8 @@
     "timeframe": "-MyTimeh",
     "managementZone": null
    },
-   "customName": "Returning User Revenue",
-   "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS false",
+   "customName": "Requests",
+   "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
@@ -525,8 +525,8 @@
     "timeframe": "-MyCompareTimeh to -MyTimeh",
     "managementZone": null
    },
-   "customName": "Returning User Revenue",
-   "query": "select sum(comparerevenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and CompareLastFunnelStep and newUser IS false",
+   "customName": "Requests",
+   "query": "select count(usersessionid) as \"Requests\" FROM usersession where useraction.application=\"MyCompareApp\" and CompareStepFunnel1 and CompareLastFunnelStep",
    "type": "SINGLE_VALUE",
    "timeFrameShift": "dynamic"
   },
