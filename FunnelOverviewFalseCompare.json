@@ -481,6 +481,25 @@
    "tileType": "DTAQL",
    "configured": true,
    "bounds": {
+    "top": 228,
+    "left": 1292,
+    "width": 228,
+    "height": 152
+   },
+   "tileFilter": {
+    "timeframe": "-MyTimeh",
+    "managementZone": null
+   },
+   "customName": "Session Duration",
+   "query": "select avg(usersession.duration) as \"Session Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10",
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
     "top": 646,
     "left": 836,
     "width": 228,
@@ -511,6 +530,25 @@
    },
    "customName": "Nonengaged Sessions",
    "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10",
+   "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+  },
+  {
+   "name": "User Sessions Query",
+   "tileType": "DTAQL",
+   "configured": true,
+   "bounds": {
+    "top": 646,
+    "left": 1292,
+    "width": 228,
+    "height": 152
+   },
+   "tileFilter": {
+    "timeframe": "-MyCompareTimeh to -MyTimeh",
+    "managementZone": null
+   },
+   "customName": "Session Duration",
+   "query": "select avg(usersession.duration) as \"Session Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   }
