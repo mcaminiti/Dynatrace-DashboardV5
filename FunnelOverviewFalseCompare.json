@@ -491,7 +491,7 @@
     "managementZone": null
    },
    "customName": "Session Duration",
-   "query": "select avg(usersession.duration) as \"Session Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10",
+   "query": "select avg(usersession.duration) as \"Session Duration\" from usersession where useraction.application=\"MyApp\" MyFilter",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   },
@@ -548,7 +548,7 @@
     "managementZone": null
    },
    "customName": "Session Duration",
-   "query": "select avg(usersession.duration) as \"Session Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10",
+   "query": "select avg(usersession.duration) as \"Session Duration\" from usersession where useraction.application=\"MyApp\" MyFilter",
    "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
   }
