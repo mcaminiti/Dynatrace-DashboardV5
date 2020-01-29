@@ -333,7 +333,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Compare Links]()\n## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [Funnel Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)\n![]()\n## [New Feature Compare](#dashboard;id=7e481cc8-bea9-46ba-b1f8-23ebdd1da313)"
+      "markdown": "![Compare Links]()\n## [Overview Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-23ebdd1da313)\n![]()\n## [User Journey Compare](#dashboard;id=6e481cc8-bea9-46ba-b1f8-24ebdd1da313)\n![]()\n## [New Feature Compare](#dashboard;id=7e481cc8-bea9-46ba-b1f8-23ebdd1da313)"
     },
     {
       "name": "Markdown",
