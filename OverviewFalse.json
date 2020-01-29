@@ -365,7 +365,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [MyFunnel Funnel](#dashboard;id=65312f05-ca6c-4896-b2b4-1bc8ce3da313)"
+      "markdown": "## [MyFunnel User Journey](#dashboard;id=65312f05-ca6c-4896-b2b4-1bc8ce3da313)"
     },
     {
       "name": "Markdown",
@@ -381,7 +381,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![Forecast Links]()\n## [Funnel Forecast](#dashboard;id=18e35e26-8734-467e-9c04-0f398e2da313)"
+      "markdown": "![Forecast Links]()\n## [User Journey Forecast](#dashboard;id=18e35e26-8734-467e-9c04-0f398e2da313)"
     },
     {
       "name": "Markdown",

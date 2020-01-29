@@ -51,7 +51,7 @@
    }
   },
   {
-   "name": "MyCompareApp MyCompareFunnel Funnel Previous MyTime Hours",
+   "name": "MyCompareApp MyCompareFunnel User Journey Previous MyTime Hours",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -66,7 +66,7 @@
    }
   },
   {
-   "name": "MyApp MyFunnel Funnel Last MyTime Hours",
+   "name": "MyApp MyFunnel User Journey Last MyTime Hours",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -94,7 +94,7 @@
     "timeframe": "-MyTimeh",
     "managementZone": null
    },
-   "customName": "Funnel",
+   "customName": "User Journey",
    "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyApp\"",
    "type": "FUNNEL",
    "timeFrameShift": "dynamic"
@@ -129,7 +129,7 @@
     "timeframe": "-MyCompareTimeh to -MyTimeh",
     "managementZone": null
    },
-   "customName": "Funnel",
+   "customName": "User Journey",
    "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyCompareApp\"",
    "type": "FUNNEL",
    "timeFrameShift": "dynamic"

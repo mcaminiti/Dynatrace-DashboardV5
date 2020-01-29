@@ -202,7 +202,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Funnel Links1]()\n"
+   "markdown": "![User Journey Links1]()\n"
   },
   {
    "name": "Markdown",
@@ -356,7 +356,7 @@
    }
   },
           {
-      "name": "Funnel Links \u25BC",
+      "name": "User Journey Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
