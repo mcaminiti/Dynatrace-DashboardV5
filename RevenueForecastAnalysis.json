@@ -241,8 +241,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue Forecast",
-      "query": "select (((rev1*256 + rev2*16 + rev3*4 + rev4*2 + rev5)/279) + (rev1 + ((((rev1-rev2) - (rev2-rev3))) - (((rev2-rev3) - (rev3-rev4))) + ((rev1-rev2) - (rev2-rev3)) + (rev1-rev2) + ((rev2-rev3) - (rev3-rev4)) + (rev2-rev3) + ((rev3-rev4) - (rev4-rev5)) + (rev3-rev4) + (rev4-rev5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((rev1*256 + rev2*16 + rev3*4 + rev4*2 + rev5)/279) + (rev1 + ((((rev1-rev2) - (rev2-rev3))) - (((rev2-rev3) - (rev3-rev4))) + ((rev1-rev2) - (rev2-rev3)) + (rev1-rev2) + ((rev2-rev3) - (rev3-rev4)) + (rev2-rev3) + ((rev3-rev4) - (rev4-rev5)) + (rev3-rev4) + (rev4-rev5))/10)*2)/3*tfactor/100 as \"Revenue Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
