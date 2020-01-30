@@ -214,7 +214,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Conversion Forecast",
       "query": "select (((funconv1*256 + funconv2*16 + funconv3*4 + funconv4*2 + funconv5)/279) + (funconv1 + ((((funconv1-funconv2) - (funconv2-funconv3))) - (((funconv2-funconv3) - (funconv3-funconv4))) + ((funconv1-funconv2) - (funconv2-funconv3)) + (funconv1-funconv2) + ((funconv2-funconv3) - (funconv3-funconv4)) + (funconv2-funconv3) + ((funconv3-funconv4) - (funconv4-funconv5)) + (funconv3-funconv4) + (funconv4-funconv5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -232,7 +232,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Conversions",
       "query": "select funconv1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -250,7 +250,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Conversions",
       "query": "select funconv2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -268,7 +268,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Conversions",
       "query": "select funconv3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -286,7 +286,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Conversions",
       "query": "select funconv4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -304,7 +304,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Conversions",
       "query": "select funconv5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -322,7 +322,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Abandon Forecast",
       "query": "select (((funaban1*256 + funaban2*16 + funaban3*4 + funaban4*2 + funaban5)/279) + (funaban1 + ((((funaban1-funaban2) - (funaban2-funaban3))) - (((funaban2-funaban3) - (funaban3-funaban4))) + ((funaban1-funaban2) - (funaban2-funaban3)) + (funaban1-funaban2) + ((funaban2-funaban3) - (funaban3-funaban4)) + (funaban2-funaban3) + ((funaban3-funaban4) - (funaban4-funaban5)) + (funaban3-funaban4) + (funaban4-funaban5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -340,7 +340,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Abandons",
       "query": "select funaban1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -358,7 +358,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Abandons",
       "query": "select funaban2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -376,7 +376,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Abandons",
       "query": "select funaban3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -394,7 +394,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Abandons",
       "query": "select funaban4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -412,7 +412,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Abandons",
       "query": "select funaban5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -430,7 +430,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Visit Forecast",
       "query": "select (((funvisit1*256 + funvisit2*16 + funvisit3*4 + funvisit4*2 + funvisit5)/279) + (funvisit1 + ((((funvisit1-funvisit2) - (funvisit2-funvisit3))) - (((funvisit2-funvisit3) - (funvisit3-funvisit4))) + ((funvisit1-funvisit2) - (funvisit2-funvisit3)) + (funvisit1-funvisit2) + ((funvisit2-funvisit3) - (funvisit3-funvisit4)) + (funvisit2-funvisit3) + ((funvisit3-funvisit4) - (funvisit4-funvisit5)) + (funvisit3-funvisit4) + (funvisit4-funvisit5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -448,7 +448,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Visits",
       "query": "select funvisit1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -466,7 +466,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Visits",
       "query": "select funvisit2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -484,7 +484,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Visits",
       "query": "select funvisit3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -502,7 +502,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Visits",
       "query": "select funvisit4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -520,7 +520,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Visits",
       "query": "select funvisit5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -538,7 +538,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Satisfied Users Forecast",
       "query": "select (((fnosu1*256 + fnosu2*16 + fnosu3*4 + fnosu4*2 + fnosu5)/279) + (fnosu1 + ((((fnosu1-fnosu2) - (fnosu2-fnosu3))) - (((fnosu2-fnosu3) - (fnosu3-fnosu4))) + ((fnosu1-fnosu2) - (fnosu2-fnosu3)) + (fnosu1-fnosu2) + ((fnosu2-fnosu3) - (fnosu3-fnosu4)) + (fnosu2-fnosu3) + ((fnosu3-fnosu4) - (fnosu4-fnosu5)) + (fnosu3-fnosu4) + (fnosu4-fnosu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -556,7 +556,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Satisfied Users",
       "query": "select fnosu1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -574,7 +574,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Satisfied Users",
       "query": "select fnosu2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -592,7 +592,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Satisfied Users",
       "query": "select fnosu3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -610,7 +610,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Satisfied Users",
       "query": "select fnosu4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -628,7 +628,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Satisfied Users",
       "query": "select fnosu5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -646,7 +646,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Session Duration Forecast",
       "query": "select (((fundur1*256 + fundur2*16 + fundur3*4 + fundur4*2 + fundur5)/279) + (fundur1 + ((((fundur1-fundur2) - (fundur2-fundur3))) - (((fundur2-fundur3) - (fundur3-fundur4))) + ((fundur1-fundur2) - (fundur2-fundur3)) + (fundur1-fundur2) + ((fundur2-fundur3) - (fundur3-fundur4)) + (fundur2-fundur3) + ((fundur3-fundur4) - (fundur4-fundur5)) + (fundur3-fundur4) + (fundur4-fundur5))/10)*2)/3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -664,7 +664,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Session Duration",
       "query": "select fundur1 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -682,7 +682,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Session Duration",
       "query": "select fundur2 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -700,7 +700,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Session Duration",
       "query": "select fundur3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -718,7 +718,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Session Duration",
       "query": "select fundur4 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
@@ -736,7 +736,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": " ",
+      "customName": "Session Duration",
       "query": "select fundur5 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
