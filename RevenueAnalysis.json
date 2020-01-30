@@ -26,26 +26,7 @@
       "configured": true,
       "bounds": {
         "top": 38,
-        "left": 1064,
-        "width": 190,
-        "height": 152
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "\ud83c\udfc1",
-      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\tuserExperienceScore=\"SATISFIED\" and\n\trevenueproperty>0\n",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "DTAQL",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 1254,
+        "left": 38,
         "width": 228,
         "height": 152
       },
@@ -53,8 +34,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83c\udfc1",
-      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\tuserExperienceScore=\"TOLERATED\" and\n\trevenueproperty>0\n",
+      "customName": " ",
+      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -64,45 +45,7 @@
       "configured": true,
       "bounds": {
         "top": 38,
-        "left": 1482,
-        "width": 190,
-        "height": 152
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "\ud83c\udfc1",
-      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\tuserExperienceScore=\"FRUSTRATED\" and\n\trevenueproperty>0\n",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "DTAQL",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 228,
-        "width": 190,
-        "height": 152
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "\ud83d\udcb0",
-      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\tuserExperienceScore=\"SATISFIED\" and\n\trevenueproperty>0\n",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "DTAQL",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 418,
+        "left": 266,
         "width": 228,
         "height": 152
       },
@@ -110,8 +53,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\tuserExperienceScore=\"TOLERATED\" and\n\trevenueproperty>0\n",
+      "customName": " ",
+      "query": "select avg(revenueproperty) as \"Avg Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -121,16 +64,92 @@
       "configured": true,
       "bounds": {
         "top": 38,
-        "left": 646,
-        "width": 190,
+        "left": 494,
+        "width": 228,
         "height": 152
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\tuserExperienceScore=\"FRUSTRATED\" and\n\trevenueproperty>0\n",
+      "customName": " ",
+      "query": "select sum(revenueproperty) as \"Risk Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 722,
+        "width": 228,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select avg(revenueproperty) as \"Avg Risk Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 950,
+        "width": 228,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1178,
+        "width": 228,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select avg(revenueproperty) as \"Average Lost Order Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 38,
+        "left": 1406,
+        "width": 228,
+        "height": 152
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select sum(revenueproperty) as \"New User Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -148,81 +167,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
-      "type": "PIE_CHART"
-    },
-    {
-      "name": "DTAQL",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 0,
-        "width": 228,
-        "height": 152
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "\ud83d\udcb0",
-      "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\trevenueproperty>0\n",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "DTAQL",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 836,
-        "width": 228,
-        "height": 152
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "\ud83c\udfc1",
-      "query": "select count(distinct userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and\n\trevenueproperty>0\n",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "DTAQL",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 532,
-        "left": 0,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "\ud83d\udcb0",
-      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
-      "type": "PIE_CHART"
-    },
-    {
-      "name": "DTAQL",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 228,
-        "left": 836,
-        "width": 418,
-        "height": 304
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": "\ud83d\udcb0",
+      "customName": "Revenue by Region",
       "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
@@ -240,8 +185,26 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
+      "customName": "Revenue by User Experience",
+      "query": "SELECT userExperienceScore, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by userExperienceScore order by sum(revenueproperty) desc",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 228,
+        "left": 836,
+        "width": 418,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Risk Revenue by Region",
+      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\") and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -258,8 +221,26 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
+      "customName": "Risk Revenue by User Experience",
+      "query": "SELECT userExperienceScore, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\") and region!=\"synthetic\" and region IS NOT NULL group by userExperienceScore order by sum(revenueproperty) desc",
+      "type": "PIE_CHART"
+    },
+    {
+      "name": "DTAQL",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 532,
+        "left": 0,
+        "width": 418,
+        "height": 304
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": "Lost Revenue by Region",
+      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep) and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -276,8 +257,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
+      "customName": "Lost Revenue by User Experience",
+      "query": "SELECT userExperienceScore, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep) and region!=\"synthetic\" and region IS NOT NULL group by userExperienceScore order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -294,8 +275,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
+      "customName": "New User Revenue by Region",
+      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -312,8 +293,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "\ud83d\udcb0",
-      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
+      "customName": "New User Revenue by User Experience",
+      "query": "SELECT userExperienceScore, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true and region!=\"synthetic\" and region IS NOT NULL group by userExperienceScore order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -322,24 +303,8 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 836,
-        "width": 190,
-        "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "## [Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%2C%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
-    },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 0,
-        "width": 190,
+        "left": 38,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
@@ -354,15 +319,15 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 228,
-        "width": 152,
+        "left": 266,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%2C%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20where%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+   "markdown": "## [Avg Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -370,15 +335,15 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 418,
-        "width": 152,
+        "left": 494,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%2C%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20where%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+   "markdown": "## [Risk Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -386,15 +351,15 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 646,
-        "width": 152,
+        "left": 722,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%2C%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20where%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+   "markdown": "## [Avg Risk Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -402,15 +367,15 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 1064,
-        "width": 152,
+        "left": 950,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%2C%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20where%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+   "markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -418,15 +383,15 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 1254,
-        "width": 152,
+        "left": 1178,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%2C%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20where%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+   "markdown": "## [Avg Lost Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -434,15 +399,15 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 1482,
-        "width": 152,
+        "left": 1406,
+        "width": 228,
         "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%2C%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20where%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+   "markdown": "## [New User Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
