@@ -172,13 +172,13 @@
    "markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09f1urlstep%20and%20userExperienceScore%3D%22FRUSTRATED%22%20and%20not%20LastURLStep%20&visualization=TABLE)"
   },
   {
-   "name": "Abandons by Apdex",
+   "name": "Abandons by User Experience",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
     "top": 0,
     "left": 836,
-    "width": 304,
+    "width": 380,
     "height": 38
    },
    "tileFilter": {

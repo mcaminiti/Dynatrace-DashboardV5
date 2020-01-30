@@ -208,13 +208,13 @@
    "type": "PIE_CHART"
   },
   {
-   "name": "Conversions by Apdex",
+   "name": "Conversions by User Experience",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
     "top": 0,
     "left": 836,
-    "width": 304,
+    "width": 380,
     "height": 38
    },
    "tileFilter": {

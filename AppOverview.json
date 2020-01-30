@@ -610,6 +610,54 @@
    "tileType": "MARKDOWN",
    "configured": true,
    "bounds": {
+        "top": 1216,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Performance](https://MyTenant/#uemapplications/performanceanalysis;uemapplicationId=InternalAppID;visiblepart=action)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 1254,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Bounces](https://MyTenant/#uemapplications/uemvisitcompareoverview;uemapplicationId=InternalAppID;visiblepart=visitBounces)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
+        "top": 1292,
+        "left": 1368,
+        "width": 266,
+        "height": 38
+   },
+   "tileFilter": {
+    "timeframe": null,
+    "managementZone": null
+   },
+   "markdown": "## [Top Findings](https://MyTenant/#hyperlyzer;uemapplicationId=InternalAppID)"
+  },
+  {
+   "name": "Markdown",
+   "tileType": "MARKDOWN",
+   "configured": true,
+   "bounds": {
     "top": 0,
     "left": 1634,
     "width": 38,

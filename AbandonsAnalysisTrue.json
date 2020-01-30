@@ -307,13 +307,13 @@
 			"type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
 		},
 		{
-			"name": "Lost Revenue by Apdex",
+			"name": "Lost Revenue by User Experience",
 			"tileType": "HEADER",
 			"configured": true,
 			"bounds": {
 				"top": 532,
 				"left": 0,
-				"width": 304,
+				"width": 380,
 				"height": 38
 			},
 			"tileFilter": {
@@ -337,13 +337,13 @@
 			}
 		},
 		{
-			"name": "Abandons by Apdex",
+			"name": "Abandons by User Experience",
 			"tileType": "HEADER",
 			"configured": true,
 			"bounds": {
 				"top": 532,
 				"left": 798,
-				"width": 304,
+				"width": 380,
 				"height": 38
 			},
 			"tileFilter": {
