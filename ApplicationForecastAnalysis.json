@@ -214,8 +214,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Satisfied User Forecast",
-      "query": "select (((anosu1*256 + anosu2*16 + anosu3*4 + anosu4*2 + anosu5)/279) + (anosu1 + ((((anosu1-anosu2) - (anosu2-anosu3))) - (((anosu2-anosu3) - (anosu3-anosu4))) + ((anosu1-anosu2) - (anosu2-anosu3)) + (anosu1-anosu2) + ((anosu2-anosu3) - (anosu3-anosu4)) + (anosu2-anosu3) + ((anosu3-anosu4) - (anosu4-anosu5)) + (anosu3-anosu4) + (anosu4-anosu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((anosu1*256 + anosu2*16 + anosu3*4 + anosu4*2 + anosu5)/279) + (anosu1 + ((((anosu1-anosu2) - (anosu2-anosu3))) - (((anosu2-anosu3) - (anosu3-anosu4))) + ((anosu1-anosu2) - (anosu2-anosu3)) + (anosu1-anosu2) + ((anosu2-anosu3) - (anosu3-anosu4)) + (anosu2-anosu3) + ((anosu3-anosu4) - (anosu4-anosu5)) + (anosu3-anosu4) + (anosu4-anosu5))/10)*2)/3*tfactor/100 as \"Satisfied User Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -232,8 +232,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Satisfied Users",
-      "query": "select anosu1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anosu1 as \"Satisfied Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -250,8 +250,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Satisfied Users",
-      "query": "select anosu2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anosu2 as \"Satisfied Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -268,8 +268,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Satisfied Users",
-      "query": "select anosu3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anosu3 as \"Satisfied Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -286,8 +286,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Satisfied Users",
-      "query": "select anosu4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anosu4 as \"Satisfied Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -304,8 +304,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Satisfied Users",
-      "query": "select anosu5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anosu5 as \"Satisfied Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -322,8 +322,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Tolerated Users Forecast",
-      "query": "select (((anotu1*256 + anotu2*16 + anotu3*4 + anotu4*2 + anotu5)/279) + (anotu1 + ((((anotu1-anotu2) - (anotu2-anotu3))) - (((anotu2-anotu3) - (anotu3-anotu4))) + ((anotu1-anotu2) - (anotu2-anotu3)) + (anotu1-anotu2) + ((anotu2-anotu3) - (anotu3-anotu4)) + (anotu2-anotu3) + ((anotu3-anotu4) - (anotu4-anotu5)) + (anotu3-anotu4) + (anotu4-anotu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((anotu1*256 + anotu2*16 + anotu3*4 + anotu4*2 + anotu5)/279) + (anotu1 + ((((anotu1-anotu2) - (anotu2-anotu3))) - (((anotu2-anotu3) - (anotu3-anotu4))) + ((anotu1-anotu2) - (anotu2-anotu3)) + (anotu1-anotu2) + ((anotu2-anotu3) - (anotu3-anotu4)) + (anotu2-anotu3) + ((anotu3-anotu4) - (anotu4-anotu5)) + (anotu3-anotu4) + (anotu4-anotu5))/10)*2)/3*tfactor/100 as \"Tolerated Users Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -340,8 +340,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Tolerated Users",
-      "query": "select anotu1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anotu1 as \"Tolerated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -358,8 +358,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Tolerated Users",
-      "query": "select anotu2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anotu2 as \"Tolerated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -376,8 +376,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Tolerated Users",
-      "query": "select anotu3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anotu3 as \"Tolerated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -394,8 +394,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Tolerated Users",
-      "query": "select anotu4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anotu4 as \"Tolerated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -412,8 +412,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Tolerated Users",
-      "query": "select anotu5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anotu5 as \"Tolerated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -430,8 +430,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Frustrated Users Forecast",
-      "query": "select (((anofu1*256 + anofu2*16 + anofu3*4 + anofu4*2 + anofu5)/279) + (anofu1 + ((((anofu1-anofu2) - (anofu2-anofu3))) - (((anofu2-anofu3) - (anofu3-anofu4))) + ((anofu1-anofu2) - (anofu2-anofu3)) + (anofu1-anofu2) + ((anofu2-anofu3) - (anofu3-anofu4)) + (anofu2-anofu3) + ((anofu3-anofu4) - (anofu4-anofu5)) + (anofu3-anofu4) + (anofu4-anofu5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((anofu1*256 + anofu2*16 + anofu3*4 + anofu4*2 + anofu5)/279) + (anofu1 + ((((anofu1-anofu2) - (anofu2-anofu3))) - (((anofu2-anofu3) - (anofu3-anofu4))) + ((anofu1-anofu2) - (anofu2-anofu3)) + (anofu1-anofu2) + ((anofu2-anofu3) - (anofu3-anofu4)) + (anofu2-anofu3) + ((anofu3-anofu4) - (anofu4-anofu5)) + (anofu3-anofu4) + (anofu4-anofu5))/10)*2)/3*tfactor/100 as \"Frustrated Users Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -448,8 +448,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Frustrated Users",
-      "query": "select anofu1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anofu1 as \"Frustrated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -466,8 +466,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Frustrated Users",
-      "query": "select anofu2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anofu2 as \"Frustrated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -484,8 +484,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Frustrated Users",
-      "query": "select anofu3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anofu3 as \"Frustrated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -502,8 +502,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Frustrated Users",
-      "query": "select anofu4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anofu4 as \"Frustrated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -520,8 +520,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Frustrated Users",
-      "query": "select anofu5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select anofu5 as \"Frustrated Users\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -538,8 +538,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "User Action Duration Forecast",
-      "query": "select (((appdur1*256 + appdur2*16 + appdur3*4 + appdur4*2 + appdur5)/279) + (appdur1 + ((((appdur1-appdur2) - (appdur2-appdur3))) - (((appdur2-appdur3) - (appdur3-appdur4))) + ((appdur1-appdur2) - (appdur2-appdur3)) + (appdur1-appdur2) + ((appdur2-appdur3) - (appdur3-appdur4)) + (appdur2-appdur3) + ((appdur3-appdur4) - (appdur4-appdur5)) + (appdur3-appdur4) + (appdur4-appdur5))/10)*2)/3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((appdur1*256 + appdur2*16 + appdur3*4 + appdur4*2 + appdur5)/279) + (appdur1 + ((((appdur1-appdur2) - (appdur2-appdur3))) - (((appdur2-appdur3) - (appdur3-appdur4))) + ((appdur1-appdur2) - (appdur2-appdur3)) + (appdur1-appdur2) + ((appdur2-appdur3) - (appdur3-appdur4)) + (appdur2-appdur3) + ((appdur3-appdur4) - (appdur4-appdur5)) + (appdur3-appdur4) + (appdur4-appdur5))/10)*2)/3 as \"User Action Duration Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -556,8 +556,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Action Duration",
-      "query": "select appdur1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select appdur1 as \"Action Duration\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -574,8 +574,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Action Duration",
-      "query": "select appdur2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select appdur2 as \"Action Duration\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -592,8 +592,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Action Duration",
-      "query": "select appdur3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select appdur3 as \"Action Duration\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -610,8 +610,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Action Duration",
-      "query": "select appdur4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select appdur4 as \"Action Duration\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -628,8 +628,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Action Duration",
-      "query": "select appdur5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select appdur5 as \"Action Duration\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -646,8 +646,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Error Forecast",
-      "query": "select (((apperr1*256 + apperr2*16 + apperr3*4 + apperr4*2 + apperr5)/279) + (apperr1 + ((((apperr1-apperr2) - (apperr2-apperr3))) - (((apperr2-apperr3) - (apperr3-apperr4))) + ((apperr1-apperr2) - (apperr2-apperr3)) + (apperr1-apperr2) + ((apperr2-apperr3) - (apperr3-apperr4)) + (apperr2-apperr3) + ((apperr3-apperr4) - (apperr4-apperr5)) + (apperr3-apperr4) + (apperr4-apperr5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((apperr1*256 + apperr2*16 + apperr3*4 + apperr4*2 + apperr5)/279) + (apperr1 + ((((apperr1-apperr2) - (apperr2-apperr3))) - (((apperr2-apperr3) - (apperr3-apperr4))) + ((apperr1-apperr2) - (apperr2-apperr3)) + (apperr1-apperr2) + ((apperr2-apperr3) - (apperr3-apperr4)) + (apperr2-apperr3) + ((apperr3-apperr4) - (apperr4-apperr5)) + (apperr3-apperr4) + (apperr4-apperr5))/10)*2)/3*tfactor/100 as \"Error Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -664,8 +664,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
-      "query": "select apperr1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select apperr1 as \"Errors\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -682,8 +682,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
-      "query": "select apperr2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select apperr2 as \"Errors\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -700,8 +700,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
-      "query": "select apperr3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select apperr3 as \"Errors\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -718,8 +718,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
-      "query": "select apperr4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select apperr4 as \"Errors\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -736,8 +736,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Errors",
-      "query": "select apperr5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select apperr5 as \"Errors\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {

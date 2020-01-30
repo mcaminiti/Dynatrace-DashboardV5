@@ -260,7 +260,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select (((acv1*256 + acv2*16 + acv3*4 + acv4*2 + acv5)/279) + (acv1 + ((((acv1-acv2) - (acv2-acv3))) - (((acv2-acv3) - (acv3-acv4))) + ((acv1-acv2) - (acv2-acv3)) + (acv1-acv2) + ((acv2-acv3) - (acv3-acv4)) + (acv2-acv3) + ((acv3-acv4) - (acv4-acv5)) + (acv3-acv4) + (acv4-acv5))/10)*2)/3 as \" \" from useraction limit 1",
+      "query": "select (((acv1*256 + acv2*16 + acv3*4 + acv4*2 + acv5)/279) + (acv1 + ((((acv1-acv2) - (acv2-acv3))) - (((acv2-acv3) - (acv3-acv4))) + ((acv1-acv2) - (acv2-acv3)) + (acv1-acv2) + ((acv2-acv3) - (acv3-acv4)) + (acv2-acv3) + ((acv3-acv4) - (acv4-acv5)) + (acv3-acv4) + (acv4-acv5))/10)*2)/3 as \"Cart Value Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -277,8 +277,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue Forecast",
-      "query": "select (((riskrev1*256 + riskrev2*16 + riskrev3*4 + riskrev4*2 + riskrev5)/279) + (riskrev1 + ((((riskrev1-riskrev2) - (riskrev2-riskrev3))) - (((riskrev2-riskrev3) - (riskrev3-riskrev4))) + ((riskrev1-riskrev2) - (riskrev2-riskrev3)) + (riskrev1-riskrev2) + ((riskrev2-riskrev3) - (riskrev3-riskrev4)) + (riskrev2-riskrev3) + ((riskrev3-riskrev4) - (riskrev4-riskrev5)) + (riskrev3-riskrev4) + (riskrev4-riskrev5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((riskrev1*256 + riskrev2*16 + riskrev3*4 + riskrev4*2 + riskrev5)/279) + (riskrev1 + ((((riskrev1-riskrev2) - (riskrev2-riskrev3))) - (((riskrev2-riskrev3) - (riskrev3-riskrev4))) + ((riskrev1-riskrev2) - (riskrev2-riskrev3)) + (riskrev1-riskrev2) + ((riskrev2-riskrev3) - (riskrev3-riskrev4)) + (riskrev2-riskrev3) + ((riskrev3-riskrev4) - (riskrev4-riskrev5)) + (riskrev3-riskrev4) + (riskrev4-riskrev5))/10)*2)/3*tfactor/100 as \"Risk Revenue Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -295,8 +295,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Cart Value Forecast",
-      "query": "select (((arcv1*256 + arcv2*16 + arcv3*4 + arcv4*2 + arcv5)/279) + (arcv1 + ((((arcv1-arcv2) - (arcv2-arcv3))) - (((arcv2-arcv3) - (arcv3-arcv4))) + ((arcv1-arcv2) - (arcv2-arcv3)) + (arcv1-arcv2) + ((arcv2-arcv3) - (arcv3-arcv4)) + (arcv2-arcv3) + ((arcv3-arcv4) - (arcv4-arcv5)) + (arcv3-arcv4) + (arcv4-arcv5))/10)*2)/3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((arcv1*256 + arcv2*16 + arcv3*4 + arcv4*2 + arcv5)/279) + (arcv1 + ((((arcv1-arcv2) - (arcv2-arcv3))) - (((arcv2-arcv3) - (arcv3-arcv4))) + ((arcv1-arcv2) - (arcv2-arcv3)) + (arcv1-arcv2) + ((arcv2-arcv3) - (arcv3-arcv4)) + (arcv2-arcv3) + ((arcv3-arcv4) - (arcv4-arcv5)) + (arcv3-arcv4) + (arcv4-arcv5))/10)*2)/3 as \"Risk Cart Value Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -313,8 +313,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue Forecast",
-      "query": "select (((lostrev1*256 + lostrev2*16 + lostrev3*4 + lostrev4*2 + lostrev5)/279) + (lostrev1 + ((((lostrev1-lostrev2) - (lostrev2-lostrev3))) - (((lostrev2-lostrev3) - (lostrev3-lostrev4))) + ((lostrev1-lostrev2) - (lostrev2-lostrev3)) + (lostrev1-lostrev2) + ((lostrev2-lostrev3) - (lostrev3-lostrev4)) + (lostrev2-lostrev3) + ((lostrev3-lostrev4) - (lostrev4-lostrev5)) + (lostrev3-lostrev4) + (lostrev4-lostrev5))/10)*2)/3*tfactor/100 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((lostrev1*256 + lostrev2*16 + lostrev3*4 + lostrev4*2 + lostrev5)/279) + (lostrev1 + ((((lostrev1-lostrev2) - (lostrev2-lostrev3))) - (((lostrev2-lostrev3) - (lostrev3-lostrev4))) + ((lostrev1-lostrev2) - (lostrev2-lostrev3)) + (lostrev1-lostrev2) + ((lostrev2-lostrev3) - (lostrev3-lostrev4)) + (lostrev2-lostrev3) + ((lostrev3-lostrev4) - (lostrev4-lostrev5)) + (lostrev3-lostrev4) + (lostrev4-lostrev5))/10)*2)/3*tfactor/100 as \"Lost Revenue Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -331,8 +331,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Cart Value Forecast",
-      "query": "select (((alcv1*256 + alcv2*16 + alcv3*4 + alcv4*2 + alcv5)/279) + (alcv1 + ((((alcv1-alcv2) - (alcv2-alcv3))) - (((alcv2-alcv3) - (alcv3-alcv4))) + ((alcv1-alcv2) - (alcv2-alcv3)) + (alcv1-alcv2) + ((alcv2-alcv3) - (alcv3-alcv4)) + (alcv2-alcv3) + ((alcv3-alcv4) - (alcv4-alcv5)) + (alcv3-alcv4) + (alcv4-alcv5))/10)*2)/3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select (((alcv1*256 + alcv2*16 + alcv3*4 + alcv4*2 + alcv5)/279) + (alcv1 + ((((alcv1-alcv2) - (alcv2-alcv3))) - (((alcv2-alcv3) - (alcv3-alcv4))) + ((alcv1-alcv2) - (alcv2-alcv3)) + (alcv1-alcv2) + ((alcv2-alcv3) - (alcv3-alcv4)) + (alcv2-alcv3) + ((alcv3-alcv4) - (alcv4-alcv5)) + (alcv3-alcv4) + (alcv4-alcv5))/10)*2)/3 as \"Lost Cart Value Forecast\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -349,8 +349,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue",
-      "query": "select rev1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select rev1 as \"Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -367,8 +367,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Cart Value",
-      "query": "select acv1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select acv1 as \"Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -385,8 +385,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue",
-      "query": "select riskrev1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select riskrev1 as \"Risk Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -403,8 +403,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Cart Value",
-      "query": "select arcv1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select arcv1 as \"Risk Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -421,8 +421,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue",
-      "query": "select lostrev1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select lostrev1 as \"Lost Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -439,8 +439,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Cart Value",
-      "query": "select alcv1 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select alcv1 as \"Lost Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -457,8 +457,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue",
-      "query": "select rev2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select rev2 as \"Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -475,8 +475,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Cart Value",
-      "query": "select acv2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select acv2 as \"Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -493,8 +493,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue",
-      "query": "select riskrev2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select riskrev2 as \"Risk Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -511,8 +511,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Cart Value",
-      "query": "select arcv2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select arcv2 as \"Risk Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -529,8 +529,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue",
-      "query": "select lostrev2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select lostrev2 as \"Lost Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -547,8 +547,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Cart Value",
-      "query": "select alcv2 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select alcv2 as \"Lost Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -565,8 +565,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue",
-      "query": "select rev3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select rev3 as \"Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -583,8 +583,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Cart Value",
-      "query": "select acv3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select acv3 as \"Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -601,8 +601,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue",
-      "query": "select riskrev3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select riskrev3 as \"Risk Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -619,8 +619,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Cart Value",
-      "query": "select arcv3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select arcv3 as \"Risk Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -637,8 +637,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue",
-      "query": "select lostrev3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select lostrev3 as \"Lost Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -655,8 +655,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Cart Value",
-      "query": "select alcv3 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select alcv3 as \"Lost Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -673,8 +673,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue",
-      "query": "select rev4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select rev4 as \"Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -691,8 +691,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Cart Value",
-      "query": "select acv4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select acv4 as \"Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -709,8 +709,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue",
-      "query": "select riskrev4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select riskrev4 as \"Risk Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -727,8 +727,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Cart Value",
-      "query": "select arcv4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select arcv4 as \"Risk Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -745,8 +745,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue",
-      "query": "select lostrev4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select lostrev4 as \"Lost Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -763,8 +763,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Cart Value",
-      "query": "select alcv4 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select alcv4 as \"Lost Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -781,8 +781,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue",
-      "query": "select rev5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select rev5 as \"Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -799,8 +799,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Cart Value",
-      "query": "select acv5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select acv5 as \"Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -817,8 +817,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue",
-      "query": "select riskrev5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select riskrev5 as \"Risk Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -835,8 +835,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Cart Value",
-      "query": "select arcv5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select arcv5 as \"Risk Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -853,8 +853,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue",
-      "query": "select lostrev5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select lostrev5 as \"Lost Revenue\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
@@ -871,8 +871,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Cart Value",
-      "query": "select alcv5 as \" \" from useraction limit 1",
+      "customName": " ",
+      "query": "select alcv5 as \"Lost Cart Value\" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
     {
