@@ -259,7 +259,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Cart Value Forecast",
+      "customName": " ",
       "query": "select (((acv1*256 + acv2*16 + acv3*4 + acv4*2 + acv5)/279) + (acv1 + ((((acv1-acv2) - (acv2-acv3))) - (((acv2-acv3) - (acv3-acv4))) + ((acv1-acv2) - (acv2-acv3)) + (acv1-acv2) + ((acv2-acv3) - (acv3-acv4)) + (acv2-acv3) + ((acv3-acv4) - (acv4-acv5)) + (acv3-acv4) + (acv4-acv5))/10)*2)/3 as \" \" from useraction limit 1",
       "type": "SINGLE_VALUE"
     },
