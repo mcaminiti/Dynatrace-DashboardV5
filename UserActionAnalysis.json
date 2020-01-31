@@ -35,7 +35,7 @@
         "managementZone": null
       },
       "customName": "Requests",
-      "query": "select useraction.name, count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\" MyFilter group by useraction.name",
+      "query": "select useraction.name, count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\"  group by useraction.name",
       "type": "PIE_CHART"
     },
     {
@@ -53,7 +53,7 @@
         "managementZone": null
       },
       "customName": "Duration",
-      "query": "select useraction.name, avg(duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter group by useraction.name  order by Duration DESC",
+      "query": "select useraction.name, avg(duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"  group by useraction.name  order by Duration DESC",
       "type": "PIE_CHART"
     },
     {
@@ -71,7 +71,7 @@
         "managementZone": null
       },
       "customName": "Duration",
-      "query": "select distinct name as \"User Action Name\", avg(duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter order by Duration DESC",
+      "query": "select distinct name as \"User Action Name\", avg(duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"  order by Duration DESC",
       "type": "TABLE"
     },
     {
@@ -105,7 +105,7 @@
         "managementZone": null
       },
       "customName": "Requests",
-      "query": "select distinct useraction.name as \"User Action Name\", count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\" MyFilter order by count(*) DESC",
+      "query": "select distinct useraction.name as \"User Action Name\", count(*) as \"Requests\" from usersession where useraction.application=\"MyApp\"  order by count(*) DESC",
       "type": "TABLE"
     }
   ]
