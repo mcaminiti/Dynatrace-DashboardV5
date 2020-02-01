@@ -322,7 +322,7 @@
 			}
 		},
 		{
-			"name": "Lost Revenue by Region",
+			"name": "Lost Revenue by Browser",
 			"tileType": "HEADER",
 			"configured": true,
 			"bounds": {
@@ -352,7 +352,7 @@
 			}
 		},
 		{
-			"name": "Abandons by Region",
+			"name": "Abandons by Browser",
 			"tileType": "HEADER",
 			"configured": true,
 			"bounds": {
@@ -399,7 +399,7 @@
 				"managementZone": null
 			},
 			"customName": "\u2620",
-			"query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep) and region!=\"synthetic\" and region IS NOT NULL group by region order by sum(revenueproperty) desc",
+			"query": "SELECT browserFamily, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)   group by browserFamily order by sum(revenueproperty) desc",
 			"type": "PIE_CHART"
 		},
 		{
@@ -435,7 +435,7 @@
 				"managementZone": null
 			},
 			"customName": "\u2620",
-			"query": "SELECT region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep) and region!=\"synthetic\" and region IS NOT NULL group by region order by count(userSessionId) desc",
+			"query": "SELECT browserFamily, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)   group by browserFamily order by count(userSessionId) desc",
 			"type": "PIE_CHART"
 		},
 		{

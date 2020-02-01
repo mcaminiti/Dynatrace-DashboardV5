@@ -204,7 +204,7 @@
     "managementZone": null
    },
    "customName": "\uD83C\uDFC1",
-   "query": "SELECT region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and region!=\"synthetic\" and region IS NOT NULL group by region order by count(userSessionId) desc",
+   "query": "SELECT browserFamily, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep   group by browserFamily order by count(userSessionId) desc",
    "type": "PIE_CHART"
   },
   {
@@ -223,7 +223,7 @@
    }
   },
   {
-   "name": "Conversions by Region",
+   "name": "Conversions by Browser",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {

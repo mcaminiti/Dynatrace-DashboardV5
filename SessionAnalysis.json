@@ -72,8 +72,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Sessions by Region",
-      "query": "select region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\"  and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "customName": "Sessions by Browser",
+      "query": "select browserFamily, count(userSessionId) FROM usersession where useraction.application=\"MyApp\"    group by browserFamily",
       "type": "PIE_CHART"
     },
     {
@@ -106,8 +106,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Sessions by Region",
-      "query": "select region, count(userSessionId) as \"Session Count\" FROM usersession where useraction.application=\"MyApp\"  and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "customName": "Sessions by Browser",
+      "query": "select browserFamily, count(userSessionId) as \"Session Count\" FROM usersession where useraction.application=\"MyApp\"    group by browserFamily",
       "type": "COLUMN_CHART"
     }
   ]

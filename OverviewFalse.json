@@ -204,8 +204,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Conversions by Region",
-      "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep and region!=\"synthetic\" group by Region",
+      "customName": "Conversions by Browser",
+      "query": "select browserFamily, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep  group by browserFamily",
       "type": "PIE_CHART",
       "timeFrameShift": "dynamic"
     },
@@ -223,8 +223,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Abandons by Region",
-      "query": "select Region, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep and region!=\"synthetic\" group by Region",
+      "customName": "Abandons by Browser",
+      "query": "select browserFamily, count(usersessionid) as \"Conversions\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep  group by browserFamily",
       "type": "PIE_CHART",
       "timeFrameShift": "dynamic"
     },
