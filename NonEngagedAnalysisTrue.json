@@ -68,7 +68,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20LastURLStep&visualization=TABLE)"
+			"markdown": "## [Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20LastURLStep&visualization=TABLE)"
 		},
 		{
 			"name": "DTAQL",
@@ -102,7 +102,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09stringProperties.incomplete%3D%22Please%20enter%20your%20credit%20card%20number.%22%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
+			"markdown": "## [Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20LastURLStep&visualization=TABLE)"
 		},
 		{
 			"name": "DTAQL",
@@ -154,7 +154,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09stringProperties.incomplete%3D%22Please%20enter%20your%20credit%20card%20number.%22%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
+			"markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20not%20LastURLStep&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -170,7 +170,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20not%20LastURLStep&visualization=TABLE)"
+			"markdown": "## [Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20not%20LastURLStep&visualization=TABLE)"
 		},
 		{
 			"name": "User Sessions Query",

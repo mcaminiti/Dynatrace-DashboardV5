@@ -104,7 +104,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [No Errors (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22%20FROM%20usersession%20where%0A%09totalErrorCount%3D0%20and%20LastURLStep%20%0A&visualization=TABLE)"
+   "markdown": "## [No Errors (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22%20FROM%20usersession%20where%0A%09totalErrorCount%3D0%20MyFilter%20and%20LastURLStep%20%0A&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -120,7 +120,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Low Errors (1-2)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09totalErrorCount%20IN%20(1,2)%20and%20LastURLStep%20order%20by%20totalErrorCount%20DESC%0A&visualization=TABLE)"
+   "markdown": "## [Low Errors (1-2)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09totalErrorCount%20IN%20(1,2)%20MyFilter%20and%20LastURLStep%20order%20by%20totalErrorCount%20DESC%0A&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -136,7 +136,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [High Errors (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09f1urlstep%20and%20totalErrorCount%20%3E%202%20and%20LastURLStep%20&visualization=TABLE)"
+   "markdown": "## [High Errors (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09f1urlstep%20MyFilter%20and%20totalErrorCount%20%3E%202%20and%20LastURLStep%20&visualization=TABLE)"
   },
   {
    "name": "DTAQL",
@@ -206,7 +206,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [No Errors (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22%20FROM%20usersession%20where%0A%09f1urlstep%20and%20totalErrorCount%3D0%20and%20not%20LastURLStep&visualization=TABLE)"
+   "markdown": "## [No Errors (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22%20FROM%20usersession%20where%0A%09f1urlstep%20MyFilter%20and%20totalErrorCount%3D0%20and%20not%20LastURLStep&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -222,7 +222,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Low Errors (1-2)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09f1urlstep%20and%20totalErrorCount%20IN%20(1,2)%20and%20not%20LastURLStep%20order%20by%20totalErrorCount%20DESC&visualization=TABLE)"
+   "markdown": "## [Low Errors (1-2)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09f1urlstep%20MyFilter%20and%20totalErrorCount%20IN%20(1,2)%20and%20not%20LastURLStep%20order%20by%20totalErrorCount%20DESC&visualization=TABLE)"
   },
   {
    "name": "Markdown",
@@ -238,7 +238,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [High Errors (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09f1urlstep%20and%20totalErrorCount%20%3E%202%20and%20not%20LastURLStep%20order%20by%20totalErrorCount%20DESC%0A&visualization=TABLE)"
+   "markdown": "## [High Errors (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20totalErrorCount%20as%20%22Errors%22%20%20FROM%20usersession%20where%0A%09f1urlstep%20MyFilter%20and%20totalErrorCount%20%3E%202%20and%20not%20LastURLStep%20order%20by%20totalErrorCount%20DESC%0A&visualization=TABLE)"
   },
   {
    "name": "User Sessions Query",

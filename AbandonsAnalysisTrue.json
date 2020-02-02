@@ -170,7 +170,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
+			"markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20MyFilter%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -186,7 +186,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
+			"markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -202,7 +202,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
+			"markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -218,7 +218,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
+			"markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20MyFilter%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -234,7 +234,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
+			"markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -250,7 +250,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
+			"markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc&visualization=TABLE)"
 		},
 		{
 			"name": "DTAQL",
@@ -452,7 +452,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+			"markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22%20FROM%20usersession%20where%0A%09not%20LastURLStep%20MyFilter%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -468,7 +468,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
+			"markdown": "## [Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%0A%09not%20LastURLStep%20MyFilter%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20desc%0A&visualization=TABLE)"
 		},
 		{
 			"name": "User Sessions Query",

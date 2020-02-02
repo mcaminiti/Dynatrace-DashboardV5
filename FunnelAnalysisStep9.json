@@ -70,7 +70,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -86,7 +86,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "DTAQL",
@@ -140,7 +140,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
+      "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -156,7 +156,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
+      "markdown": "## [Duration](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.duration%20as%20%22Funnel%20Click%20Path%20Duration%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.duration%20desc&visualization=TABLE)"
     },
     {
       "name": "DTAQL",
@@ -210,7 +210,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
+      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -226,7 +226,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20DESC&visualization=TABLE)"
+      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20totalErrorCount%20as%20%22Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20totalErrorCount%3E0%20order%20by%20totalErrorCount%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -242,7 +242,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=55885bfd-7d70-450d-b0a6-8570fe60dd00&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20usersession.duration%3E180000%20and%20StepFunnel9%20and%20StepFunnel10%20and%20userActionCount%3C10&visualization=TABLE)"
+      "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=55885bfd-7d70-450d-b0a6-8570fe60dd00&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20usersession.duration%3E180000%20and%20StepFunnel9%20and%20StepFunnel10%20and%20userActionCount%3C10&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -258,7 +258,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=dd66617c-b601-44f6-982c-a871cc80b8a0&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20usersession.duration%3E180000%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20userActionCount%3C10&visualization=TABLE)"
+      "markdown": "## [NonEngaged](https://MyTenant/ui/user-sessions/query?sessionquerytileconfigid=dd66617c-b601-44f6-982c-a871cc80b8a0&sessionquery=select%20userid%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20usersession.duration%3E180000%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20userActionCount%3C10&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -274,7 +274,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel9%20and%20StepFunnel10&visualization=TABLE)"
+      "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel9%20and%20StepFunnel10&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -290,7 +290,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel9%20and%20not%20StepFunnel10&visualization=TABLE)"
+      "markdown": "## [Rage](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20numberOfRageClicks%20as%20%22Rages%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20%20numberOfRageClicks%3E0%20and%20StepFunnel9%20and%20not%20StepFunnel10&visualization=TABLE)"
     },
     {
       "name": "DTAQL",
@@ -837,7 +837,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
+      "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -853,7 +853,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
+      "markdown": "## [Visually Complete](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.visuallyCompleteTime%20as%20%22Funnel%20Click%20Path%20Visually%20Complete%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.visuallyCompleteTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -869,7 +869,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
+      "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -885,7 +885,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
+      "markdown": "## [Speed Index](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.speedIndex%20as%20%22Funnel%20Click%20Path%20Speed%20Index%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.speedIndex%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -901,7 +901,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
+      "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -917,7 +917,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
+      "markdown": "## [Server](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.serverTime%20as%20%22Funnel%20Click%20Path%20Server%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.serverTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -933,7 +933,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
+      "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -949,7 +949,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
+      "markdown": "## [Network](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.networkTime%20as%20%22Funnel%20Click%20Path%20Network%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.networkTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -965,7 +965,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
+      "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -981,7 +981,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
+      "markdown": "## [Request Start](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.requestStart%20as%20%22Funnel%20Click%20Path%20Request%20Start%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.requestStart%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -997,7 +997,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
+      "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1013,7 +1013,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
+      "markdown": "## [Load Event End](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.loadEventEnd%20as%20%22Funnel%20Click%20Path%20Load%20Event%20End%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.loadEventEnd%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1029,7 +1029,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
+      "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1045,7 +1045,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
+      "markdown": "## [DOM Interactive](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.documentInteractiveTime%20as%20%22Funnel%20Click%20Path%20DOM%20Interactive%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20useraction.documentInteractiveTime%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1061,7 +1061,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.httpRequestsWithErrors%20as%20%22HTTP%20Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20DESC&visualization=TABLE)"
+      "markdown": "## [HTTP Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.httpRequestsWithErrors%20as%20%22HTTP%20Errors%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20useraction.httpRequestsWithErrors%3E0%20order%20by%20useraction.httpRequestsWithErrors%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1077,7 +1077,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc&visualization=TABLE)"
+      "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1093,7 +1093,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20DESC&visualization=TABLE)"
+      "markdown": "## [Failed Images](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedImages%20as%20%22Failed%20Images%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20useraction.failedImages%3E0%20order%20by%20useraction.failedImages%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1109,7 +1109,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedXhrRequests%20as%20%22Failed%20Xhr%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20DESC&visualization=TABLE)"
+      "markdown": "## [Failed Xhr Requests](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,%20useraction.failedXhrRequests%20as%20%22Failed%20Xhr%22%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20and%20useraction.failedXhrRequests%3E0%20order%20by%20useraction.failedXhrRequests%20DESC&visualization=TABLE)"
     },
     {
       "name": "Environment Breakdown",
@@ -1140,7 +1140,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1156,7 +1156,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "DTAQL",
@@ -1208,7 +1208,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Browser](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20browserFamily%20as%20%22Browser%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by Browser](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20browserFamily%20as%20%22Browser%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1224,7 +1224,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Browser](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20browserFamily%20as%20%22Browser%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by Browser](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20browserFamily%20as%20%22Browser%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel9%20and%20not%20StepFunnel10%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",

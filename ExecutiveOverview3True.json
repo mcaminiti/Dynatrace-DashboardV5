@@ -215,7 +215,7 @@
     "managementZone": null
    },
    "customName": "Duration",
-   "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
@@ -233,7 +233,7 @@
     "managementZone": null
    },
    "customName": "Errors",
-   "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\"",
+   "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter",
    "type": "SINGLE_VALUE", "timeFrameShift": "dynamic"
   },
   {
