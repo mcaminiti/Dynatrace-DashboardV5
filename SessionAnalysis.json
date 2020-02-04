@@ -8,11 +8,11 @@
   "id": "dc858870-3724-4df3-b341-67156f9da313",
   "dashboardMetadata": {
     "name": "\u27b5 Session Analysis",
-    "shared": false,
+    "shared": true,
     "owner": "MyEmail",
     "sharingDetails": {
       "linkShared": true,
-      "published": false
+      "published": true
     },
     "dashboardFilter": {
       "timeframe": "l_2_HOURS",
