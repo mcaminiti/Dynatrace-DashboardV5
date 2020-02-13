@@ -1259,7 +1259,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![]()\n![]()\n # ▶"
+      "markdown": "![]()\n![]()\n # \u25b6"
     },
     {
       "name": "Markdown",
@@ -1291,7 +1291,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "![]()\n![]()\n # ▶"
+      "markdown": "![]()\n![]()\n # \u25b6"
     },
     {
       "name": "Markdown",
