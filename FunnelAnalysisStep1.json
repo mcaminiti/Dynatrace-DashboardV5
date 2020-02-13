@@ -17,7 +17,10 @@
     "dashboardFilter": {
       "timeframe": "l_2_HOURS",
       "managementZone": null
-    }
+    },
+    "tags": [
+      "Step Analysis"
+    ]
   },
   "tiles": [
     {
@@ -1231,7 +1234,7 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-        "top": 152,
+        "top": 190,
         "left": 0,
         "width": 114,
         "height": 228
