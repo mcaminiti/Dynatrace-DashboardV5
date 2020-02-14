@@ -398,7 +398,7 @@
         "timeframe": null,
         "managementZone": null
    },
-   "markdown": "## [Dashboard List](#dashboards)"
+   "markdown": "## [Dashboard List](https://MyTenant/ui/dashboards)"
     },
   {
    "name": "Markdown",
