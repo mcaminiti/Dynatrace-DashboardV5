@@ -258,7 +258,7 @@
      "series": [
       {
        "metric": "builtin:apps.web.activeSessions",
-       "aggregation": "AVG",
+       "aggregation": "NONE",
        "percentile": null,
        "type": "LINE",
        "entityType": "APPLICATION",
