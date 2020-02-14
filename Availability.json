@@ -3,7 +3,7 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.186.0.20200109-170258"
+    "clusterVersion": "1.188.0.20200213-194820"
   },
   "id": "fd4b3162-465b-46ee-a1bc-8f979cfda313",
   "dashboardMetadata": {
@@ -26,7 +26,7 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 190,
+        "left": 304,
         "width": 228,
         "height": 228
       },
@@ -43,7 +43,7 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 418,
+        "left": 570,
         "width": 228,
         "height": 228
       },
@@ -55,51 +55,12 @@
       "chartVisible": true
     },
     {
-      "name": "",
-      "tileType": "CUSTOM_CHARTING",
-      "configured": true,
-      "bounds": {
-        "top": 0,
-        "left": 1330,
-        "width": 304,
-        "height": 836
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "MIXED",
-        "customName": "Synthetic Tests Availability",
-        "defaultName": "Custom chart",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TOP_LIST",
-          "series": [
-            {
-              "metric": "CTS_SYNTHETIC_TEST_AVAILABILITY",
-              "aggregation": "NONE",
-              "percentile": null,
-              "type": "LINE",
-              "entityType": "SYNTHETIC_BROWSER_MONITOR",
-              "dimensions": [],
-              "sortAscending": false,
-              "sortColumn": true,
-              "aggregationRate": "TOTAL"
-            }
-          ],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {}
-      }
-    },
-    {
       "name": "Synthetic Monitor Health",
       "tileType": "SYNTHETIC_TESTS",
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 1102,
+        "left": 1368,
         "width": 228,
         "height": 228
       },
@@ -116,7 +77,7 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 646,
+        "left": 836,
         "width": 228,
         "height": 228
       },
@@ -133,7 +94,7 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 874,
+        "left": 1102,
         "width": 228,
         "height": 228
       },
@@ -150,7 +111,7 @@
       "configured": true,
       "bounds": {
         "top": 0,
-        "left": 0,
+        "left": 38,
         "width": 190,
         "height": 228
       },
@@ -165,8 +126,8 @@
       "configured": true,
       "bounds": {
         "top": 228,
-        "left": 0,
-        "width": 1330,
+        "left": 38,
+        "width": 1558,
         "height": 608
       },
       "tileFilter": {
@@ -182,16 +143,16 @@
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-    "top": 0,
-    "left": 1634,
-    "width": 38,
-    "height": 38
+        "top": 0,
+        "left": 1634,
+        "width": 38,
+        "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
       "markdown": "## [\u21e6](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
-  }
+    }
   ]
 }
