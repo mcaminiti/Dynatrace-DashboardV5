@@ -124,6 +124,25 @@
       "configured": true,
       "bounds": {
         "top": 570,
+        "left": 0,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select count(userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 570,
         "left": 266,
         "width": 266,
         "height": 114
@@ -134,44 +153,6 @@
       },
       "customName": " ",
       "query": "select sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 570,
-        "left": 836,
-        "width": 266,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 702,
-        "left": 1102,
-        "width": 266,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -199,45 +180,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 702,
-        "left": 1368,
-        "width": 266,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and duration > 180000 and userActionCount < 10 and StepFunnel1",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 702,
-        "left": 0,
-        "width": 266,
-        "height": 114
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "customName": " ",
-      "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
-      "type": "SINGLE_VALUE",
-      "timeFrameShift": "dynamic"
-    },
-    {
-      "name": "User Sessions Query",
-      "tileType": "DTAQL",
-      "configured": true,
-      "bounds": {
-        "top": 702,
+        "top": 570,
         "left": 836,
         "width": 266,
         "height": 114
@@ -247,7 +190,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+      "query": "select sum(revenueproperty) as \"Lost Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -294,7 +237,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 570,
+        "top": 684,
         "left": 0,
         "width": 266,
         "height": 114
@@ -304,7 +247,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select count(userSessionId) as \"Sessions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+      "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -313,7 +256,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 702,
+        "top": 684,
         "left": 266,
         "width": 266,
         "height": 114
@@ -332,7 +275,7 @@
       "tileType": "DTAQL",
       "configured": true,
       "bounds": {
-        "top": 702,
+        "top": 684,
         "left": 532,
         "width": 266,
         "height": 114
@@ -343,6 +286,63 @@
       },
       "customName": " ",
       "query": "SELECT count(userSessionId) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not LastFunnelStep",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 836,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 1102,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select sum(numberOfRageClicks) as \"Rage Clicks\" FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+      "type": "SINGLE_VALUE",
+      "timeFrameShift": "dynamic"
+    },
+    {
+      "name": "User Sessions Query",
+      "tileType": "DTAQL",
+      "configured": true,
+      "bounds": {
+        "top": 684,
+        "left": 1368,
+        "width": 266,
+        "height": 114
+      },
+      "tileFilter": {
+        "timeframe": null,
+        "managementZone": null
+      },
+      "customName": " ",
+      "query": "select count(usersessionid) as \"Nonengaged Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and duration > 180000 and userActionCount < 10 and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
