@@ -3,7 +3,7 @@
     "configurationVersions": [
       3
     ],
-    "clusterVersion": "1.186.0.20200115-201640"
+    "clusterVersion": "1.188.0.20200213-194820"
   },
   "id": "af663a92-726d-494f-addd-3e9246dda313",
   "dashboardMetadata": {
@@ -25,7 +25,7 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 228,
+        "top": 38,
         "left": 1140,
         "width": 532,
         "height": 304
@@ -71,7 +71,7 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 228,
+        "top": 38,
         "left": 0,
         "width": 532,
         "height": 304
@@ -117,7 +117,7 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 228,
+        "top": 38,
         "left": 570,
         "width": 532,
         "height": 304
@@ -163,10 +163,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
+        "top": 342,
         "left": 0,
         "width": 532,
-        "height": 304
+        "height": 494
       },
       "tileFilter": {
         "timeframe": null,
@@ -209,10 +209,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
+        "top": 342,
         "left": 570,
         "width": 532,
-        "height": 304
+        "height": 494
       },
       "tileFilter": {
         "timeframe": null,
@@ -255,10 +255,10 @@
       "tileType": "CUSTOM_CHARTING",
       "configured": true,
       "bounds": {
-        "top": 532,
+        "top": 342,
         "left": 1140,
         "width": 532,
-        "height": 304
+        "height": 494
       },
       "tileFilter": {
         "timeframe": null,
@@ -295,89 +295,22 @@
         },
         "filtersPerEntityType": {}
       }
-    },
-    {
-      "name": "",
-      "tileType": "SERVICES",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 0,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "chartVisible": true
-    },
-    {
-      "name": "",
-      "tileType": "SERVICES",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 570,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": null,
-      "chartVisible": true
-    },
-    {
-      "name": "",
-      "tileType": "SERVICES",
-      "configured": true,
-      "bounds": {
-        "top": 38,
-        "left": 1140,
-        "width": 532,
-        "height": 190
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "filterConfig": {
-        "type": "SERVICE",
-        "customName": "Non Impacted Service Health",
-        "defaultName": "Non Impacted Service Health",
-        "chartConfig": {
-          "legendShown": true,
-          "type": "TIMESERIES",
-          "series": [],
-          "resultMetadata": {}
-        },
-        "filtersPerEntityType": {
-          "NON_DATABASE_SERVICE": {
-            "PROBLEM_IMPACT": [
-              "false"
-            ]
-          }
-        }
-      },
-      "chartVisible": true
     },
     {
       "name": "Markdown",
       "tileType": "MARKDOWN",
       "configured": true,
       "bounds": {
-    "top": 0,
-    "left": 1634,
-    "width": 38,
-    "height": 38
+        "top": 0,
+        "left": 1634,
+        "width": 38,
+        "height": 38
       },
       "tileFilter": {
         "timeframe": null,
         "managementZone": null
       },
       "markdown": "## [\u21e6](#dashboard;id=fbe8d3b1-ccb9-480c-9e5d-0e1b8b4da313)"
-  }	
+    }
   ]
 }
