@@ -19,7 +19,8 @@
       "managementZone": null
     },
     "tags": [
-      "Step Analysis"
+      "Step Analysis",
+	  "User Journey"
     ]
   },
   "tiles": [

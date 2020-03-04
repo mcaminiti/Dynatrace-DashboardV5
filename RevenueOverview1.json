@@ -17,7 +17,11 @@
     "dashboardFilter": {
       "timeframe": "l_2_HOURS",
       "managementZone": null
-    }
+    },
+    "tags": [
+	  "Overview",
+	  "Revenue"
+    ]
   },
   "tiles": [
     {

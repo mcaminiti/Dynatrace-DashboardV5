@@ -17,7 +17,11 @@
     "dashboardFilter": {
       "timeframe": "",
       "managementZone": null
-    }
+    },
+    "tags": [
+	  "Forecast",
+	  "Revenue"
+    ]
   },
   "tiles": [
     {
