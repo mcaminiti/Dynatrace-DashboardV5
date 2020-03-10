@@ -7,7 +7,7 @@
 	},
 	"id": "10a69069-74c2-4eba-b18a-6856d91da313",
 	"dashboardMetadata": {
-		"name": "\ud83c\udfaf User Journey Analysis - StepHeader3",
+		"name": "\ud83c\udfaf User Journey Forensics - StepHeader3",
 		"shared": true,
 		"owner": "MyEmail",
 		"sharingDetails": {
@@ -18,8 +18,8 @@
 			"timeframe": "l_2_HOURS",
 			"managementZone": null
 		},
-    "tags": [
-      "Step Analysis",
+    "tags": ["MyApp",
+      "Forensics",
 	  "User Journey"
     ]
 	},

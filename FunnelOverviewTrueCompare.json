@@ -18,9 +18,9 @@
    "timeframe": "l_2_HOURS",
    "managementZone": null
   },
- "tags": [
+ "tags": ["MyApp",
 	  "Compare",
-	  "Revenue"
+	  "User Journey"
     ]
  },
  "tiles": [

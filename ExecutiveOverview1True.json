@@ -18,8 +18,9 @@
    "timeframe": "l_2_HOURS",
    "managementZone": null
   },
-    "tags": [
-      "Overview"
+    "tags": ["MyApp",
+      "Overview",
+	  "Executive"
     ]
  },
  "tiles": [

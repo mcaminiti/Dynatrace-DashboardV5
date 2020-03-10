@@ -18,8 +18,9 @@
       "timeframe": "",
       "managementZone": null
     },
-    "tags": [
-      "Forecast"
+    "tags": ["MyApp",
+      "Forecast",
+	  "User Journey"
     ]
 
   },

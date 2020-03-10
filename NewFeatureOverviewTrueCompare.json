@@ -18,9 +18,9 @@
    "timeframe": "l_2_HOURS",
    "managementZone": null
   },
-    "tags": [
+    "tags": ["MyApp",
       "New Feature",
-	  "Overview"
+	  "Compare"
     ]
  },
  "tiles": [
