@@ -19,8 +19,7 @@
    "managementZone": null
   },
     "tags": ["MyApp",
-	  "Compare",
-	  "User Journey"
+	  "Compare"
     ]
  },
  "tiles": [
