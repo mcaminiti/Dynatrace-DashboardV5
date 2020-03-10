@@ -56,7 +56,7 @@
    }
   },
   {
-   "name": "MyCompareApp MyCompareFunnel User Journey Previous MyTime Hours",
+   "name": "MyCompareApp MyCompareFunnel Previous MyTime Hours",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -71,7 +71,7 @@
    }
   },
   {
-   "name": "MyApp MyFunnel User Journey Last MyTime Hours",
+   "name": "MyApp MyFunnel Last MyTime Hours",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {

@@ -37,9 +37,10 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Duration",
+      "customName": "MyFunnel User Journey",
       "query": "SELECT FUNNEL(FunnelStep) FROM usersession where useraction.application=\"MyApp\" MyFilter",
-      "type": "FUNNEL"
+      "type": "FUNNEL",
+   "timeFrameShift": "dynamic"
     },
     {
       "name": "User Sessions Query",
