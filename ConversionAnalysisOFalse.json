@@ -208,7 +208,7 @@
     "managementZone": null
    },
    "customName": "\uD83C\uDFC1",
-   "query": "SELECT region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep   group by region order by count(userSessionId) desc",
+   "query": "SELECT City, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep   group by City order by count(userSessionId) desc",
    "type": "PIE_CHART"
   },
   {
@@ -227,7 +227,7 @@
    }
   },
   {
-   "name": "Conversions by Region",
+   "name": "Conversions by City",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {

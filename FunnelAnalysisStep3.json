@@ -39,7 +39,7 @@
         "managementZone": null
       },
       "customName": "Location",
-      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and StepFunnel4 and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "query": "select count(usersessionid) as \"Requests\",City FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and StepFunnel4 and City!=\"synthetic\" and City IS NOT NULL group by City",
       "type": "PIE_CHART"
     },
     {
@@ -57,7 +57,7 @@
         "managementZone": null
       },
       "customName": "Location",
-      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and not StepFunnel4 and region!=\"synthetic\" and region IS NOT NULL group by region",
+      "query": "select count(usersessionid) as \"Requests\",City FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and not StepFunnel4 and City!=\"synthetic\" and City IS NOT NULL group by City",
       "type": "PIE_CHART"
     },
     {
@@ -1144,7 +1144,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20City%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1160,7 +1160,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20not%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by Location](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20City%20as%20%22Location%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20not%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "DTAQL",
@@ -1176,8 +1176,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Region",
-      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and StepFunnel4 group by region",
+      "customName": "City",
+      "query": "select count(usersessionid) as \"Requests\",City FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and StepFunnel4 group by City",
       "type": "PIE_CHART"
     },
     {
@@ -1194,8 +1194,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Region",
-      "query": "select count(usersessionid) as \"Requests\",region FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and not StepFunnel4 group by region",
+      "customName": "City",
+      "query": "select count(usersessionid) as \"Requests\",City FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3 and not StepFunnel4 group by City",
       "type": "PIE_CHART"
     },
     {
@@ -1212,7 +1212,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Region](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Region%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by City](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20City%20as%20%22City%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -1228,7 +1228,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Requests by Region](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20region%20as%20%22Region%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20not%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
+      "markdown": "## [Requests by City](https://MyTenant/ui/user-sessions/query?sessionquery=select%20UserId%20as%20%22User%22,%20City%20as%20%22City%22,%20duration%20as%20%22Funnel%20Duration%22%20FROM%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel3%20and%20not%20StepFunnel4%20order%20by%20duration%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",

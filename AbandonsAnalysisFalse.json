@@ -191,7 +191,7 @@
    }
   },
   {
-   "name": "Abandons by Region",
+   "name": "Abandons by City",
    "tileType": "HEADER",
    "configured": true,
    "bounds": {
@@ -238,7 +238,7 @@
     "managementZone": null
    },
    "customName": "\u2620",
-   "query": "SELECT region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not (LastFunnelStep)   group by region order by count(userSessionId) desc",
+   "query": "SELECT City, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1 and not (LastFunnelStep)   group by City order by count(userSessionId) desc",
    "type": "PIE_CHART"
   },
   {
