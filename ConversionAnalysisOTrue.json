@@ -325,7 +325,7 @@
 				"managementZone": null
 			},
 			"customName": "\ud83d\udcb0",
-			"query": "SELECT browserFamily, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep   group by browserFamily order by sum(revenueproperty) desc",
+			"query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep   group by region order by sum(revenueproperty) desc",
 			"type": "PIE_CHART"
 		},
 		{
@@ -361,7 +361,7 @@
 				"managementZone": null
 			},
 			"customName": "\ud83c\udfc1",
-			"query": "SELECT browserFamily, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep   group by browserFamily order by count(userSessionId) desc",
+			"query": "SELECT region, count(userSessionId) FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep   group by region order by count(userSessionId) desc",
 			"type": "PIE_CHART"
 		},
 		{
@@ -380,7 +380,7 @@
 			}
 		},
 		{
-			"name": "Conversions by Browser",
+			"name": "Conversions by Region",
 			"tileType": "HEADER",
 			"configured": true,
 			"bounds": {
@@ -410,7 +410,7 @@
 			}
 		},
 		{
-			"name": "Revenue by Browser",
+			"name": "Revenue by Region",
 			"tileType": "HEADER",
 			"configured": true,
 			"bounds": {

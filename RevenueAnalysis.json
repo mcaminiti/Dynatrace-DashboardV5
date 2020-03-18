@@ -171,8 +171,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Revenue by Browser",
-      "query": "SELECT browserFamily, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep   group by browserFamily order by sum(revenueproperty) desc",
+      "customName": "Revenue by Region",
+      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep   group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -207,8 +207,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Risk Revenue by Browser",
-      "query": "SELECT browserFamily, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")   group by browserFamily order by sum(revenueproperty) desc",
+      "customName": "Risk Revenue by Region",
+      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and (userExperienceScore =\"TOLERATED\" or userExperienceScore =\"FRUSTRATED\" or userExperienceScore =\"UNDEFINED\")   group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -243,8 +243,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "Lost Revenue by Browser",
-      "query": "SELECT browserFamily, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)   group by browserFamily order by sum(revenueproperty) desc",
+      "customName": "Lost Revenue by Region",
+      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)   group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
@@ -279,8 +279,8 @@
         "timeframe": null,
         "managementZone": null
       },
-      "customName": "New User Revenue by Browser",
-      "query": "SELECT browserFamily, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true   group by browserFamily order by sum(revenueproperty) desc",
+      "customName": "New User Revenue by Region",
+      "query": "SELECT region, sum(revenueproperty) FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true   group by region order by sum(revenueproperty) desc",
       "type": "PIE_CHART"
     },
     {
