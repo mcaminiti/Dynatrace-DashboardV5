@@ -18,9 +18,7 @@
    "timeframe": "l_2_HOURS",
    "managementZone": null
   },
-    "tags": ["MyApp",
-      "Portal"
-    ]
+    "tags": ["MyApp","Portal","User Journey"]
  },
  "tiles": [
   {
@@ -247,7 +245,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+      "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },
@@ -304,7 +302,7 @@
         "managementZone": null
       },
       "customName": " ",
-      "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+      "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
       "type": "SINGLE_VALUE",
       "timeFrameShift": "dynamic"
     },

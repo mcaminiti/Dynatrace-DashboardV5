@@ -260,7 +260,7 @@
   "managementZone": null
   },
   "customName": "StepHeader4",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel4",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel4",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -279,7 +279,7 @@
   "managementZone": null
   },
   "customName": "StepHeader1",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -298,7 +298,7 @@
   "managementZone": null
   },
   "customName": "StepHeader5",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel5",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel5",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -317,7 +317,7 @@
   "managementZone": null
   },
   "customName": "StepHeader1",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
+  "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel1",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -336,7 +336,7 @@
   "managementZone": null
   },
   "customName": "StepHeader4",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel4",
+  "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel4",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -355,7 +355,7 @@
   "managementZone": null
   },
   "customName": "StepHeader5",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel5",
+  "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel5",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -466,7 +466,7 @@
   "managementZone": null
   },
   "customName": "StepHeader2",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel2 ",
+  "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel2 ",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -485,7 +485,7 @@
   "managementZone": null
   },
   "customName": "StepHeader3",
-  "query": "select avg(useraction.duration) as \"Duration\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3",
+  "query": "select avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel3",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -504,7 +504,7 @@
   "managementZone": null
   },
   "customName": "StepHeader2",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel2",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel2",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
@@ -523,7 +523,7 @@
   "managementZone": null
   },
   "customName": "StepHeader3",
-  "query": "select sum(useraction.errorCount) as \"Errors\" from usersession where useraction.application=\"MyApp\" MyFilter and StepFunnel3",
+  "query": "select sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and StepFunnel3",
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
