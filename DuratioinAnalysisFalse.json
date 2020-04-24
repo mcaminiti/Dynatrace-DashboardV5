@@ -260,7 +260,7 @@
    },
    "customName": "\u23f1",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep ",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "User Action Duration Over Time",
@@ -293,7 +293,7 @@
    },
    "customName": "\u23f1",
    "query": "select distinct name, avg(useraction.duration) as \"Duration\" from useraction where useraction.application=\"MyApp\" MyFilter order by Duration DESC",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "Top Slow Actions",

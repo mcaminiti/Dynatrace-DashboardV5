@@ -139,7 +139,7 @@
       },
       "customName": "User Action Errors",
       "query": "select useraction.name, count(*) as \"User Action Count\" from usersession where totalErrorCount>0 group by useraction.name",
-      "type": "COLUMN_CHART"
+      "type": "LINE_CHART"
     },
     {
       "name": "Markdown",

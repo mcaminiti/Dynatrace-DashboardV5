@@ -158,7 +158,7 @@
    },
    "customName": "\uD83C\uDFC1",
    "query": "select distinct DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tLastFunnelStep",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "Conversions Over Time",

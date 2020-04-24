@@ -256,7 +256,7 @@
       },
       "customName": " ",
       "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(revenueproperty) as \"Average Lost Cart Value\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep)",
-      "type": "COLUMN_CHART"
+      "type": "LINE_CHART"
     },
     {
       "name": "Markdown",

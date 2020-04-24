@@ -288,7 +288,7 @@
    },
    "customName": "\u2620",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(usersessionid) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" MyFilter and LastFunnelStep ",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
      {
       "name": "Markdown",

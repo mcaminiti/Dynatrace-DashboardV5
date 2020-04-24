@@ -191,7 +191,7 @@
 			},
 			"customName": "\ud83d\ude34",
 			"query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\",count(usersessionid) as \"Sessions\" from usersession where useraction.application=\"MyApp\" MyFilter and duration > 180000 and userActionCount < 10 and userid is not null ",
-			"type": "COLUMN_CHART"
+			"type": "LINE_CHART"
 		},
 		{
 			"name": "Nonengaged Sessions Over Time",

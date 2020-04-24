@@ -39,7 +39,7 @@
    },
    "customName": "Duration",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", avg(useraction.duration) as \"Duration\" from useraction",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "User Sessions Query",
@@ -57,7 +57,7 @@
    },
    "customName": "Visually Complete",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(visuallyCompleteTime) as \"Visually Complete\" from useraction",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "User Sessions Query",
@@ -75,7 +75,7 @@
    },
    "customName": "Speed Index",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", AVG(speedIndex) as \"Speed Index\" from useraction",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "User Sessions Query",

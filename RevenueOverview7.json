@@ -256,7 +256,7 @@
       },
       "customName": " ",
       "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"New User Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep and newUser IS true",
-      "type": "COLUMN_CHART"
+      "type": "LINE_CHART"
     },
     {
       "name": "Markdown",

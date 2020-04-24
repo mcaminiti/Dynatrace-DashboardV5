@@ -513,7 +513,7 @@
    },
    "customName": " ",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(*) as \"Abandons\" FROM usersession where useraction.application=\"MyApp\" MyFilter and not (LastFunnelStep) and StepFunnel1",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
     {
       "name": "Markdown",

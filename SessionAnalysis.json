@@ -111,7 +111,7 @@
       },
       "customName": "Sessions by City",
       "query": "select City, count(userSessionId) as \"Session Count\" FROM usersession where useraction.application=\"MyApp\"    group by City",
-      "type": "COLUMN_CHART"
+      "type": "LINE_CHART"
     }
   ]
 }

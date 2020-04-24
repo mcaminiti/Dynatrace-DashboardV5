@@ -110,7 +110,7 @@
    },
    "customName": "\u2620",
    "query": "select distinct DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(userSessionId) as \"Abandons Count\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tStepFunnel1 and not (LastFunnelStep)",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "Abandons Over Time",

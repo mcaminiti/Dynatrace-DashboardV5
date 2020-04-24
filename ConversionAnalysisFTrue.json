@@ -94,7 +94,7 @@
 			},
 			"customName": "\uD83C\uDFC1",
 			"query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep ",
-			"type": "COLUMN_CHART"
+			"type": "LINE_CHART"
 		},
 		{
 			"name": "Revenue Over Time",
@@ -239,7 +239,7 @@
 			},
 			"customName": "\ud83c\udfc1",
 			"query": "select distinct DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", count(userSessionId) as \"Conversions\" FROM usersession where useraction.application=\"MyApp\" MyFilter and\n\tLastFunnelStep and\n\trevenueproperty>0\n",
-			"type": "COLUMN_CHART"
+			"type": "LINE_CHART"
 		},
 		{
 			"name": "Conversions Over Time",

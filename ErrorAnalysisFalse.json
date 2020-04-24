@@ -259,7 +259,7 @@
    },
    "customName": "\ud83d\ude12",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(useraction.errorCount) as \"Errors\" FROM usersession",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "Errors Over Time",
@@ -292,7 +292,7 @@
    },
    "customName": "\ud83d\ude12",
    "query": "select distinct name, sum(useraction.errorCount) as \"Errors\" from useraction where useraction.application=\"MyApp\" MyFilter and errorcount>0 order by sum(useraction.errorCount) DESC",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
   {
    "name": "Top User Actions",

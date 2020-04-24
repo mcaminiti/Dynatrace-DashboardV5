@@ -292,7 +292,7 @@
    },
    "customName": "\ud83d\udcb0",
    "query": "select DISTINCT DATETIME(starttime, \"HH:mm\", \"10m\") as \"Time\", sum(revenueproperty) as \"Revenue\" FROM usersession where useraction.application=\"MyApp\" MyFilter and CombinedStep ",
-   "type": "COLUMN_CHART"
+   "type": "LINE_CHART"
   },
     {
       "name": "Markdown",
