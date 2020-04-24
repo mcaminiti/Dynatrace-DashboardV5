@@ -214,7 +214,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,totalErrorCount%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel2%20and%20StepFunnel3%20andtotalErrorCount%3E0%20order%20bytotalErrorCount%20desc&visualization=TABLE)"
+      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,totalErrorCount%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel2%20and%20StepFunnel3%20andtotalErrorCount%3E0%20order%20by%20totalErrorCount%20desc&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -230,7 +230,7 @@
         "timeframe": null,
         "managementZone": null
       },
-      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,totalErrorCount%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel2%20and%20not%20StepFunnel3%20andtotalErrorCount%3E0%20order%20bytotalErrorCount%20DESC&visualization=TABLE)"
+      "markdown": "## [Errors](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid,totalErrorCount%20from%20usersession%20where%20useraction.application%20%3D%20%22MyURLApp%22%20MyFilter%20and%20StepFunnel2%20and%20not%20StepFunnel3%20andtotalErrorCount%3E0%20order%20by%20totalErrorCount%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
