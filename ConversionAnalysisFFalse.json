@@ -106,7 +106,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20MyFilter%20MyFilter%20and%20LastURLStep%20%0A)"
+   "markdown": "## [Satisfied](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22SATISFIED%22%20MyFilter%20MyFilter%20and%20LastFunnelStep%20%0A)"
   },
   {
    "name": "Markdown",
@@ -122,7 +122,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20MyFilter%20and%20LastURLStep%20%0A)"
+   "markdown": "## [Tolerated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22TOLERATED%22%20MyFilter%20and%20LastFunnelStep%20%0A)"
   },
   {
    "name": "Markdown",
@@ -138,7 +138,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20MyFilter%20and%20LastURLStep%20%0A)"
+   "markdown": "## [Frustrated](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09userExperienceScore%3D%22FRUSTRATED%22%20MyFilter%20and%20LastFunnelStep%20%0A)"
   },
   {
    "name": "DTAQL",
@@ -271,7 +271,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09LastURLStep%0A MyFilter)"
+   "markdown": "## [Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userId%20as%20%22User%22%20FROM%20usersession%20where%0A%09LastFunnelStep%0A MyFilter)"
   }
  ]
 }

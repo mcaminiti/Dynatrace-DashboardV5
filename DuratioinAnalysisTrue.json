@@ -105,7 +105,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Fast Conversions (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20duration%20as%20%22Duration%22%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20duration%0A&visualization=TABLE)"
+			"markdown": "## [Fast Conversions (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20duration%20as%20%22Duration%22%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20duration%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -121,7 +121,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Avg Conversions (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
+			"markdown": "## [Avg Conversions (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -137,7 +137,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Slow Conversions (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
+			"markdown": "## [Slow Conversions (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
 		},
 		{
 			"name": "DTAQL",
@@ -207,7 +207,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Fast Revenue (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20duration%20as%20%22Duration%22%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20duration%0A&visualization=TABLE)"
+			"markdown": "## [Fast Revenue (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20duration%20as%20%22Duration%22%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20duration%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -223,7 +223,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Avg Revenue (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
+			"markdown": "## [Avg Revenue (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -239,7 +239,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Slow Revenue (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
+			"markdown": "## [Slow Revenue (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20\"Revenue\",%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%0A&visualization=TABLE)"
 		},
 		{
 			"name": "DTAQL",
@@ -363,7 +363,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Fast Lost Revenue (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Fast Lost Revenue (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -379,7 +379,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Avg Lost Revenue (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Avg Lost Revenue (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -395,7 +395,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Slow Lost Revenue (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Slow Lost Revenue (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -411,7 +411,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Fast Abandons (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Fast Abandons (<1m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3C%3D60000%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -427,7 +427,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Avg Abandons (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Avg Abandons (1-3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E60000%20MyFilter%20AND%20duration%3C%3D180000%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -443,7 +443,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Slow Abandons (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Slow Abandons (>3m)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Lost%20Revenue%22,%20duration%20as%20%22Duration%22%20%20FROM%20usersession%20where%0A%09duration%3E180000%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "User Sessions Query",

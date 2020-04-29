@@ -69,7 +69,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20LastURLStep&visualization=TABLE)"
+   "markdown": "## [Conversions](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20LastFunnelStep&visualization=TABLE)"
   },
   {
    "name": "DTAQL",
@@ -103,7 +103,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "## [Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20StepFunnel1%20and%20not%20LastURLStep&visualization=TABLE)"
+   "markdown": "## [Abandons](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22Users%22%20%20FROM%20usersession%20where%20duration%20%3E%20180000%20MyFilter%20and%20userActionCount%20%3C%2010%20and%20userid%20is%20not%20null%20and%20StepFunnel1%20and%20not%20LastFunnelStep&visualization=TABLE)"
   },
   {
    "name": "User Sessions Query",

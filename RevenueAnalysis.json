@@ -312,7 +312,7 @@
         "timeframe": null,
         "managementZone": null
       },
-   "markdown": "## [Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastFunnelStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -328,7 +328,7 @@
         "timeframe": null,
         "managementZone": null
       },
-   "markdown": "## [Avg Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [Avg Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastFunnelStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -344,7 +344,7 @@
         "timeframe": null,
         "managementZone": null
       },
-   "markdown": "## [Risk Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Risk%20Revenue%22%20FROM%20usersession%20where%20LastURLStep%20MyFilter%20and%20revenueproperty%3E0%20and%20(userExperienceScore%20%3D%22TOLERATED%22%20or%20userExperienceScore%20%3D%22FRUSTRATED%22%20or%20userExperienceScore%20%3D%22UNDEFINED%22)%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [Risk Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Risk%20Revenue%22%20FROM%20usersession%20where%20LastFunnelStep%20MyFilter%20and%20revenueproperty%3E0%20and%20(userExperienceScore%20%3D%22TOLERATED%22%20or%20userExperienceScore%20%3D%22FRUSTRATED%22%20or%20userExperienceScore%20%3D%22UNDEFINED%22)%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -360,7 +360,7 @@
         "timeframe": null,
         "managementZone": null
       },
-   "markdown": "## [Avg Risk Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20MyFilter%20and%20revenueproperty%3E0%20and%20(userExperienceScore%20%3D%22TOLERATED%22%20or%20userExperienceScore%20%3D%22FRUSTRATED%22%20or%20userExperienceScore%20%3D%22UNDEFINED%22)%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [Avg Risk Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastFunnelStep%20MyFilter%20and%20revenueproperty%3E0%20and%20(userExperienceScore%20%3D%22TOLERATED%22%20or%20userExperienceScore%20%3D%22FRUSTRATED%22%20or%20userExperienceScore%20%3D%22UNDEFINED%22)%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -376,7 +376,7 @@
         "timeframe": null,
         "managementZone": null
       },
-   "markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20not%20LastURLStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [Lost Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20not%20LastFunnelStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -392,7 +392,7 @@
         "timeframe": null,
         "managementZone": null
       },
-   "markdown": "## [Avg Lost Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20not%20LastURLStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [Avg Lost Order Value](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20not%20LastFunnelStep%20MyFilter%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",
@@ -408,7 +408,7 @@
         "timeframe": null,
         "managementZone": null
       },
-   "markdown": "## [New User Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastURLStep%20MyFilter%20and%20newUser%20IS%20true%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
+   "markdown": "## [New User Revenue](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20FROM%20usersession%20where%20LastFunnelStep%20MyFilter%20and%20newUser%20IS%20true%20and%20revenueproperty%3E0%20order%20by%20revenueproperty%20DESC&visualization=TABLE)"
     },
     {
       "name": "Markdown",

@@ -105,7 +105,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Clear Conversions (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Clear Conversions (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -121,7 +121,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Low Conversions (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Low Conversions (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -137,7 +137,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [High Conversions (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [High Conversions (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "DTAQL",
@@ -207,7 +207,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Clear Revenue (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Clear Revenue (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -223,7 +223,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Low Revenue (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Low Revenue (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -239,7 +239,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [High Revenue (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [High Revenue (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "DTAQL",
@@ -363,7 +363,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Clear Lost Revenue (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Clear Lost Revenue (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -379,7 +379,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Low Lost Revenue (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Low Lost Revenue (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -395,7 +395,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [High Lost Revenue (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [High Lost Revenue (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -411,7 +411,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Clear Abandons (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Clear Abandons (0)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%3D0%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20revenueproperty%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -427,7 +427,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [Low Abandons (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [Low Abandons (1-3)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,%20revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20BETWEEN%201%20and%203%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20Rages%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "Markdown",
@@ -443,7 +443,7 @@
 				"timeframe": null,
 				"managementZone": null
 			},
-			"markdown": "## [High Abandons (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20not%20LastURLStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
+			"markdown": "## [High Abandons (3+)](https://MyTenant/ui/user-sessions/query?sessionquery=select%20userid%20as%20%22User%22,revenueproperty%20as%20%22Revenue%22,%20numberOfRageClicks%20as%20%22Rages%22%20%20FROM%20usersession%20where%0A%09numberOfRageClicks%20%3E%202%20MyFilter%20and%20not%20LastFunnelStep%20and%0A%09revenueproperty%3E0%20order%20by%20numberOfRageClicks%20DESC%0A&visualization=TABLE)"
 		},
 		{
 			"name": "User Sessions Query",
