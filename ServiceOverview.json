@@ -18,10 +18,7 @@
       "timeframe": "",
       "managementZone": null
     },
-    "tags": [
-      "Overview",
-	  "Services"
-    ]
+    "tags": ["CEM EXT","Overview","Services"]
   },
   "tiles": [
     {

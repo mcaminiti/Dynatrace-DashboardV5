@@ -18,10 +18,7 @@
       "timeframe": "",
       "managementZone": null
     },
-    "tags": ["MyApp",
-	  "Forecast",
-	  "Revenue"
-    ]
+    "tags": ["CEM EXT","MyApp","Forecast","Revenue"]
   },
   "tiles": [
     {

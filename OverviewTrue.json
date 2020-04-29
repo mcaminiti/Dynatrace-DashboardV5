@@ -18,7 +18,7 @@
    "timeframe": "l_2_HOURS",
    "managementZone": null
   },
-    "tags": ["MyApp","Portal","User Journey"]
+    "tags": ["CEM EXT","MyApp","Portal","User Journey"]
  },
  "tiles": [
   {

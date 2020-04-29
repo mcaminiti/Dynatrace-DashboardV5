@@ -18,9 +18,7 @@
       "timeframe": "",
       "managementZone": null
     },
-	"tags": ["MyApp",
-	  "Analysis"
-    ]
+	"tags": ["CEM EXT","MyApp","Analysis"]
   },
   "tiles": [
     {

@@ -18,9 +18,7 @@
    "timeframe": "l_2_HOURS",
    "managementZone": null
   },
- "tags": ["MyApp",
-	  "Compare"
-    ]
+ "tags": ["CEM EXT","MyApp","Compare"]
  },
  "tiles": [
   {

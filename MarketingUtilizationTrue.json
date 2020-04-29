@@ -18,10 +18,7 @@
       "timeframe": "l_2_HOURS",
       "managementZone": null
     },
-    "tags": ["MyApp",
-      "Marketing",
-	  "Utilization"
-    ]
+    "tags": ["CEM EXT","MyApp","Marketing","Utilization"]
   },
   "tiles": [
     {

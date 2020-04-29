@@ -18,9 +18,7 @@
       "timeframe": "",
       "managementZone": null
     },
-    "tags": [
-      "Availability"
-    ]
+    "tags": ["CEM EXT","Availability"]
   },
   "tiles": [
     {

@@ -18,9 +18,7 @@
       "timeframe": "",
       "managementZone": null
     },
-    "tags": [
-      "Infrastructure"
-    ]
+    "tags": ["CEM EXT","Infrastructure"]
   },
   "tiles": [
     {

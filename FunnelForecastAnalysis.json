@@ -18,10 +18,7 @@
       "timeframe": "",
       "managementZone": null
     },
-    "tags": ["MyApp",
-      "Forecast",
-	  "User Journey"
-    ]
+    "tags": ["CEM EXT","MyApp","Forecast","User Journey"]
 
   },
   "tiles": [

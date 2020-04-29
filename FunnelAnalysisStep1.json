@@ -18,10 +18,7 @@
       "timeframe": "l_2_HOURS",
       "managementZone": null
     },
-    "tags": ["MyApp",
-      "Forensics",
-	  "User Journey"
-    ]
+    "tags": ["CEM EXT","MyApp","Forensics","User Journey"]
   },
   "tiles": [
     {
