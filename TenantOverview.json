@@ -326,7 +326,7 @@
       }
     },
     {
-      "name": "Infrastructure Links \u25BC",
+      "name": "Custom Links \u25BC",
       "tileType": "HEADER",
       "configured": true,
       "bounds": {
@@ -431,7 +431,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Infrastructure Links1]()\n## [Host Overview](#dashboard;id=af663a92-726d-494f-addd-3e92461da313)\n![]()\n## [CPU Utilization](#dashboard;id=9cb1b9b3-e885-4bbc-9a01-d9a46feda313)\n![]()\n## [Memory Utilization](#dashboard;id=9bd2fedb-b3d2-4add-ad30-82a4333da313)\n![]()\n## [Network Utilization](#dashboard;id=f2fe11ab-4a93-4b64-aa58-8203c4fda313)\n![]()\n## [Disk Utilization](#dashboard;id=0663ef55-a070-4455-8ec8-080e736da313)"
+   "markdown": "![Custom Links1]()\n"
   },
   {
    "name": "Markdown",
@@ -479,7 +479,7 @@
     "timeframe": null,
     "managementZone": null
    },
-   "markdown": "![Custom Links1]()\n"
+   "markdown": "![Custom Links2]()\n"
   }
 	]
 }
