@@ -21,6 +21,7 @@
     "tags": ["CEM EXT","MyApp","User Journey"]
  },
  "tiles": [
+ {
         "name": "DTAQL",
         "tileType": "DTAQL",
         "configured": true,
