@@ -497,22 +497,6 @@
         "managementZone": null
       },
       "markdown": "![Utilization Links]()\n## [Marketing Utilization](#dashboard;id=919b0dce-bbf4-443d-b0f0-e370faeda313)\n![]()\n## [New Feature Utilization](#dashboard;id=918b0dce-bbf4-443d-b0f0-e370faeda313)"
-    },
-  {
-   "name": "Markdown",
-   "tileType": "MARKDOWN",
-   "configured": true,
-   "bounds": {
-    "top": 0,
-    "left": 1634,
-    "width": 38,
-    "height": 38
-   },
-   "tileFilter": {
-    "timeframe": null,
-    "managementZone": null
-   },
-      "markdown": "![BackButton]()"
-  }
+    }
  ]
 }
