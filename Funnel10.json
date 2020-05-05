@@ -449,22 +449,6 @@
   "type": "SINGLE_VALUE",
   "timeFrameShift": "dynamic"
  },
-    {
-      "name": "Markdown",
-      "tileType": "MARKDOWN",
-      "configured": true,
-      "bounds": {
-    "top": 0,
-    "left": 2434,
-    "width": 38,
-    "height": 38
-      },
-      "tileFilter": {
-        "timeframe": null,
-        "managementZone": null
-      },
-      "markdown": "![BackButton]()"
- },
  {
   "name": "User Sessions Query",
   "tileType": "DTAQL",
